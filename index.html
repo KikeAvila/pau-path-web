@@ -11,7 +11,7 @@
       document.documentElement.setAttribute("data-theme", _t);
     } catch (e) {}
   </script>
-  <link rel="stylesheet" href="styles.css?v=33" />
+  <link rel="stylesheet" href="styles.css?v=34" />
   <link rel="manifest" href="manifest.webmanifest" />
   <meta name="theme-color" content="#58cc02" />
   <!-- iOS: instalable en pantalla de inicio -->
@@ -208,23 +208,27 @@
   <div id="user-modal" class="modal hidden">
     <div class="modal-box">
       <h2>Perfil y Ajustes</h2>
-      <div style="display:flex;flex-direction:column;gap:10px;margin-top:15px;">
-        <label>
-          <b>Tu nombre (Usuario):</b><br/>
+      <div style="display:flex;flex-direction:column;gap:15px;margin-top:15px;">
+        <div>
+          <label style="display:block; margin-bottom:5px;"><b>Tu nombre (Usuario):</b></label>
           <input type="text" id="user-nombre" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;" placeholder="Ej: Kike">
-        </label>
-        <label>
-          <b>PIN (4 dígitos):</b><br/>
+        </div>
+        <div>
+          <label style="display:block; margin-bottom:5px;"><b>PIN (4 dígitos):</b></label>
           <input type="password" id="user-pin" inputmode="numeric" maxlength="4" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;" placeholder="Ej: 1234">
-          <small style="color:var(--gray);font-size:0.85em;">Tu clave de seguridad local.</small>
-        </label>
-        <label>
-          <b>Gemini API Key:</b><br/>
-          <input type="password" id="user-apikey" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;" placeholder="AIzaSy...">
-          <small style="color:var(--gray);font-size:0.85em;">Clave gratuita de Google Studio para usar la IA.</small>
-        </label>
+          <small style="color:var(--gray);font-size:0.85em;display:block;margin-top:4px;">Tu clave de seguridad local. Necesaria para guardar tu perfil.</small>
+        </div>
+        
+        <div style="border-top:1px solid #333; padding-top:15px; margin-top:5px;">
+          <h3 style="font-size:1.1em; margin-bottom:8px;">🤖 IA Vocacional (Opcional)</h3>
+          <p style="font-size:0.9em; line-height:1.4; color:#bbb; margin-bottom:10px;">
+            <b>Google Gemini tiene nivel gratis</b> — crea la key sin tarjeta en <b>aistudio.google.com</b> (Get API key). La key se guarda solo en este dispositivo.
+          </p>
+          <label style="display:block; margin-bottom:5px;"><b>API key de Gemini (empieza por AIza…):</b></label>
+          <input type="password" id="user-apikey" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;" placeholder="AIza...">
+        </div>
       </div>
-      <div style="margin-top:15px;display:flex;justify-content:flex-end;gap:10px;">
+      <div style="margin-top:20px;display:flex;justify-content:flex-end;gap:10px;">
         <button class="btn" id="user-cancelar">Cancelar</button>
         <button class="btn btn-primary" id="user-guardar">Guardar</button>
       </div>
@@ -234,10 +238,10 @@
   <!-- SDK de Firebase (nube). Si no hay internet, la app funciona igual en local. -->
   <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
-  <script src="firebase-config.js?v=33"></script>
-  <script src="i18n.js?v=33"></script>
+  <script src="firebase-config.js?v=34"></script>
+  <script src="i18n.js?v=34"></script>
   <script src="pau_data.js"></script>
-          <script src="app.js?v=33"></script>
+          <script src="app.js?v=34"></script>
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
