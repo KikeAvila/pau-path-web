@@ -329,48 +329,28 @@ async function enviarMensajeVoc() {
 
 function renderEscritor() {
   const c = $("escritor-container");
-  if (!c.querySelector("#escritor-chat")) {
-    c.innerHTML = `
-      <h2>✍️ El Rincón del Escritor</h2>
-      <p style="font-size: 0.9em; color: var(--gray);">Tu asistente creativo impulsado por Gemini.</p>
-      <div id="escritor-chat" style="height:350px;overflow-y:auto;background:#111;padding:15px;margin-bottom:10px;border-radius:8px;border:1px solid #333;display:flex;flex-direction:column;"></div>
-      <div style="display:flex;gap:5px;">
-        <textarea id="escritor-input" rows="2" style="flex:1;padding:12px;border-radius:6px;border:1px solid #333;background:#222;color:#fff;font-family:inherit;resize:vertical;" placeholder="Tengo un bloqueo con el capítulo 3..."></textarea>
-        <button class="btn btn-primary" id="escritor-btn" onclick="enviarMensajeEscritor()">Enviar</button>
+  c.innerHTML = `
+    <div style="padding:15px;">
+      <h2>✍️ Pasión por Escribir</h2>
+      <p style="font-size: 0.9em; color: var(--gray);">Sabemos que además de las ciencias, tienes una gran pasión por la escritura y que escribir es importante para ti. Este es un espacio para reflexionar sobre tus opciones.</p>
+      
+      <div style="margin-top:20px; background:#111; padding:15px; border-radius:8px;">
+        <h3 style="color:#4CAF50;">Ingeniería y Letras: ¿Se pueden combinar?</h3>
+        <p style="margin-top:10px; line-height:1.5;">Tener un cerebro lógico para la Ingeniería Mecánica y a la vez talento para contar historias en un libro de 150 páginas es un perfil poco común y muy valioso. Si no sabes por dónde inclinarte, ten en cuenta estas opciones:</p>
+        <ul style="margin-top:10px; margin-left:20px; line-height:1.5;">
+          <li><b>Ingeniería + Escritor por vocación:</b> Muchos profesionales técnicos (ingenieros, médicos) son escritores exitosos. La ingeniería te da estabilidad, y tu tiempo libre te da libertad creativa pura.</li>
+          <li><b>Divulgación Científica / Periodismo Tecnológico:</b> Escribir sobre motores, tecnología y avances científicos combinando tu conocimiento técnico con tu pluma.</li>
+          <li><b>Liderazgo y Gestión:</b> En el mundo de la ingeniería, quien sabe comunicarse, redactar y organizar ideas claramente, rápidamente asciende a puestos de liderazgo.</li>
+        </ul>
       </div>
-    `;
-    
-    if (escritorHistory.length === 0) {
-       appendMsg("escritor-chat", "assistant", "¡Hola escritor! 📚 Estoy aquí para ayudarte con tu libro. ¿En qué trabajamos hoy?");
-    } else {
-       escritorHistory.forEach(m => appendMsg("escritor-chat", m.role, m.content));
-    }
-  }
-}
 
-async function enviarMensajeEscritor() {
-  const input = $("escritor-input");
-  const text = input.value.trim();
-  if (!text) return;
-  
-  input.value = "";
-  input.disabled = true;
-  $("escritor-btn").disabled = true;
-  
-  appendMsg("escritor-chat", "user", text);
-  escritorHistory.push({ role: "user", content: text });
-  
-  const systemPrompt = "Eres un asistente creativo de escritura colaborativa. El usuario escribe un libro de 150 páginas. Ayúdale con bloqueos, personajes y trama. No escribas por él, da ideas. Usa formato claro.";
-  
-  const respuesta = await callIA(systemPrompt, null, escritorHistory);
-  if (respuesta) {
-    appendMsg("escritor-chat", "assistant", respuesta);
-    escritorHistory.push({ role: "assistant", content: respuesta });
-  }
-  
-  input.disabled = false;
-  $("escritor-btn").disabled = false;
-  input.focus();
+      <div style="margin-top:20px; background:#111; padding:15px; border-radius:8px;">
+        <h3 style="color:#2196F3;">Diario de Orientación</h3>
+        <p style="margin-top:10px;">Usa este bloque de notas para aclarar tus ideas. ¿Te ves trabajando de ingeniero y escribiendo en tus ratos libres? ¿O te llama más una carrera de letras puros?</p>
+        <textarea style="width:100%; height:120px; margin-top:10px; background:#222; color:#fff; border:1px solid #333; padding:10px; border-radius:6px; font-family:inherit;" placeholder="Escribe aquí tus pensamientos y reflexiones personales..."></textarea>
+      </div>
+    </div>
+  `;
 }
 
 function renderStats() {
