@@ -10,25 +10,70 @@ window.PAU_DATA = {
   camino: [
     {
       id: "nivel-1",
-      titulo: "Trimestre 1 - Arranque",
+      titulo: "Trimestre 1 - Nivel 1 (Básico)",
       nodos: [
-        { id: "m2-1", asig: "mates2", tema: "Matrices y Determinantes", tipo: "quiz" },
-        { id: "fis-1", asig: "fisica", tema: "Campo Gravitatorio", tipo: "quiz" },
-        { id: "dib-1", asig: "dibujo", tema: "Geometría Métrica", tipo: "quiz" },
-        { id: "len-1", asig: "lengua", tema: "Sintaxis", tipo: "quiz" },
+        { id: "m2-1", asig: "mates2", tema: "Matrices Básicas", tipo: "teoria" },
+        { id: "fis-1", asig: "fisica", tema: "Fuerza Gravitatoria", tipo: "quiz" },
+        { id: "dib-1", asig: "dibujo", tema: "Geometría Métrica", tipo: "quiz" }
       ]
     },
     {
       id: "nivel-2",
-      titulo: "Trimestre 1 - Profundizando",
+      titulo: "Trimestre 1 - Nivel 2 (Intermedio)",
       nodos: [
-        { id: "m2-2", asig: "mates2", tema: "Sistemas de Ecuaciones", tipo: "quiz" },
-        { id: "fis-2", asig: "fisica", tema: "Campo Electromagnético", tipo: "quiz" },
+        { id: "m2-2", asig: "mates2", tema: "Determinantes", tipo: "quiz" },
+        { id: "fis-2", asig: "fisica", tema: "Campo Gravitatorio", tipo: "teoria" },
+        { id: "len-1", asig: "lengua", tema: "Sintaxis Simple", tipo: "quiz" }
+      ]
+    },
+    {
+      id: "nivel-3",
+      titulo: "Trimestre 1 - Nivel 3 (Avanzado)",
+      nodos: [
+        { id: "m2-3", asig: "mates2", tema: "Rango e Inversa", tipo: "quiz" },
         { id: "hist-1", asig: "historia", tema: "Raíces Históricas", tipo: "quiz" },
+        { id: "fis-3", asig: "fisica", tema: "Velocidad de Escape", tipo: "quiz" }
+      ]
+    },
+    {
+      id: "nivel-4",
+      titulo: "Trimestre 1 - Nivel 4 (Retos EBAU)",
+      nodos: [
+        { id: "m2-4", asig: "mates2", tema: "Sistemas Lineales", tipo: "quiz" },
+        { id: "fis-4", asig: "fisica", tema: "Satélites y Órbitas", tipo: "quiz" },
+        { id: "dib-2", asig: "dibujo", tema: "Sistema Diédrico Básico", tipo: "quiz" }
+      ]
+    },
+    {
+      id: "nivel-5",
+      titulo: "Trimestre 1 - Nivel 5 (Simulacro T1)",
+      nodos: [
+        { id: "sim-m2", asig: "mates2", tema: "Simulacro Matemáticas T1", tipo: "examen" },
+        { id: "sim-fis", asig: "fisica", tema: "Simulacro Física T1", tipo: "examen" }
       ]
     }
   ],
-  grados: [
+  teoria: {
+    "m2-1": {
+      titulo: "Matrices Básicas",
+      secciones: [
+        { h: "Definición", puntos: ["Una matriz es un arreglo bidimensional de números.", "Su dimensión se expresa como m x n (filas x columnas)."] },
+        { h: "Tipos", puntos: ["Matriz fila, matriz columna, matriz cuadrada.", "Matriz identidad (unos en la diagonal, ceros en el resto)."] }
+      ]
+    },
+    "fis-2": {
+      titulo: "Campo Gravitatorio",
+      secciones: [
+        { h: "Concepto", puntos: ["Perturbación del espacio creada por una masa.", "Se mide por la intensidad g = G*M/r^2."] },
+        { h: "Potencial", puntos: ["El campo gravitatorio es conservativo.", "Energía potencial Ep = -G*M*m/r."] }
+      ]
+    }
+  },
+  examenes: [
+    { id: "ebau-2023-ord", titulo: "EBAU Madrid 2023 - Ordinaria", qs: ["m2-1", "fis-1", "fis-3"] },
+    { id: "ebau-2023-ext", titulo: "EBAU Madrid 2023 - Extraordinaria", qs: ["m2-2", "fis-2", "m2-4"] }
+  ],
+  universidades: [
     // INGENIERÍAS (UPM, UC3M, URJC)
     { uni: "Universidad Politécnica de Madrid (UPM)", carrera: "Ingeniería Mecánica", corte: 11.234, rama: "Ingeniería" },
     { uni: "Universidad Politécnica de Madrid (UPM)", carrera: "Ingeniería Aeroespacial", corte: 12.560, rama: "Ingeniería" },
@@ -68,7 +113,8 @@ window.PAU_DATA = {
         q: "Si A es una matriz 3x3 y |A| = 2, ¿cuál es el determinante de 3A?",
         opciones: ["6", "18", "54", "Ninguna de las anteriores"],
         correcta: 2,
-        explicacion: "El determinante de k*A para una matriz nxn es k^n * |A|. Aquí n=3, k=3, así que 3^3 * 2 = 27 * 2 = 54."
+        explicacion: "El determinante de k*A para una matriz nxn es k^n * |A|. Aquí n=3, k=3, así que 3^3 * 2 = 27 * 2 = 54.",
+        dificil: true
       },
       {
         q: "¿Cuál de las siguientes afirmaciones sobre el rango de una matriz es cierta?",
@@ -78,7 +124,8 @@ window.PAU_DATA = {
           "El rango de una matriz nula es 1."
         ],
         correcta: 0,
-        explicacion: "El rango de una matriz es, por definición, el número máximo de filas (o columnas) que son linealmente independientes."
+        explicacion: "El rango de una matriz es, por definición, el número máximo de filas (o columnas) que son linealmente independientes.",
+        dificil: false
       }
     ],
     "fis-1": [
@@ -90,7 +137,8 @@ window.PAU_DATA = {
           "Inversamente proporcional a las masas."
         ],
         correcta: 1,
-        explicacion: "F = G * (m1*m2) / r^2. La fuerza es inversamente proporcional al cuadrado de la distancia (r)."
+        explicacion: "F = G * (m1*m2) / r^2. La fuerza es inversamente proporcional al cuadrado de la distancia (r).",
+        dificil: false
       },
       {
         q: "¿Qué es la velocidad de escape?",
@@ -100,7 +148,44 @@ window.PAU_DATA = {
           "La velocidad de rotación de un planeta."
         ],
         correcta: 1,
-        explicacion: "Es la velocidad que necesita un objeto para que su energía mecánica sea cero (o mayor), pudiendo alejarse indefinidamente."
+        explicacion: "Es la velocidad que necesita un objeto para que su energía mecánica sea cero (o mayor), pudiendo alejarse indefinidamente.",
+        dificil: true
+      }
+    ],
+    "m2-3": [
+      {
+        q: "Si el determinante de una matriz es 0, entonces...",
+        opciones: ["Tiene matriz inversa.", "No tiene matriz inversa.", "Es la matriz identidad."],
+        correcta: 1,
+        explicacion: "Una matriz es invertible si y solo si su determinante es distinto de cero.",
+        dificil: false
+      }
+    ],
+    "m2-4": [
+      {
+        q: "En un sistema compatible indeterminado...",
+        opciones: ["No hay solución.", "Hay una única solución.", "Hay infinitas soluciones."],
+        correcta: 2,
+        explicacion: "Según el teorema de Rouché-Frobenius, si rang(A)=rang(A*) < n, hay infinitas soluciones.",
+        dificil: true
+      }
+    ],
+    "fis-3": [
+      {
+        q: "La Tercera Ley de Kepler establece que...",
+        opciones: ["El periodo al cuadrado es proporcional al cubo del radio.", "El periodo es igual al radio.", "Las órbitas son siempre circulares."],
+        correcta: 0,
+        explicacion: "T^2 / r^3 = constante.",
+        dificil: false
+      }
+    ],
+    "fis-4": [
+      {
+        q: "La energía mecánica de un satélite en órbita circular es...",
+        opciones: ["Positiva.", "Cero.", "Negativa."],
+        correcta: 2,
+        explicacion: "Em = Ep + Ec = -G*M*m/r + G*M*m/(2r) = -G*M*m/(2r), que es negativa.",
+        dificil: true
       }
     ]
   }

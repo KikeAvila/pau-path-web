@@ -32,6 +32,8 @@ function navTo(viewId) {
   document.querySelectorAll(".tab").forEach(t => t.classList.toggle("active", t.dataset.view === viewId));
   if (viewId === "inicio") renderInicio();
   if (viewId === "path") renderPath();
+  if (viewId === "teoria") renderTeoria();
+  if (viewId === "examenes") renderExamenes();
   if (viewId === "orientacion") renderOrientacion();
   if (viewId === "vocacional") renderVocacional();
   if (viewId === "escritor") renderEscritor();
@@ -198,6 +200,88 @@ function finishQuiz() {
   $("result-title").textContent = "¡Prueba superada!";
   $("result-text").textContent = `Has terminado con ${currentQuiz.fallos} fallos. Ganaste ${CFG.XP_NODO} XP extra.`;
   $("result-modal").classList.remove("hidden");
+}
+
+function renderTeoria() {
+  const c = $("teoria-container");
+  const teoria = window.PAU_DATA.teoria || {};
+  let html = `<h2>📚 Fichas de Teoría</h2><p style="color:var(--gray); font-size:0.9em; margin-bottom:15px;">Estudia los conceptos más difíciles antes de enfrentarte a los retos.</p>`;
+  
+  Object.keys(teoria).forEach(id => {
+    const t = teoria[id];
+    html += `<div style="background:#111; padding:15px; border-radius:8px; margin-bottom:15px; border-left:4px solid var(--blue);">
+      <h3 style="color:var(--blue);">${t.titulo}</h3>`;
+    t.secciones.forEach(sec => {
+      html += `<h4 style="margin-top:10px; color:#bbb;">${sec.h}</h4>
+      <ul style="margin-top:5px; margin-left:20px; line-height:1.5;">`;
+      sec.puntos.forEach(p => html += `<li>${p}</li>`);
+      html += `</ul>`;
+    });
+    html += `</div>`;
+  });
+  c.innerHTML = html;
+}
+
+function renderExamenes() {
+  const c = $("examenes-container");
+  const examenes = window.PAU_DATA.examenes || [];
+  
+  let html = `<h2>📝 Exámenes y Retos</h2>
+    <p style="color:var(--gray); font-size:0.9em; margin-bottom:15px;">Pruebas oficiales EBAU y colecciones de preguntas difíciles.</p>
+    
+    <div style="background:#222; padding:15px; border-radius:8px; margin-bottom:20px; text-align:center; border: 2px solid #FF5722;">
+      <h3 style="color:#FF5722; margin-bottom:5px;">🔥 Reto: Solo Preguntas Difíciles</h3>
+      <p style="font-size:0.9em; color:#bbb; margin-bottom:10px;">Un test infinito compuesto únicamente por las preguntas en las que la gente suele fallar más.</p>
+      <button class="btn btn-primary" style="background:#FF5722;" onclick="abrirTestDificil()">Empezar Reto Difícil</button>
+    </div>
+    
+    <h3>Exámenes Oficiales (EBAU)</h3>
+  `;
+  
+  examenes.forEach(ex => {
+    html += `<div style="background:#111; padding:15px; border-radius:8px; margin-top:10px; display:flex; justify-content:space-between; align-items:center;">
+      <div>
+        <h4 style="font-size:1.1em;">${ex.titulo}</h4>
+        <span style="font-size:0.85em; color:var(--gray);">${ex.qs.length} preguntas de Matemáticas y Física</span>
+      </div>
+      <button class="btn" style="background:var(--blue);" onclick="alert('Próximamente: Carga de examen oficial')">Hacer Examen</button>
+    </div>`;
+  });
+  
+  c.innerHTML = html;
+}
+
+function abrirTestDificil() {
+  // Recopilar todas las preguntas marcadas como "dificil"
+  let preguntasDificiles = [];
+  const todas = window.PAU_DATA.preguntas || {};
+  Object.keys(todas).forEach(id => {
+    todas[id].forEach(q => {
+      if (q.dificil) preguntasDificiles.push(q);
+    });
+  });
+  
+  if (preguntasDificiles.length === 0) {
+    alert("No hay suficientes preguntas difíciles catalogadas en la base de datos.");
+    return;
+  }
+  
+  // Mezclar array (Fisher-Yates)
+  for (let i = preguntasDificiles.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [preguntasDificiles[i], preguntasDificiles[j]] = [preguntasDificiles[j], preguntasDificiles[i]];
+  }
+  
+  currentQuiz = {
+    id: "test-dificil",
+    qs: preguntasDificiles.slice(0, 5), // Tomar 5 al azar
+    idx: 0,
+    fallos: 0
+  };
+  
+  $("quiz-tema").textContent = "🔥 Reto: Preguntas Difíciles";
+  $("quiz-modal").classList.remove("hidden");
+  renderQuizQuestion();
 }
 
 function renderOrientacion() {
