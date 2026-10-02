@@ -249,11 +249,12 @@ function renderTeoria() {
 }
 
 function renderExamenes() {
-  const c = $("examenes-container");
-  const examenes = window.PAU_DATA.examenes || [];
+  const c = examenes-container;
+  const leyes = window.PAU_DATA.leyes_educativas || [];
+  const historico = window.PAU_DATA.histórico_examenes || [];
   
-  let html = `<h2>📝 Exámenes y Retos</h2>
-    <p style="color:var(--gray); font-size:0.9em; margin-bottom:15px;">Pruebas oficiales EBAU y colecciones de preguntas difíciles.</p>
+  let html = <h2>📜 Histórico de Exámenes (20 Años)</h2>
+    <p style="color:var(--gray); font-size:0.9em; margin-bottom:15px;">Pruebas oficiales organizadas por Ley Educativa y cambios de modalidad.</p>
     
     <div style="background:#222; padding:15px; border-radius:8px; margin-bottom:20px; text-align:center; border: 2px solid #FF5722;">
       <h3 style="color:#FF5722; margin-bottom:5px;">🔥 Reto: Solo Preguntas Difíciles</h3>
@@ -261,22 +262,36 @@ function renderExamenes() {
       <button class="btn btn-primary" style="background:#FF5722;" onclick="abrirTestDificil()">Empezar Reto Difícil</button>
     </div>
     
-    <h3>Exámenes Oficiales (EBAU)</h3>
-  `;
+    <h3>Línea Temporal de Leyes Educativas</h3>
+    <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:20px;">
+  ;
   
-  examenes.forEach(ex => {
-    html += `<div style="background:#111; padding:15px; border-radius:8px; margin-top:10px; display:flex; justify-content:space-between; align-items:center;">
-      <div>
-        <h4 style="font-size:1.1em;">${ex.titulo}</h4>
-        <span style="font-size:0.85em; color:var(--gray);">${ex.qs.length} preguntas de Matemáticas y Física</span>
+  leyes.forEach(l => {
+    html += 
+      <div style="background:#1a1a1a; border-left: 4px solid #00BCD4; padding:10px; border-radius:4px;">
+        <h4 style="margin:0; color:#00BCD4;"> - </h4>
+        <p style="margin:5px 0 0 0; font-size:0.85em; color:#aaa;"></p>
       </div>
-      <button class="btn" style="background:var(--blue);" onclick="alert('Próximamente: Carga de examen oficial')">Hacer Examen</button>
-    </div>`;
+    ;
+  });
+
+  html += <h3>Archivo de Exámenes</h3><div style="display:flex; flex-direction:column; gap:10px;">;
+
+  historico.forEach(ex => {
+    const color = ex.disponible ? 'var(--blue)' : '#444';
+    const text = ex.disponible ? 'Hacer Examen' : 'PDF (Próximamente)';
+    html += <div style="background:#111; padding:15px; border-radius:8px; display:flex; justify-content:space-between; align-items:center;">
+      <div>
+        <h4 style="font-size:1.1em; margin:0;"></h4>
+        <span style="font-size:0.85em; color:var(--gray);">Año  | Ley:  | </span>
+      </div>
+      <button class="btn" style="background:;" onclick="alert('')"></button>
+    </div>;
   });
   
+  html += </div>;
   c.innerHTML = html;
 }
-
 function abrirTestDificil() {
   // Recopilar todas las preguntas marcadas como "dificil"
   let preguntasDificiles = [];

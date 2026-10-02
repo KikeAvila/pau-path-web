@@ -269,7 +269,20 @@ window.PAU_DATA = {
         }
       ]
     }
-  },
+  },  leyes_educativas: [
+    { año: 2024, ley: "LOMLOE", cambios: "Nuevo formato PAU. Competencial. Desaparece la opción A y B cerrada, hay optatividad transversal. Se recupera Historia de la Filosofía como troncal a elegir con Historia de España." },
+    { año: 2017, ley: "LOMCE", cambios: "Selectividad pasa a llamarse EBAU/EvAU. Introducción de Ciencias Aplicadas. Las materias troncales pesan el 40%." },
+    { año: 2010, ley: "LOE", cambios: "Se divide la prueba en Fase General (obligatoria, puntúa sobre 10) y Fase Específica (voluntaria, puntúa hasta 14). Permite subir nota eligiendo asignaturas de modalidad." },
+    { año: 2000, ley: "LOGSE", cambios: "Modelo antiguo de Selectividad. Puntuación sobre 10. Bloques rígidos por letras y ciencias." }
+  ],
+  histórico_examenes: [
+    { año: 2024, ley: "LOMLOE", convocatoria: "Ordinaria", titulo: "EBAU 2024 - Matemáticas II", disponible: true },
+    { año: 2023, ley: "LOMCE", convocatoria: "Ordinaria", titulo: "EBAU 2023 - Física", disponible: true },
+    { año: 2020, ley: "LOMCE", convocatoria: "Extraordinaria", titulo: "EvAU 2020 (Pandemia) - Flexibilidad Máxima", disponible: false },
+    { año: 2015, ley: "LOMCE", convocatoria: "Ordinaria", titulo: "PAU 2015 - Historia de España", disponible: false },
+    { año: 2010, ley: "LOE", convocatoria: "Ordinaria", titulo: "PAU 2010 - Fase Específica (Primera edición sobre 14)", disponible: false },
+    { año: 2004, ley: "LOGSE", convocatoria: "Ordinaria", titulo: "Selectividad 2004 - Modelo Clásico sobre 10", disponible: false }
+  ],
   examenes: [
     { id: "ebau-2023-ord", titulo: "EBAU Madrid 2023 - Ordinaria", qs: ["m2-1", "fis-1", "fis-3"] },
     { id: "ebau-2023-ext", titulo: "EBAU Madrid 2023 - Extraordinaria", qs: ["m2-2", "fis-2", "m2-4"] }
