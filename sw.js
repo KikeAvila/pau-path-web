@@ -1,6 +1,6 @@
 /* Service worker — cachea la app para uso OFFLINE.
    Sube CACHE cada vez que cambies ficheros para forzar la actualización. */
-const CACHE = "pau-path-v54";
+const CACHE = "pau-path-v55";
 const ASSETS = [
   "./",
   "index.html",
