@@ -277,8 +277,8 @@ function renderExamenes() {
   html += `</div><h3>Archivo de Exámenes</h3><div style="display:flex; flex-direction:column; gap:10px;">`;
 
   historico.forEach(ex => {
-    const color = ex.disponible ? 'var(--blue)' : '#444';
-    const text = ex.disponible ? 'Hacer Examen' : 'PDF (Próximamente)';
+    const color = ex.disponible ? 'var(--blue)' : '#e53935';
+    const text = ex.disponible ? 'Hacer Examen' : 'Ver PDF (Real)';
     const alertMsg = ex.disponible ? 'Cargando examen interactivo...' : 'Archivo PDF no disponible en la demo';
     
     html += `<div style="background:#111; padding:15px; border-radius:8px; display:flex; justify-content:space-between; align-items:center;">
