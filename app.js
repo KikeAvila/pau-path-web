@@ -202,15 +202,85 @@ function finishQuiz() {
 
 function renderOrientacion() {
   const c = $("orientacion-container");
-  let html = `<h2>🎓 Orientación Universitaria</h2>`;
-  window.PAU_DATA.universidades.forEach(u => {
-    html += `<div style="background:#222; padding:10px; margin:10px 0; border-radius:8px;">
-      <strong>${u.carrera}</strong> en ${u.nombre} <br/>
-      Nota de corte: <span style="color: #4CAF50;">${u.corte}</span> ${u.tipo ? `(${u.tipo})` : ""}
-    </div>`;
-  });
+  
+  // Extract unique careers and universities for the dropdowns
+  const grados = window.PAU_DATA.grados || [];
+  const carreras = [...new Set(grados.map(g => g.carrera))].sort();
+  const unis = [...new Set(grados.map(g => g.uni))].sort();
+  
+  let html = `
+    <div style="padding:15px;">
+      <h2>🎓 Buscador de Notas de Corte</h2>
+      <p style="font-size: 0.9em; color: var(--gray); margin-bottom:15px;">Busca por carrera o por universidad para ver la oferta y las notas exigidas en la EBAU.</p>
+      
+      <div style="display:flex; flex-direction:column; gap:10px; background:#111; padding:15px; border-radius:8px; margin-bottom:20px;">
+        <label style="font-weight:bold;">Buscar Carrera (Ej: Medicina, Ingeniería...):</label>
+        <select id="ori-carrera" style="padding:10px; border-radius:6px; background:#222; color:#fff; border:1px solid #444;" onchange="filtrarOrientacion()">
+          <option value="ALL">-- Todas las carreras --</option>
+          ${carreras.map(car => `<option value="${car}">${car}</option>`).join('')}
+        </select>
+        
+        <label style="font-weight:bold; margin-top:10px;">Buscar Universidad:</label>
+        <select id="ori-uni" style="padding:10px; border-radius:6px; background:#222; color:#fff; border:1px solid #444;" onchange="filtrarOrientacion()">
+          <option value="ALL">-- Todas las universidades --</option>
+          ${unis.map(u => `<option value="${u}">${u}</option>`).join('')}
+        </select>
+      </div>
+
+      <div id="ori-resultados" style="display:flex; flex-direction:column; gap:10px;">
+        <!-- Resultados aquí -->
+      </div>
+    </div>
+  `;
   c.innerHTML = html;
+  
+  // Initial render of all items
+  filtrarOrientacion();
 }
+
+// Ensure this is accessible globally by the onchange events
+window.filtrarOrientacion = function() {
+  const selCarrera = $("ori-carrera").value;
+  const selUni = $("ori-uni").value;
+  const res = $("ori-resultados");
+  
+  const grados = window.PAU_DATA.grados || [];
+  
+  const filtrados = grados.filter(g => {
+    const matchCarrera = (selCarrera === "ALL" || g.carrera === selCarrera);
+    const matchUni = (selUni === "ALL" || g.uni === selUni);
+    return matchCarrera && matchUni;
+  });
+  
+  if (filtrados.length === 0) {
+    res.innerHTML = `<p style="color:#ffc7ca; padding:15px; background:#3d1518; border-radius:8px;">No se han encontrado resultados para esta combinación.</p>`;
+    return;
+  }
+  
+  let html = "";
+  filtrados.forEach(g => {
+    // Add color coding based on branch
+    let ramaColor = "#888";
+    if (g.rama === "Ingeniería") ramaColor = "#4CAF50";
+    else if (g.rama === "Salud") ramaColor = "#2196F3";
+    else if (g.rama === "Sociales") ramaColor = "#FF9800";
+    else if (g.rama === "Artes") ramaColor = "#E91E63";
+    else if (g.rama === "Humanidades") ramaColor = "#9C27B0";
+    
+    html += `
+      <div style="background:#222; padding:15px; border-radius:8px; border-left: 5px solid ${ramaColor};">
+        <div style="font-weight:900; font-size:1.1em;">${g.carrera}</div>
+        <div style="font-size:0.9em; color:#bbb; margin-top:4px;">${g.uni}</div>
+        <div style="margin-top:10px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.85em; background:#333; padding:3px 8px; border-radius:12px;">${g.rama}</span>
+          <span style="font-weight:bold; color:${g.corte > 12 ? '#FF5722' : '#8BC34A'};">Nota de corte: ${g.corte.toFixed(3)}</span>
+        </div>
+      </div>
+    `;
+  });
+  
+  res.innerHTML = html;
+};
 
 // ----- IA y Gemini -----
 async function callIA(systemPrompt, userText, history = []) {
