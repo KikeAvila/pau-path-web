@@ -3411,112 +3411,230 @@ window.PAU_DATA = {
 ]
   ,
   teoria: {
-    "m2-1": {
-      titulo: "Álgebra: Matrices y Determinantes (Nivel EBAU)",
-      secciones: [
-        { 
-          h: "1. Concepto y Dimensión", 
-          puntos: [
-            "Una matriz real de orden m×n es un conjunto de m·n números reales dispuestos en m filas y n columnas.",
-            "Notación: A = (a_ij) donde 'i' es la fila (1 ≤ i ≤ m) y 'j' es la columna (1 ≤ j ≤ n).",
-            "Dos matrices son iguales si y solo si tienen la misma dimensión y los elementos que ocupan la misma posición son idénticos."
-          ] 
-        },
-        { 
-          h: "2. Operaciones Básicas y Propiedades", 
-          puntos: [
-            "Suma: A + B = (a_ij + b_ij). Solo se pueden sumar matrices de la misma dimensión. Propiedades: Conmutativa, Asociativa, Elemento neutro (matriz nula), Elemento opuesto.",
-            "Producto por un escalar: k·A = (k·a_ij). Propiedades: Distributiva respecto a la suma de matrices y de escalares, pseudo-asociativa.",
-            "Producto de matrices: A·B. Condición estricta: el número de columnas de A debe coincidir con el número de filas de B. El elemento c_ij se obtiene multiplicando escalarmente la fila 'i' de A por la columna 'j' de B.",
-            "ATENCIÓN EBAU: El producto de matrices NO es conmutativo (A·B ≠ B·A en general). Esto es crucial en ecuaciones matriciales."
-          ] 
-        },
-        {
-          h: "3. Matrices Cuadradas Especiales",
-          puntos: [
-            "Matriz Identidad (I): Elementos de la diagonal principal son 1, el resto 0. Cumple que A·I = I·A = A.",
-            "Matriz Traspuesta (A^T): Se obtiene cambiando filas por columnas. Propiedades: (A^T)^T = A; (A+B)^T = A^T + B^T; (A·B)^T = B^T · A^T.",
-            "Matriz Simétrica: A = A^T. Matriz Antisimétrica: A = -A^T."
-          ]
-        },
-        {
-          h: "4. Cálculo de Inversa y Rango",
-          puntos: [
-            "Matriz Inversa (A^-1): Cumple que A·A^-1 = A^-1·A = I. Solo existe si el determinante |A| ≠ 0 (matriz regular).",
-            "Fórmula: A^-1 = (1/|A|) · (Adj(A))^T.",
-            "Rango de una matriz: Número de filas o columnas linealmente independientes. También se define como el orden del mayor menor no nulo de la matriz."
-          ]
-        }
-      ]
+    "mates2": {
+        "titulo": "Matemáticas II: Álgebra, Análisis y Geometría Espacial",
+        "secciones": [
+            {
+                "h": "1. Álgebra Lineal: Matrices y Sistemas",
+                "puntos": [
+                    "Definición de Matriz: Una tabla bidimensional de números. Operaciones básicas: suma, producto por escalar, producto de matrices (A·B no es siempre igual a B·A).",
+                    "Determinantes: Regla de Sarrus para 3x3. Propiedades fundamentales (ej. si una fila es combinación lineal de otras, det(A)=0).",
+                    "Rango de una Matriz: Número de filas o columnas linealmente independientes. Se halla por determinantes (menores no nulos) o método de Gauss.",
+                    "Matriz Inversa (A⁻¹): A·A⁻¹ = I. Cálculo mediante determinantes: A⁻¹ = (1/|A|) · Adj(A)^T. Condición: |A| ≠ 0.",
+                    "Teorema de Rouché-Fröbenius: Sea A la matriz de coeficientes y A* la ampliada. Si Rg(A) = Rg(A*) = n (nº incógnitas) -> Sistema Compatible Determinado. Si Rg(A) = Rg(A*) < n -> Sistema Compatible Indeterminado. Si Rg(A) ≠ Rg(A*) -> Sistema Incompatible.",
+                    "Regla de Cramer: Método para resolver SCD mediante el cociente de determinantes. x_i = |A_i| / |A|."
+                ]
+            },
+            {
+                "h": "2. Análisis: Límites, Derivadas e Integrales",
+                "puntos": [
+                    "Límites y Continuidad: Una función f(x) es continua en x=a si existe f(a), existe lim(x->a) f(x) y ambos coinciden.",
+                    "Teoremas de Continuidad: Teorema de Bolzano (si f es continua en [a,b] y f(a)·f(b) < 0, existe c en (a,b) tal que f(c)=0).",
+                    "Regla de L'Hôpital: Para indeterminaciones 0/0 o ∞/∞, lim (f(x)/g(x)) = lim (f'(x)/g'(x)).",
+                    "Derivadas y Optimización: La derivada f'(x) representa la pendiente de la recta tangente. Puntos críticos cuando f'(x)=0. Si f''(x)>0 es mínimo local; si f''(x)<0 es máximo local.",
+                    "Integrales Indefinidas: Operación inversa de la derivada. Métodos: sustitución, por partes (u·v - ∫v·du), fracciones simples.",
+                    "Integrales Definidas: Regla de Barrow. El área bajo la curva entre a y b es F(b) - F(a)."
+                ]
+            },
+            {
+                "h": "3. Geometría Analítica en el Espacio",
+                "puntos": [
+                    "Vectores en R³: Operaciones. Producto escalar (u·v = |u||v|cosθ). Producto vectorial (uxv da un vector perpendicular a ambos). Producto mixto (volumen del paralelepípedo).",
+                    "Ecuaciones de la Recta: Vectorial, paramétrica, continua, implícita (intersección de dos planos).",
+                    "Ecuaciones del Plano: Determinado por un punto y dos vectores directores, o por un punto y un vector normal (A,B,C). Ecuación general: Ax+By+Cz+D=0.",
+                    "Posiciones Relativas: Recta-recta (se cruzan, se cortan, paralelas, coincidentes). Recta-plano. Plano-plano.",
+                    "Problemas Métricos: Cálculo de distancias (punto-recta, punto-plano, entre rectas que se cruzan). Cálculo de ángulos."
+                ]
+            }
+        ]
     },
-    "fis-1": {
-      titulo: "Física: Interacción Gravitatoria",
-      secciones: [
-        { 
-          h: "1. Ley de Gravitación Universal de Newton", 
-          puntos: [
-            "Dos masas puntuales (m1 y m2) separadas una distancia 'r' se atraen con una fuerza directamente proporcional al producto de sus masas e inversamente proporcional al cuadrado de su distancia.",
-            "Fórmula vector: F = -G · (m1·m2 / r^2) · u_r",
-            "G es la constante de gravitación universal: 6.67 × 10^-11 N·m^2/kg^2.",
-            "Características de la fuerza: Es siempre atractiva, central (dirigida al centro de la masa) y conservativa (el trabajo en un trayecto cerrado es cero)."
-          ] 
-        },
-        { 
-          h: "2. Campo Gravitatorio e Intensidad (g)", 
-          puntos: [
-            "El campo gravitatorio es la perturbación que una masa crea en el espacio que la rodea. Se mide mediante la intensidad del campo gravitatorio 'g'.",
-            "g = Fuerza por unidad de masa = -G · (M / r^2) · u_r.",
-            "Principio de superposición: Si existen varias masas, el campo total en un punto es la suma vectorial de los campos creados por cada masa individualmente."
-          ] 
-        },
-        { 
-          h: "3. Energía Potencial Gravitatoria (Ep)", 
-          puntos: [
-            "Como el campo es conservativo, se puede definir una energía potencial. Ep = -G · (M·m / r).",
-            "El signo negativo indica que la fuerza es atractiva y que el cero de energía se ha establecido convencionalmente en el infinito.",
-            "Potencial gravitatorio (V): Energía potencial por unidad de masa. V = Ep/m = -G·M/r. Se mide en J/kg."
-          ] 
-        },
-        { 
-          h: "4. Movimiento Orbital y Leyes de Kepler", 
-          puntos: [
-            "Velocidad orbital (v): Se iguala la fuerza gravitatoria a la fuerza centrípeta (m·v^2/r). Resulta v = √(G·M/r).",
-            "Tercera Ley de Kepler: El cuadrado del período orbital (T) es proporcional al cubo del radio orbital (r). T^2 = (4π^2 / G·M) · r^3.",
-            "Velocidad de escape: Velocidad mínima para escapar de la atracción gravitatoria (Ep = 0). v_e = √(2·G·M/R)."
-          ] 
-        }
-      ]
+    "fisica": {
+        "titulo": "Física: Campos, Ondas y Electromagnetismo",
+        "secciones": [
+            {
+                "h": "1. Campo Gravitatorio",
+                "puntos": [
+                    "Leyes de Kepler: 1) Órbitas elípticas. 2) Áreas barridas iguales en tiempos iguales (conservación del momento angular). 3) T²/r³ = Cte.",
+                    "Ley de Gravitación Universal (Newton): F = -G (M·m / r²) u_r. Es una fuerza central, atractiva y conservativa.",
+                    "Intensidad del Campo (g): Fuerza por unidad de masa. g = -G(M/r²) u_r.",
+                    "Energía Potencial Gravitatoria: Ep = -G·M·m / r. El trabajo para mover una masa W = -ΔEp.",
+                    "Órbitas: Velocidad orbital v = √(G·M/r). Energía mecánica total en órbita: Em = -G·M·m / 2r.",
+                    "Velocidad de Escape: Velocidad mínima para escapar de la atracción planetaria (Em=0). v_e = √(2·G·M/R)."
+                ]
+            },
+            {
+                "h": "2. Movimiento Ondulatorio y Acústica",
+                "puntos": [
+                    "Ecuación de Onda Armónica: y(x,t) = A·sin(ωt ± kx + φ). Donde ω = 2π/T y k = 2π/λ.",
+                    "Velocidad de propagación: v = λ/T = λ·f.",
+                    "Interferencia y Ondas Estacionarias: Condición de nodos (A=0) y vientres (A máxima) en cuerdas fijas.",
+                    "Acústica: Nivel de intensidad sonora en decibelios (dB) = 10·log(I/I_0).",
+                    "Efecto Doppler: Variación aparente de la frecuencia f' = f(v ± v_o)/(v ∓ v_f)."
+                ]
+            },
+            {
+                "h": "3. Electromagnetismo e Inducción",
+                "puntos": [
+                    "Campo Eléctrico: Ley de Coulomb. Principio de superposición. Líneas de campo (salen de +, entran en -).",
+                    "Campo Magnético: Ley de Lorentz (F = q(v x B)). Trayectoria de una carga en un campo B es circular (R = m·v / |q|B).",
+                    "Fuerza sobre un hilo conductor: Ley de Laplace (F = I(L x B)).",
+                    "Inducción Electromagnética: Flujo magnético Φ = B·S·cosθ. Ley de Faraday: ε = -dΦ/dt.",
+                    "Ley de Lenz: La corriente inducida genera un campo magnético que se opone a la variación del flujo que la produce."
+                ]
+            }
+        ]
     },
-    "len-1": {
-      titulo: "Lengua: Sintaxis y Oración Simple",
-      secciones: [
-        { 
-          h: "1. El Sujeto y sus Características", 
-          puntos: [
-            "Es el Sintagma Nominal (SN) cuyo núcleo concuerda en número y persona con el verbo. NUNCA lleva preposición (excepto 'hasta' o 'entre' en casos marginales).",
-            "Prueba de concordancia: Cambia el número del verbo. Si una palabra o grupo de palabras tiene que cambiar obligatoriamente, eso es el sujeto.",
-            "Sujeto Omitido/Elíptico (SO): No aparece explícito pero se deduce de la desinencia verbal (Ej: [Nosotros] fuimos al cine)."
-          ] 
-        },
-        { 
-          h: "2. Los Complementos Verbales Principales", 
-          puntos: [
-            "Complemento Directo (CD): Sintagma Nominal o S.Prep (con 'a' si es persona). Se sustituye por lo, la, los, las. Al pasar la oración a pasiva, el CD se convierte en Sujeto Paciente.",
-            "Complemento Indirecto (CI): Sintagma Preposicional (con 'a'). Indica el destinatario del daño o provecho de la acción. Se sustituye por le, les. (Ojo con los leísmos).",
-            "Atributo (Atr): Exclusivo de verbos copulativos (ser, estar, parecer). Expresa una cualidad del sujeto. Se sustituye por 'lo' (invariable). Ej: Juan está (cansado -> lo está)."
-          ] 
-        },
-        {
-          h: "3. Complementos Circunstanciales y de Régimen",
-          puntos: [
-            "Complemento de Régimen (CRég): S.Prep exigido semánticamente por el verbo (Ej: 'acordarse DE', 'depender DE', 'confiar EN'). No se puede omitir sin alterar el significado del verbo.",
-            "Complemento Predicativo (CPvo): Adjetivo o SN que complementa simultáneamente al verbo y al Sujeto o CD, concordando en género y número. (Ej: Los atletas llegaron 'exhaustos').",
-            "Complementos Circunstanciales (CC): Indican circunstancias de la acción (Lugar, Tiempo, Modo, Causa, Finalidad, Compañía, Instrumento). Son eliminables."
-          ]
-        }
-      ]
+    "dibujo": {
+        "titulo": "Dibujo Técnico II: Sistema Diédrico y Cónicas",
+        "secciones": [
+            {
+                "h": "1. Sistema Diédrico: Conceptos Fundamentales",
+                "puntos": [
+                    "El espacio se divide en cuatro cuadrantes mediante dos planos de proyección ortogonales (PH y PV).",
+                    "Representación del Punto: Cota (altura sobre PH) y Alejamiento (distancia al PV).",
+                    "El Plano: Representado por sus trazas (intersecciones con PH y PV). Tipos: horizontal, frontal, proyectante, paralelo a la Línea de Tierra.",
+                    "Pertenencia e Intersección: Un punto pertenece a un plano si pertenece a una recta del plano. Intersección de dos planos genera una recta, hallando el corte de sus trazas homónimas."
+                ]
+            },
+            {
+                "h": "2. Abatimientos y Distancias",
+                "puntos": [
+                    "Abatimiento: Girar un plano oblicuo hasta hacerlo coincidir con un plano de proyección para obtener verdaderas magnitudes (VM).",
+                    "Distancias: Distancia punto-plano (trazar recta perpendicular al plano por el punto). Distancia entre planos paralelos (trazar recta perpendicular a ambos)."
+                ]
+            },
+            {
+                "h": "3. Curvas Cónicas",
+                "puntos": [
+                    "Elipse: Lugar geométrico de los puntos cuya suma de distancias a dos focos F y F' es constante (2a).",
+                    "Parábola: Lugar geométrico de puntos equidistantes a un foco (F) y a una recta directriz (d).",
+                    "Hipérbola: Lugar geométrico donde la diferencia de distancias a los focos es constante (2a).",
+                    "Tangencias en cónicas: Propiedad focal fundamental (la normal a la curva biseca el ángulo formado por los radios vectores)."
+                ]
+            }
+        ]
+    },
+    "historia": {
+        "titulo": "Historia de España: S.XIX y S.XX",
+        "secciones": [
+            {
+                "h": "1. La Crisis del Antiguo Régimen",
+                "puntos": [
+                    "Guerra de Independencia (1808-1814): Levantamiento popular del 2 de mayo. Constitución de Cádiz (1812): Primera carta magna liberal de España, soberanía nacional y separación de poderes.",
+                    "Reinado de Fernando VII: Restauración del absolutismo (Sexenio Absolutista), Trienio Liberal (Riego, 1820-1823) y Década Ominosa."
+                ]
+            },
+            {
+                "h": "2. Construcción y Consolidación del Estado Liberal",
+                "puntos": [
+                    "Reinado de Isabel II: Guerras Carlistas. Alternancia entre Moderados y Progresistas. Desamortizaciones de Mendizábal y Madoz.",
+                    "Sexenio Democrático (1868-1874): Revolución 'La Gloriosa'. Reinado de Amadeo de Saboya, Primera República Española."
+                ]
+            },
+            {
+                "h": "3. La Restauración Borbónica y Crisis",
+                "puntos": [
+                    "Sistema canovista (Cánovas del Castillo): Constitución de 1876, bipartidismo (Conservadores y Liberales) y turnismo pacífico mediante el fraude electoral (caciquismo).",
+                    "Crisis del 98: Pérdida de Cuba, Puerto Rico y Filipinas. Auge del regeneracionismo (Joaquín Costa)."
+                ]
+            },
+            {
+                "h": "4. Segunda República y Guerra Civil (1931-1939)",
+                "puntos": [
+                    "Bienio Reformista (1931-33): Reformas agraria, militar, educativa (Azaña).",
+                    "Bienio Radical-Cedista (1933-35): Paralización de reformas. Revolución de Asturias (1934).",
+                    "Guerra Civil: Sublevación militar del 18 de julio de 1936. Bando Nacional (apoyo nazi y fascista) vs Bando Republicano (apoyo soviético y Brigadas Internacionales). Consecuencias demográficas y económicas."
+                ]
+            }
+        ]
+    },
+    "filosofia": {
+        "titulo": "Historia de la Filosofía",
+        "secciones": [
+            {
+                "h": "1. Filosofía Antigua y Medieval",
+                "puntos": [
+                    "Platón: Dualismo ontológico (Mundo Sensible e Inteligible). Alegoría de la Caverna. El Estado ideal regido por el filósofo-rey.",
+                    "Aristóteles: Hilemorfismo (sustancia compuesta de materia y forma). Potencia y acto. Ética teleológica (fin=felicidad, virtud como término medio).",
+                    "Tomás de Aquino: Síntesis fe-razón (autonomía armónica). Las Cinco Vías para la existencia de Dios (motor inmóvil, causa incausada, contingencia, grados de perfección, teleología)."
+                ]
+            },
+            {
+                "h": "2. Filosofía Moderna",
+                "puntos": [
+                    "Descartes (Racionalismo): Duda metódica. 'Cogito, ergo sum'. Las tres sustancias: Res cogitans (alma), Res infinita (Dios), Res extensa (mundo).",
+                    "Hume (Empirismo): Crítica a la causalidad (no hay conexión necesaria, solo hábito/costumbre). Todo conocimiento proviene de impresiones.",
+                    "Kant (Idealismo Trascendental): Crítica de la Razón Pura. Fenómeno vs Noúmeno. Ética formal basada en el Imperativo Categórico (deber por el deber)."
+                ]
+            },
+            {
+                "h": "3. Filosofía Contemporánea",
+                "puntos": [
+                    "Marx (Materialismo Histórico): La base económica (infraestructura) determina la ideología (superestructura). Lucha de clases como motor de la historia. Alienación capitalista.",
+                    "Nietzsche (Vitalismo): Crítica a la moral judeocristiana (moral de esclavos). Muerte de Dios (fin de valores absolutos). El Superhombre y el Eterno Retorno.",
+                    "Ortega y Gasset: Raciovitalismo ('Yo soy yo y mi circunstancia'). Perspectivismo."
+                ]
+            }
+        ]
+    },
+    "lengua": {
+        "titulo": "Lengua y Literatura II (Adaptado PAU 2027)",
+        "secciones": [
+            {
+                "h": "1. El Nuevo Comentario de Texto (Modelo Competencial)",
+                "puntos": [
+                    "Resumen: Máximo 5-6 líneas (20% del texto original). Redacción objetiva, en tercera persona. Prohibido usar citas o parafraseo literal del texto. Puntuará gravemente la capacidad de síntesis y vocabulario propio.",
+                    "Tema y Tesis: El tema es el asunto (1 frase nominal). La tesis es la postura del autor (1 oración completa).",
+                    "Estructura Interna: Dividir el texto según la progresión de ideas (Introducción, Desarrollo, Conclusión). Estructuras comunes: Inductiva (tesis al final), Deductiva (tesis al principio) o Encuadrada.",
+                    "Comentario Crítico: Es un ensayo argumentativo. Debe incluir introducción del tema, argumentación personal a favor o en contra aportando ejemplos reales y sociales, y conclusión. No es memorización, se evalúa madurez.",
+                    "⚠️ ATENCIÓN: Hasta 20% de penalización por ortografía, tildes y falta de cohesión gramatical."
+                ]
+            },
+            {
+                "h": "2. Gramática y Sintaxis de la Oración Compuesta",
+                "puntos": [
+                    "Sustantivas: Se pueden sustituir por el pronombre 'ESO'. Función: Sujeto (Me gusta que vengas), CD (Quiero que vengas), C.Régimen (Confío en que vengas).",
+                    "Adjetivas (Relativas): Llevan un nexo relativo (que, cual, quien, donde) referido a un Sustantivo Antecedente. Pueden ser Explicativas (entre comas) o Especificativas (sin comas).",
+                    "Adverbiales/Circunstanciales: Cumplen la función de CC (Tiempo, Modo, Lugar). Las impropias son Causales, Condicionales, Concesivas y Finales.",
+                    "Perífrasis Verbales: Unión de verbo auxiliar + enlace + verbo principal en forma no personal (Infinitivo, Gerundio, Participio). Aportan matiz aspectual o modal."
+                ]
+            }
+        ]
+    },
+    "ingles": {
+        "titulo": "English Language (Grammar, Vocabulary & Essay)",
+        "secciones": [
+            {
+                "h": "1. Grammar: Verb Tenses & Conditionals",
+                "puntos": [
+                    "Narrative Tenses: Past Simple (completed actions), Past Continuous (actions in progress at a time in the past), Past Perfect (action before another past action: 'When I arrived, the train had left').",
+                    "First Conditional: If + Present Simple, Will + V. (Real possibilities). 'If it rains, we will stay at home.'",
+                    "Second Conditional: If + Past Simple, Would + V. (Hypothetical situations). 'If I won the lottery, I would buy a house.'",
+                    "Third Conditional: If + Past Perfect, Would have + Past Participle. (Past regrets). 'If I had studied harder, I would have passed.'",
+                    "Wishes: 'I wish I had a car' (Present regret). 'I wish I had studied' (Past regret)."
+                ]
+            },
+            {
+                "h": "2. Grammar: Passive Voice & Reported Speech",
+                "puntos": [
+                    "Passive Voice: Object + To Be (in correct tense) + Past Participle + (by Subject). Emphasizes the action over the doer. Example: 'The letter was written by Mary.'",
+                    "Causative (Have/Get something done): Subject + Have/Get + Object + Past Participle. Indicates arranging for someone else to do a job. 'I had my hair cut.'",
+                    "Reported Speech (Statements): Move tenses one step back (Present -> Past, Past -> Past Perfect). Change pronouns and time expressions ('tomorrow' -> 'the next day').",
+                    "Reported Speech (Questions): Subject + asked + (if/whether/Wh-word) + Subject + Verb (NO inversion). 'He asked me where I lived.'"
+                ]
+            },
+            {
+                "h": "3. The Writing Section (Essay)",
+                "puntos": [
+                    "Opinion Essay Structure: 1) Introduction (State the topic and your clear opinion). 2) Body Paragraph 1 (First reason with examples). 3) Body Paragraph 2 (Second reason). 4) Conclusion (Summarize and restate opinion).",
+                    "For and Against Essay: 1) Intro (Introduce topic neutrally). 2) Pros paragraph. 3) Cons paragraph. 4) Conclusion (Give your final opinion).",
+                    "Useful Connectors: Contrast (However, Nevertheless, Although). Addition (Furthermore, Moreover, In addition). Cause/Result (Therefore, Consequently, Due to)."
+                ]
+            }
+        ]
     }
-  },  leyes_educativas: [
+}
+  ,  leyes_educativas: [
     { año: 2027, ley: "LOMLOE (Modelo PAU 2025-2027)", cambios: "Modelo 100% Competencial. Se elimina la optatividad entre opción A/B. El 70% de las preguntas son abiertas/semiabiertas. Penalización severa por ortografía (hasta 10% o más). El comentario de texto de Lengua se enfoca en espíritu crítico y no memorístico." },
     { año: "2024 (Transición)", ley: "LOMLOE", cambios: "Nuevo formato PAU. Competencial. Desaparece la opción A y B cerrada, hay optatividad transversal. Se recupera Historia de la Filosofía como troncal a elegir con Historia de España." },
     { año: 2017, ley: "LOMCE", cambios: "Selectividad pasa a llamarse EBAU/EvAU. Introducción de Ciencias Aplicadas. Las materias troncales pesan el 40%." },
