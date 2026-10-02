@@ -102,17 +102,108 @@ window.PAU_DATA = {
   ],
   teoria: {
     "m2-1": {
-      titulo: "Matrices Básicas",
+      titulo: "Álgebra: Matrices y Determinantes (Nivel EBAU)",
       secciones: [
-        { h: "Definición", puntos: ["Una matriz es un arreglo bidimensional de números.", "Su dimensión se expresa como m x n (filas x columnas)."] },
-        { h: "Tipos", puntos: ["Matriz fila, matriz columna, matriz cuadrada.", "Matriz identidad (unos en la diagonal, ceros en el resto)."] }
+        { 
+          h: "1. Concepto y Dimensión", 
+          puntos: [
+            "Una matriz real de orden m×n es un conjunto de m·n números reales dispuestos en m filas y n columnas.",
+            "Notación: A = (a_ij) donde 'i' es la fila (1 ≤ i ≤ m) y 'j' es la columna (1 ≤ j ≤ n).",
+            "Dos matrices son iguales si y solo si tienen la misma dimensión y los elementos que ocupan la misma posición son idénticos."
+          ] 
+        },
+        { 
+          h: "2. Operaciones Básicas y Propiedades", 
+          puntos: [
+            "Suma: A + B = (a_ij + b_ij). Solo se pueden sumar matrices de la misma dimensión. Propiedades: Conmutativa, Asociativa, Elemento neutro (matriz nula), Elemento opuesto.",
+            "Producto por un escalar: k·A = (k·a_ij). Propiedades: Distributiva respecto a la suma de matrices y de escalares, pseudo-asociativa.",
+            "Producto de matrices: A·B. Condición estricta: el número de columnas de A debe coincidir con el número de filas de B. El elemento c_ij se obtiene multiplicando escalarmente la fila 'i' de A por la columna 'j' de B.",
+            "ATENCIÓN EBAU: El producto de matrices NO es conmutativo (A·B ≠ B·A en general). Esto es crucial en ecuaciones matriciales."
+          ] 
+        },
+        {
+          h: "3. Matrices Cuadradas Especiales",
+          puntos: [
+            "Matriz Identidad (I): Elementos de la diagonal principal son 1, el resto 0. Cumple que A·I = I·A = A.",
+            "Matriz Traspuesta (A^T): Se obtiene cambiando filas por columnas. Propiedades: (A^T)^T = A; (A+B)^T = A^T + B^T; (A·B)^T = B^T · A^T.",
+            "Matriz Simétrica: A = A^T. Matriz Antisimétrica: A = -A^T."
+          ]
+        },
+        {
+          h: "4. Cálculo de Inversa y Rango",
+          puntos: [
+            "Matriz Inversa (A^-1): Cumple que A·A^-1 = A^-1·A = I. Solo existe si el determinante |A| ≠ 0 (matriz regular).",
+            "Fórmula: A^-1 = (1/|A|) · (Adj(A))^T.",
+            "Rango de una matriz: Número de filas o columnas linealmente independientes. También se define como el orden del mayor menor no nulo de la matriz."
+          ]
+        }
       ]
     },
-    "fis-2": {
-      titulo: "Campo Gravitatorio",
+    "fis-1": {
+      titulo: "Física: Interacción Gravitatoria",
       secciones: [
-        { h: "Concepto", puntos: ["Perturbación del espacio creada por una masa.", "Se mide por la intensidad g = G*M/r^2."] },
-        { h: "Potencial", puntos: ["El campo gravitatorio es conservativo.", "Energía potencial Ep = -G*M*m/r."] }
+        { 
+          h: "1. Ley de Gravitación Universal de Newton", 
+          puntos: [
+            "Dos masas puntuales (m1 y m2) separadas una distancia 'r' se atraen con una fuerza directamente proporcional al producto de sus masas e inversamente proporcional al cuadrado de su distancia.",
+            "Fórmula vector: F = -G · (m1·m2 / r^2) · u_r",
+            "G es la constante de gravitación universal: 6.67 × 10^-11 N·m^2/kg^2.",
+            "Características de la fuerza: Es siempre atractiva, central (dirigida al centro de la masa) y conservativa (el trabajo en un trayecto cerrado es cero)."
+          ] 
+        },
+        { 
+          h: "2. Campo Gravitatorio e Intensidad (g)", 
+          puntos: [
+            "El campo gravitatorio es la perturbación que una masa crea en el espacio que la rodea. Se mide mediante la intensidad del campo gravitatorio 'g'.",
+            "g = Fuerza por unidad de masa = -G · (M / r^2) · u_r.",
+            "Principio de superposición: Si existen varias masas, el campo total en un punto es la suma vectorial de los campos creados por cada masa individualmente."
+          ] 
+        },
+        { 
+          h: "3. Energía Potencial Gravitatoria (Ep)", 
+          puntos: [
+            "Como el campo es conservativo, se puede definir una energía potencial. Ep = -G · (M·m / r).",
+            "El signo negativo indica que la fuerza es atractiva y que el cero de energía se ha establecido convencionalmente en el infinito.",
+            "Potencial gravitatorio (V): Energía potencial por unidad de masa. V = Ep/m = -G·M/r. Se mide en J/kg."
+          ] 
+        },
+        { 
+          h: "4. Movimiento Orbital y Leyes de Kepler", 
+          puntos: [
+            "Velocidad orbital (v): Se iguala la fuerza gravitatoria a la fuerza centrípeta (m·v^2/r). Resulta v = √(G·M/r).",
+            "Tercera Ley de Kepler: El cuadrado del período orbital (T) es proporcional al cubo del radio orbital (r). T^2 = (4π^2 / G·M) · r^3.",
+            "Velocidad de escape: Velocidad mínima para escapar de la atracción gravitatoria (Ep = 0). v_e = √(2·G·M/R)."
+          ] 
+        }
+      ]
+    },
+    "len-1": {
+      titulo: "Lengua: Sintaxis y Oración Simple",
+      secciones: [
+        { 
+          h: "1. El Sujeto y sus Características", 
+          puntos: [
+            "Es el Sintagma Nominal (SN) cuyo núcleo concuerda en número y persona con el verbo. NUNCA lleva preposición (excepto 'hasta' o 'entre' en casos marginales).",
+            "Prueba de concordancia: Cambia el número del verbo. Si una palabra o grupo de palabras tiene que cambiar obligatoriamente, eso es el sujeto.",
+            "Sujeto Omitido/Elíptico (SO): No aparece explícito pero se deduce de la desinencia verbal (Ej: [Nosotros] fuimos al cine)."
+          ] 
+        },
+        { 
+          h: "2. Los Complementos Verbales Principales", 
+          puntos: [
+            "Complemento Directo (CD): Sintagma Nominal o S.Prep (con 'a' si es persona). Se sustituye por lo, la, los, las. Al pasar la oración a pasiva, el CD se convierte en Sujeto Paciente.",
+            "Complemento Indirecto (CI): Sintagma Preposicional (con 'a'). Indica el destinatario del daño o provecho de la acción. Se sustituye por le, les. (Ojo con los leísmos).",
+            "Atributo (Atr): Exclusivo de verbos copulativos (ser, estar, parecer). Expresa una cualidad del sujeto. Se sustituye por 'lo' (invariable). Ej: Juan está (cansado -> lo está)."
+          ] 
+        },
+        {
+          h: "3. Complementos Circunstanciales y de Régimen",
+          puntos: [
+            "Complemento de Régimen (CRég): S.Prep exigido semánticamente por el verbo (Ej: 'acordarse DE', 'depender DE', 'confiar EN'). No se puede omitir sin alterar el significado del verbo.",
+            "Complemento Predicativo (CPvo): Adjetivo o SN que complementa simultáneamente al verbo y al Sujeto o CD, concordando en género y número. (Ej: Los atletas llegaron 'exhaustos').",
+            "Complementos Circunstanciales (CC): Indican circunstancias de la acción (Lugar, Tiempo, Modo, Causa, Finalidad, Compañía, Instrumento). Son eliminables."
+          ]
+        }
       ]
     }
   },
