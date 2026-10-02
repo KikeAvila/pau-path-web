@@ -82,14 +82,122 @@ function renderPath() {
   c.innerHTML = html;
 }
 
+let currentQuiz = null;
+
 function abrirNodo(id) {
-  if (confirm(`¿Completar el nodo ${id}? (Simulación)`)) {
+  const qs = window.PAU_DATA.preguntas?.[id];
+  if (!qs || qs.length === 0) {
+    // Si no hay preguntas
     S.nodos[id] = true;
     S.xp += CFG.XP_NODO;
     saveState();
     renderStatsTop();
     renderPath();
+    alert(`Nodo ${id} completado (No hay preguntas cargadas en la base de datos).`);
+    return;
   }
+  
+  currentQuiz = {
+    id: id,
+    qs: [...qs],
+    idx: 0,
+    fallos: 0
+  };
+  
+  $("quiz-tema").textContent = "Test: " + window.PAU_DATA.camino.flatMap(n=>n.nodos).find(x=>x.id===id)?.tema;
+  $("quiz-modal").classList.remove("hidden");
+  renderQuizQuestion();
+}
+
+function renderQuizQuestion() {
+  $("feedback").classList.add("hidden");
+  const q = currentQuiz.qs[currentQuiz.idx];
+  $("quiz-enunciado").textContent = q.q;
+  
+  // Progress bar
+  const pct = (currentQuiz.idx / currentQuiz.qs.length) * 100;
+  $("quiz-progress").style.width = pct + "%";
+  
+  let html = "";
+  q.opciones.forEach((opt, i) => {
+    html += `<label style="display:block; padding:15px; margin:10px 0; background:#222; border-radius:8px; border:2px solid transparent; cursor:pointer; font-size:16px;" onclick="selectQuizOption(this)">
+      <input type="radio" name="quiz-opt" value="${i}" style="display:none;">
+      ${opt}
+    </label>`;
+  });
+  $("quiz-opciones").innerHTML = html;
+  
+  const checkBtn = $("quiz-check");
+  checkBtn.disabled = true;
+  checkBtn.classList.remove("hidden");
+  checkBtn.textContent = "Comprobar";
+  checkBtn.onclick = checkQuizAnswer;
+}
+
+function selectQuizOption(lbl) {
+  document.querySelectorAll("input[name='quiz-opt']").forEach(i => {
+    i.parentElement.style.border = "2px solid transparent";
+    i.parentElement.style.background = "#222";
+  });
+  lbl.style.border = "2px solid #58cc02";
+  lbl.style.background = "#005c4b";
+  lbl.querySelector("input").checked = true;
+  $("quiz-check").disabled = false;
+}
+
+function checkQuizAnswer() {
+  const q = currentQuiz.qs[currentQuiz.idx];
+  const sel = document.querySelector("input[name='quiz-opt']:checked");
+  if (!sel) return;
+  const val = parseInt(sel.value);
+  
+  const correct = val === q.correcta;
+  
+  const fb = $("feedback");
+  fb.classList.remove("hidden");
+  fb.className = "feedback"; // reset classes
+  
+  if (correct) {
+    fb.classList.add("correct");
+    $("feedback-title").textContent = "¡Correcto!";
+    $("feedback-icon").textContent = "✅";
+    $("feedback-text").textContent = q.explicacion || "";
+    S.xp += CFG.XP_ACIERTO;
+  } else {
+    fb.classList.add("wrong");
+    $("feedback-title").textContent = "Fallaste";
+    $("feedback-icon").textContent = "❌";
+    $("feedback-text").textContent = `La correcta era: ${q.opciones[q.correcta]}. ${q.explicacion || ""}`;
+    currentQuiz.fallos++;
+  }
+  
+  renderStatsTop();
+  $("quiz-check").classList.add("hidden");
+  $("feedback-continue").onclick = nextQuizQuestion;
+}
+
+function nextQuizQuestion() {
+  currentQuiz.idx++;
+  if (currentQuiz.idx >= currentQuiz.qs.length) {
+    finishQuiz();
+  } else {
+    renderQuizQuestion();
+  }
+}
+
+function finishQuiz() {
+  $("quiz-modal").classList.add("hidden");
+  $("feedback").classList.add("hidden");
+  
+  S.nodos[currentQuiz.id] = true;
+  S.xp += CFG.XP_NODO;
+  saveState();
+  renderStatsTop();
+  renderPath();
+  
+  $("result-title").textContent = "¡Prueba superada!";
+  $("result-text").textContent = `Has terminado con ${currentQuiz.fallos} fallos. Ganaste ${CFG.XP_NODO} XP extra.`;
+  $("result-modal").classList.remove("hidden");
 }
 
 function renderOrientacion() {
@@ -406,11 +514,54 @@ function initUI() {
   };
 }
 
+// ----- Tema y UI Global -----
+function currentTheme() {
+  return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+}
+
+function setThemeIcon() {
+  const tt = $("theme-toggle");
+  if (!tt) return;
+  const dark = currentTheme() === "dark";
+  tt.textContent = dark ? "☀️" : "🌙";
+  tt.title = dark ? "Cambiar a tema claro" : "Cambiar a tema oscuro";
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute("content", dark ? "#14171c" : "#58cc02");
+}
+
+function toggleTheme() {
+  const next = currentTheme() === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", next);
+  try { localStorage.setItem("paupath_theme", next); } catch (_) {}
+  setThemeIcon();
+}
+
+function toggleLang() {
+  alert("Próximamente: Traducción al inglés de Matemáticas y Física.");
+}
+
 // ----- Inicialización -----
 function init() {
   loadState();
   initUI();
   renderStatsTop();
+  setThemeIcon();
+  
+  const tt = $("theme-toggle");
+  if (tt) tt.addEventListener("click", toggleTheme);
+  
+  const lt = $("lang-toggle");
+  if (lt) lt.addEventListener("click", toggleLang);
+
+  const rc = $("result-close");
+  if (rc) rc.addEventListener("click", () => $("result-modal").classList.add("hidden"));
+  
+  const qc = $("quiz-close");
+  if (qc) qc.addEventListener("click", () => {
+    $("quiz-modal").classList.add("hidden");
+    $("feedback").classList.add("hidden");
+  });
+
   navTo("inicio");
 }
 
