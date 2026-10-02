@@ -1,6 +1,6 @@
 /* Service worker — cachea la app para uso OFFLINE.
    Sube CACHE cada vez que cambies ficheros para forzar la actualización. */
-const CACHE = "pau-path-v35";
+const CACHE = "pau-path-v36";
 const ASSETS = [
   "./",
   "index.html",
@@ -8,24 +8,14 @@ const ASSETS = [
   "app.js",
   "i18n.js",
   "firebase-config.js",
-  "data.js",
+  "pau_data.js",
   "teoria.js",
   "catalogo.js",
   "examenes.js",
   "manifest.webmanifest",
   "icon-180.png",
   "icon-192.png",
-  "icon-512.png",
-  "images/stop.svg",
-  "images/ceda_el_paso.svg",
-  "images/prohibido_adelantar.svg",
-  "images/velocidad_max_50.svg",
-  "images/velocidad_max_120.svg",
-  "images/peligro_curva.svg",
-  "images/peligro_peatones.svg",
-  "images/prohibido_estacionar.svg",
-  "images/direccion_prohibida.svg",
-  "images/sentido_obligatorio.svg",
+  "icon-512.png"
 ];
 
 self.addEventListener("install", (e) => {
@@ -41,7 +31,7 @@ self.addEventListener("activate", (e) => {
 // El código y los datos van "red primero" para que las actualizaciones se
 // apliquen en cuanto haya conexión; las imágenes/iconos van "caché primero"
 // (no cambian y así cargan al instante y funcionan offline).
-const NETWORK_FIRST = /(index\.html|app\.js|i18n\.js|firebase-config\.js|data\.js|teoria\.js|catalogo\.js|examenes\.js|styles\.css|manifest\.webmanifest)(\?|$)/;
+const NETWORK_FIRST = /(index\.html|app\.js|i18n\.js|firebase-config\.js|pau_data\.js|teoria\.js|catalogo\.js|examenes\.js|styles\.css|manifest\.webmanifest)(\?|$)/;
 
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;

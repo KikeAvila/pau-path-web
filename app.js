@@ -286,15 +286,17 @@ const vocClassicQuestions = [
       { text: "Desarmar cosas, entender cómo funcionan o construir algo.", points: { ingenieria: 2, ciencias: 1 } },
       { text: "Leer, debatir ideas, o escribir historias.", points: { letras: 2, artes: 1 } },
       { text: "Hacer experimentos caseros o leer sobre descubrimientos.", points: { ciencias: 2, ingenieria: 1 } },
-      { text: "Dibujar, tocar música o crear diseños visuales.", points: { artes: 2, letras: 1 } }
+      { text: "Dibujar, tocar música o crear diseños visuales.", points: { artes: 2, letras: 1 } },
+      { text: "Ninguna de las anteriores / Otra cosa.", points: {} }
     ]
   },
   {
     q: "Cuando te enfrentas a un problema complejo, ¿cómo prefieres resolverlo?",
     options: [
       { text: "Busco una solución lógica, paso a paso, aplicando fórmulas o matemáticas.", points: { ingenieria: 2, ciencias: 2 } },
-      { text: "Intento ver el problema desde diferentes perspectivas y reflexionar.", points: { letras: 2 } },
-      { text: "Imagino una solución creativa, fuera de lo común.", points: { artes: 2 } }
+      { text: "Intento ver el problema desde diferentes perspectivas y reflexionar sobre el impacto humano.", points: { letras: 2 } },
+      { text: "Imagino una solución creativa, innovadora y fuera de lo común.", points: { artes: 2, ingenieria: 1 } },
+      { text: "Prefiero pedir ayuda o buscar un enfoque totalmente distinto que no está aquí.", points: {} }
     ]
   },
   {
@@ -303,16 +305,18 @@ const vocClassicQuestions = [
       { text: "Matemáticas, Física, Tecnología.", points: { ingenieria: 3, ciencias: 1 } },
       { text: "Biología, Química, Ciencias de la Tierra.", points: { ciencias: 3 } },
       { text: "Historia, Lengua, Filosofía.", points: { letras: 3 } },
-      { text: "Dibujo Artístico, Diseño, Música.", points: { artes: 3 } }
+      { text: "Dibujo Artístico, Diseño, Música.", points: { artes: 3 } },
+      { text: "Sinceramente, ninguna encaja conmigo al 100%.", points: {} }
     ]
   },
   {
     q: "Imagina tu trabajo ideal dentro de 10 años. ¿Dónde te ves?",
     options: [
-      { text: "En una planta industrial, diseñando motores o mejorando procesos mecánicos.", points: { ingenieria: 3 } },
-      { text: "En un laboratorio, investigando curas o materiales nuevos.", points: { ciencias: 3 } },
-      { text: "En una oficina, editorial o dando clases, rodeado de libros y personas.", points: { letras: 3 } },
-      { text: "En un estudio de diseño, taller de arte o trabajando como freelance creativo.", points: { artes: 3 } }
+      { text: "En una planta industrial, oficina de proyectos o diseñando tecnología.", points: { ingenieria: 3 } },
+      { text: "En un laboratorio, campo de investigación o un hospital.", points: { ciencias: 3 } },
+      { text: "En una oficina, bufete, editorial o dando clases, rodeado de libros y personas.", points: { letras: 3 } },
+      { text: "En un estudio de diseño, taller de arte o trabajando como freelance creativo.", points: { artes: 3 } },
+      { text: "En otro sector completamente distinto (negocios, deportes, etc.).", points: {} }
     ]
   }
 ];
