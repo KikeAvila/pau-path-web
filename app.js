@@ -286,7 +286,7 @@ function renderExamenes() {
         <h4 style="font-size:1.1em; margin:0;">${ex.titulo}</h4>
         <span style="font-size:0.85em; color:var(--gray);">Año ${ex.año} | Ley: ${ex.ley} | ${ex.convocatoria}</span>
       </div>
-      <button class="btn" style="background:${color};" onclick="alert('${alertMsg}')">${text}</button>
+      <button class="btn" style="background:${color};" onclick="${ex.disponible ? 'alert(\'Cargando examen interactivo...\')' : `window.open('${ex.url}', '_blank')`}">${text}</button>
     </div>`;
   });
   

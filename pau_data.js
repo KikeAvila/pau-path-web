@@ -1,5 +1,8 @@
 window.PAU_DATA = {
   asignaturas: {
+
+    filosofia: { nombre: "Hist. de la Filosofía", icono: "🦉" },
+
     "mates2": { nombre: "Matemáticas II", icono: "📐" },
     "fisica": { nombre: "Física", icono: "🍎" },
     "quimica": { nombre: "Química", icono: "🧪" },
@@ -3520,12 +3523,12 @@ window.PAU_DATA = {
     { año: 2000, ley: "LOGSE", cambios: "Modelo antiguo de Selectividad. Puntuación sobre 10. Bloques rígidos por letras y ciencias." }
   ],
   histórico_examenes: [
-    { año: 2024, ley: "LOMLOE", convocatoria: "Ordinaria", titulo: "EBAU 2024 - Matemáticas II", disponible: true },
-    { año: 2023, ley: "LOMCE", convocatoria: "Ordinaria", titulo: "EBAU 2023 - Física", disponible: true },
-    { año: 2020, ley: "LOMCE", convocatoria: "Extraordinaria", titulo: "EvAU 2020 (Pandemia) - Flexibilidad Máxima", disponible: false },
-    { año: 2015, ley: "LOMCE", convocatoria: "Ordinaria", titulo: "PAU 2015 - Historia de España", disponible: false },
-    { año: 2010, ley: "LOE", convocatoria: "Ordinaria", titulo: "PAU 2010 - Fase Específica (Primera edición sobre 14)", disponible: false },
-    { año: 2004, ley: "LOGSE", convocatoria: "Ordinaria", titulo: "Selectividad 2004 - Modelo Clásico sobre 10", disponible: false }
+    { año: 2024, ley: "LOMLOE", convocatoria: "Ordinaria", titulo: "EBAU 2024 - Matemáticas II", disponible: true, url: "" },
+    { año: 2023, ley: "LOMCE", convocatoria: "Ordinaria", titulo: "EvAU Madrid 2023 - Física", disponible: false, url: "https://www.ucm.es/data/cont/docs/3-2023-06-08-Examen%20Fisica%20EvAU%202023.pdf" },
+    { año: 2022, ley: "LOMCE", convocatoria: "Ordinaria", titulo: "EvAU Madrid 2022 - Historia de España", disponible: false, url: "https://www.ucm.es/data/cont/docs/3-2022-06-15-Examen%20Historia%20de%20Espana.pdf" },
+    { año: 2021, ley: "LOMCE", convocatoria: "Extraordinaria", titulo: "EvAU Madrid 2021 - Dibujo Técnico", disponible: false, url: "https://www.ucm.es/data/cont/docs/3-2021-07-16-Examen%20Dibujo%20Tecnico%20II.pdf" },
+    { año: 2020, ley: "LOMCE", convocatoria: "Ordinaria", titulo: "EvAU 2020 (Pandemia) - Filosofía", disponible: false, url: "https://www.ucm.es/data/cont/docs/3-2020-07-20-Examen%20Historia%20de%20la%20Filosofia.pdf" },
+    { año: 2010, ley: "LOE", convocatoria: "Ordinaria", titulo: "PAU 2010 - Lengua Castellana", disponible: false, url: "https://www.ucm.es/data/cont/docs/3-2013-02-18-LENGUA%20CASTELLANA%20Y%20LIT.pdf" }
   ],
   examenes: [
     { id: "ebau-2023-ord", titulo: "EBAU Madrid 2023 - Ordinaria", qs: ["m2-1", "fis-1", "fis-3"] },
