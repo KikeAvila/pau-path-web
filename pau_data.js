@@ -1,145 +1,102 @@
 window.PAU_DATA = {
   asignaturas: {
     "mates2": { nombre: "Matemáticas II", icono: "📐" },
-    "fisica": { nombre: "Física", icono: "⚛️" },
+    "fisica": { nombre: "Física", icono: "🍎" },
+    "quimica": { nombre: "Química", icono: "🧪" },
+    "biologia": { nombre: "Biología", icono: "🧬" },
     "dibujo": { nombre: "Dibujo Técnico", icono: "📏" },
+    
     "lengua": { nombre: "Lengua Castellana", icono: "📖" },
-    "historia": { nombre: "Historia de España", icono: "🏛️" },
-    "ingles": { nombre: "Inglés", icono: "🇬🇧" }
+    "historia": { nombre: "Historia de España", icono: "📜" },
+    "ingles": { nombre: "Inglés", icono: "🇬🇧" },
+    
+    "mates_ccss": { nombre: "Matemáticas CCSS", icono: "📊" },
+    "economia": { nombre: "Economía de la Empresa", icono: "💶" },
+    "latin": { nombre: "Latín", icono: "🏛️" }
   },
   camino: [
     {
-      id: "nivel-1",
-      titulo: "Trimestre 1 - Nivel 1 (Básico)",
+      id: "comunes-t1",
+      titulo: "Fase General (Común) - Trimestre 1",
+      nodos: [
+        { id: "len-1", asig: "lengua", tema: "Sintaxis Simple", tipo: "teoria" },
+        { id: "hist-1", asig: "historia", tema: "Raíces y Reyes Católicos", tipo: "quiz" },
+        { id: "ing-1", asig: "ingles", tema: "Grammar: Past & Conditionals", tipo: "quiz" }
+      ]
+    },
+    {
+      id: "ciencias-t1",
+      titulo: "Modalidad: Ciencias e Ingeniería - Trimestre 1",
       nodos: [
         { id: "m2-1", asig: "mates2", tema: "Matrices Básicas", tipo: "teoria" },
         { id: "fis-1", asig: "fisica", tema: "Fuerza Gravitatoria", tipo: "quiz" },
-        { id: "len-1", asig: "lengua", tema: "Sintaxis Simple", tipo: "quiz" }
+        { id: "qui-1", asig: "quimica", tema: "Estructura Atómica", tipo: "quiz" },
+        { id: "dib-1", asig: "dibujo", tema: "Geometría Métrica", tipo: "quiz" },
+        { id: "bio-1", asig: "biologia", tema: "Bioelementos y Agua", tipo: "quiz" }
       ]
     },
     {
-      id: "nivel-2",
-      titulo: "Trimestre 1 - Nivel 2 (Intermedio)",
+      id: "sociales-t1",
+      titulo: "Modalidad: Ciencias Sociales y Humanidades - Trimestre 1",
       nodos: [
-        { id: "m2-2", asig: "mates2", tema: "Determinantes", tipo: "quiz" },
-        { id: "ing-1", asig: "ingles", tema: "Tiempos Verbales (Past)", tipo: "quiz" },
-        { id: "hist-1", asig: "historia", tema: "Raíces Históricas", tipo: "quiz" }
+        { id: "mcs-1", asig: "mates_ccss", tema: "Matrices y Sistemas", tipo: "quiz" },
+        { id: "eco-1", asig: "economia", tema: "La Empresa y el Entorno", tipo: "quiz" },
+        { id: "lat-1", asig: "latin", tema: "Declinaciones y Casos", tipo: "quiz" }
       ]
     },
     {
-      id: "nivel-3",
-      titulo: "Trimestre 1 - Nivel 3 (Avanzado)",
+      id: "comunes-t2",
+      titulo: "Fase General (Común) - Trimestre 2",
       nodos: [
-        { id: "m2-3", asig: "mates2", tema: "Rango e Inversa", tipo: "quiz" },
-        { id: "fis-2", asig: "fisica", tema: "Campo Gravitatorio", tipo: "teoria" },
-        { id: "len-2", asig: "lengua", tema: "Morfología Básica", tipo: "quiz" }
+        { id: "len-2", asig: "lengua", tema: "Morfología y Literatura", tipo: "quiz" },
+        { id: "hist-2", asig: "historia", tema: "Siglo XIX y Restauración", tipo: "quiz" },
+        { id: "ing-2", asig: "ingles", tema: "Passive & Reported Speech", tipo: "quiz" }
       ]
     },
     {
-      id: "nivel-4",
-      titulo: "Trimestre 1 - Nivel 4 (Retos EBAU)",
+      id: "ciencias-t2",
+      titulo: "Modalidad: Ciencias e Ingeniería - Trimestre 2",
       nodos: [
-        { id: "m2-4", asig: "mates2", tema: "Sistemas Lineales", tipo: "quiz" },
-        { id: "hist-2", asig: "historia", tema: "Reyes Católicos y Austrias", tipo: "quiz" },
-        { id: "ing-2", asig: "ingles", tema: "Condicionales", tipo: "quiz" }
+        { id: "m2-2", asig: "mates2", tema: "Geometría y Vectores", tipo: "quiz" },
+        { id: "fis-2", asig: "fisica", tema: "Ondas y Óptica", tipo: "quiz" },
+        { id: "qui-2", asig: "quimica", tema: "Termoquímica y Cinética", tipo: "quiz" },
+        { id: "dib-2", asig: "dibujo", tema: "Sistema Diédrico", tipo: "quiz" },
+        { id: "bio-2", asig: "biologia", tema: "Biología Celular", tipo: "quiz" }
       ]
     },
     {
-      id: "nivel-5",
-      titulo: "Trimestre 1 - Nivel 5 (Simulacro T1)",
+      id: "sociales-t2",
+      titulo: "Modalidad: Ciencias Sociales y Humanidades - Trimestre 2",
       nodos: [
-        { id: "sim-ciencias-t1", asig: "mates2", tema: "Simulacro Ciencias T1", tipo: "examen" },
-        { id: "sim-letras-t1", asig: "lengua", tema: "Simulacro Letras T1", tipo: "examen" }
-      ]
-    },
-    // TRIMESTRE 2
-    {
-      id: "nivel-6",
-      titulo: "Trimestre 2 - Nivel 1 (Geometría y Siglo XIX)",
-      nodos: [
-        { id: "m2-5", asig: "mates2", tema: "Vectores en el Espacio", tipo: "teoria" },
-        { id: "fis-5", asig: "fisica", tema: "Movimiento Armónico", tipo: "quiz" },
-        { id: "hist-3", asig: "historia", tema: "Guerra de Independencia", tipo: "quiz" }
+        { id: "mcs-2", asig: "mates_ccss", tema: "Probabilidad Básica", tipo: "quiz" },
+        { id: "eco-2", asig: "economia", tema: "Gestión Financiera", tipo: "quiz" },
+        { id: "lat-2", asig: "latin", tema: "Traducción de Textos", tipo: "quiz" }
       ]
     },
     {
-      id: "nivel-7",
-      titulo: "Trimestre 2 - Nivel 2 (Intermedio)",
+      id: "comunes-t3",
+      titulo: "Fase General (Común) - Trimestre 3 (Simulacros)",
       nodos: [
-        { id: "m2-6", asig: "mates2", tema: "Rectas y Planos", tipo: "quiz" },
-        { id: "len-3", asig: "lengua", tema: "Literatura: Generación del 98", tipo: "teoria" },
-        { id: "ing-3", asig: "ingles", tema: "Reported Speech", tipo: "quiz" }
+        { id: "sim-len", asig: "lengua", tema: "Examen EBAU Lengua", tipo: "examen" },
+        { id: "sim-hist", asig: "historia", tema: "Examen EBAU Historia", tipo: "examen" },
+        { id: "sim-ing", asig: "ingles", tema: "Examen EBAU Inglés", tipo: "examen" }
       ]
     },
     {
-      id: "nivel-8",
-      titulo: "Trimestre 2 - Nivel 3 (Avanzado)",
+      id: "ciencias-t3",
+      titulo: "Modalidad: Ciencias e Ingeniería - Trimestre 3 (Simulacros)",
       nodos: [
-        { id: "fis-6", asig: "fisica", tema: "Ondas Sonoras", tipo: "quiz" },
-        { id: "m2-7", asig: "mates2", tema: "Posiciones Relativas", tipo: "quiz" },
-        { id: "hist-4", asig: "historia", tema: "La Restauración", tipo: "quiz" }
+        { id: "sim-m2", asig: "mates2", tema: "Examen EBAU Matemáticas II", tipo: "examen" },
+        { id: "sim-fis", asig: "fisica", tema: "Examen EBAU Física", tipo: "examen" },
+        { id: "sim-qui", asig: "quimica", tema: "Examen EBAU Química", tipo: "examen" }
       ]
     },
     {
-      id: "nivel-9",
-      titulo: "Trimestre 2 - Nivel 4 (Retos EBAU)",
+      id: "sociales-t3",
+      titulo: "Modalidad: Ciencias Sociales y Humanidades - Trimestre 3 (Simulacros)",
       nodos: [
-        { id: "fis-7", asig: "fisica", tema: "Óptica Geométrica", tipo: "teoria" },
-        { id: "len-4", asig: "lengua", tema: "Sintaxis Compuesta", tipo: "quiz" },
-        { id: "ing-4", asig: "ingles", tema: "Passive Voice", tipo: "quiz" }
-      ]
-    },
-    {
-      id: "nivel-10",
-      titulo: "Trimestre 2 - Nivel 5 (Simulacro T2)",
-      nodos: [
-        { id: "sim-ciencias-t2", asig: "fisica", tema: "Simulacro Ciencias T2", tipo: "examen" },
-        { id: "sim-letras-t2", asig: "historia", tema: "Simulacro Letras T2", tipo: "examen" }
-      ]
-    },
-    // TRIMESTRE 3
-    {
-      id: "nivel-11",
-      titulo: "Trimestre 3 - Nivel 1 (Análisis y Siglo XX)",
-      nodos: [
-        { id: "m2-9", asig: "mates2", tema: "Límites y Continuidad", tipo: "teoria" },
-        { id: "hist-5", asig: "historia", tema: "Segunda República y Guerra", tipo: "quiz" },
-        { id: "ing-5", asig: "ingles", tema: "Relative Clauses", tipo: "quiz" }
-      ]
-    },
-    {
-      id: "nivel-12",
-      titulo: "Trimestre 3 - Nivel 2 (Intermedio)",
-      nodos: [
-        { id: "m2-10", asig: "mates2", tema: "Derivadas y Aplicaciones", tipo: "quiz" },
-        { id: "fis-9", asig: "fisica", tema: "Efecto Fotoeléctrico", tipo: "quiz" },
-        { id: "len-5", asig: "lengua", tema: "Literatura: Generación del 27", tipo: "quiz" }
-      ]
-    },
-    {
-      id: "nivel-13",
-      titulo: "Trimestre 3 - Nivel 3 (Avanzado)",
-      nodos: [
-        { id: "m2-11", asig: "mates2", tema: "Integrales Indefinidas", tipo: "quiz" },
-        { id: "hist-6", asig: "historia", tema: "Franquismo y Transición", tipo: "quiz" },
-        { id: "ing-6", asig: "ingles", tema: "Vocabulary and Reading", tipo: "quiz" }
-      ]
-    },
-    {
-      id: "nivel-14",
-      titulo: "Trimestre 3 - Nivel 4 (Retos EBAU)",
-      nodos: [
-        { id: "m2-12", asig: "mates2", tema: "Cálculo de Áreas", tipo: "quiz" },
-        { id: "fis-10", asig: "fisica", tema: "Física Nuclear", tipo: "quiz" },
-        { id: "len-6", asig: "lengua", tema: "Comentario de Texto", tipo: "teoria" }
-      ]
-    },
-    {
-      id: "nivel-15",
-      titulo: "Trimestre 3 - Nivel 5 (Simulacro T3)",
-      nodos: [
-        { id: "sim-ebau-m2", asig: "mates2", tema: "Examen EBAU Matemáticas", tipo: "examen" },
-        { id: "sim-ebau-hist", asig: "historia", tema: "Examen EBAU Historia", tipo: "examen" }
+        { id: "sim-mcs", asig: "mates_ccss", tema: "Examen EBAU Mates CCSS", tipo: "examen" },
+        { id: "sim-eco", asig: "economia", tema: "Examen EBAU Economía", tipo: "examen" }
       ]
     }
   ],
@@ -198,6 +155,16 @@ window.PAU_DATA = {
     { uni: "Universidad Francisco de Vitoria", carrera: "Periodismo", corte: 5.0, rama: "Sociales" }
   ],
   preguntas: {
+    "qui-1": [ { q: "¿Cuál es el número atómico del carbono?", opciones: ["6", "12", "14", "8"], correcta: 0, explicacion: "El carbono tiene 6 protones." } ],
+    "qui-2": [ { q: "¿Qué estudia la termoquímica?", opciones: ["El calor en reacciones químicas", "La velocidad de reacción", "El equilibrio iónico", "La tabla periódica"], correcta: 0, explicacion: "Estudia los intercambios de energía térmica." } ],
+    "bio-1": [ { q: "¿Cuál es el bioelemento primario más abundante en los seres vivos?", opciones: ["Carbono", "Oxígeno", "Hidrógeno", "Nitrógeno"], correcta: 1, explicacion: "Por masa, el oxígeno (en el agua) es el más abundante." } ],
+    "bio-2": [ { q: "¿Qué orgánulo produce la energía celular?", opciones: ["Ribosoma", "Mitocondria", "Lisosoma", "Aparato de Golgi"], correcta: 1, explicacion: "Las mitocondrias realizan la respiración celular." } ],
+    "mcs-1": [ { q: "¿Qué es una matriz estocástica?", opciones: ["Matriz de Markov", "Matriz simétrica", "Matriz nula", "Matriz identidad"], correcta: 0, explicacion: "Se usa en cadenas de Markov." } ],
+    "mcs-2": [ { q: "¿Cuál es la probabilidad de sacar un 6 en un dado normal?", opciones: ["1/6", "1/2", "1/3", "0"], correcta: 0, explicacion: "Casos favorables / Casos posibles." } ],
+    "eco-1": [ { q: "¿Qué es el patrimonio neto de una empresa?", opciones: ["Bienes + Derechos - Obligaciones", "Bienes + Obligaciones", "Sólo el capital social", "Las deudas"], correcta: 0, explicacion: "Es el activo menos el pasivo exigible." } ],
+    "eco-2": [ { q: "¿Qué es el VAN (Valor Actual Neto)?", opciones: ["Un criterio de selección de inversiones", "Un impuesto", "Un tipo de contrato", "Un ratio de liquidez"], correcta: 0, explicacion: "Actualiza los flujos de caja de una inversión." } ],
+    "lat-1": [ { q: "¿A qué declinación pertenece la palabra 'rosa, -ae'?", opciones: ["Primera", "Segunda", "Tercera", "Cuarta"], correcta: 0, explicacion: "Termina en -ae en el genitivo singular." } ],
+    "lat-2": [ { q: "¿Cómo se traduce 'Alea iacta est'?", opciones: ["La suerte está echada", "El tiempo vuela", "Aprovecha el día", "El hombre es un lobo"], correcta: 0, explicacion: "Frase atribuida a Julio César." } ],
     "ing-1": [ { q: "Complete the sentence: 'Yesterday I ___ to the store.'", opciones: ["go", "went", "gone", "going"], correcta: 1, explicacion: "Past simple." } ],
     "ing-2": [ { q: "If I ___ you, I would study more.", opciones: ["was", "were", "am", "be"], correcta: 1, explicacion: "Second conditional uses 'were' for all persons." } ],
     "ing-3": [ { q: "He said: 'I am happy'. -> He said that he ___ happy.", opciones: ["is", "was", "has been", "were"], correcta: 1, explicacion: "Present simple backshifts to past simple." } ],
