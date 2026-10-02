@@ -65,7 +65,7 @@ function renderPath() {
   }
 
   // Leer el itinerario seleccionado del estado, por defecto Ingeniería
-  const itinerario = window.S.itinerario || "ingenieria";
+  const itinerario = S.itinerario || "ingenieria";
 
   let html = `<div style="padding: 20px;">
     <h2>🗺️ Itinerario EBAU</h2>
@@ -105,7 +105,7 @@ function renderPath() {
 }
 
 window.cambiarItinerario = function(val) {
-  window.S.itinerario = val;
+  S.itinerario = val;
   saveState();
   renderPath();
 };
