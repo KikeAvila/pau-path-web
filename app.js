@@ -104,21 +104,164 @@ function renderOrientacion() {
   c.innerHTML = html;
 }
 
+// ----- IA y Anthropic -----
+async function callIA(systemPrompt, userText, history = []) {
+  if (!S.perfil.apiKey) {
+    alert("Por favor, configura tu API Key de Anthropic en tu perfil.");
+    return null;
+  }
+  
+  const messages = [...history];
+  if (userText) messages.push({ role: "user", content: userText });
+
+  try {
+    const res = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": S.perfil.apiKey,
+        "anthropic-version": "2023-06-01",
+        "anthropic-dangerous-direct-browser-access": "true"
+      },
+      body: JSON.stringify({
+        model: "claude-3-haiku-20240307",
+        max_tokens: 1000,
+        system: systemPrompt,
+        messages: messages
+      })
+    });
+    
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.error?.message || "Error en la API");
+    }
+    const data = await res.json();
+    return data.content[0].text;
+  } catch (e) {
+    alert("Error IA: " + e.message);
+    return null;
+  }
+}
+
+// Historiales temporales (se pierden al recargar)
+let vocacionalHistory = [];
+let escritorHistory = [];
+
+function appendMsg(containerId, role, text) {
+  const c = $(containerId);
+  if (!c) return;
+  const div = document.createElement("div");
+  div.style.marginBottom = "10px";
+  div.style.padding = "8px 12px";
+  div.style.borderRadius = "8px";
+  div.style.maxWidth = "85%";
+  div.style.lineHeight = "1.4";
+  
+  if (role === "user") {
+    div.style.background = "#005c4b";
+    div.style.marginLeft = "auto";
+  } else {
+    div.style.background = "#222";
+  }
+  
+  // Parsear markdown basico y saltos de linea
+  div.innerHTML = text.replace(/\n/g, "<br>").replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
+  c.appendChild(div);
+  c.scrollTop = c.scrollHeight;
+}
+
 function renderVocacional() {
-  $("vocacional-container").innerHTML = `
-    <h2>🧠 Test Vocacional interactivo</h2>
-    <p>Pronto aquí podrás chatear con la IA para descubrir tu perfil ideal.</p>
-    <button class="btn" onclick="alert('Próximamente')">Empezar Test</button>
-  `;
+  const c = $("vocacional-container");
+  if (!c.querySelector("#voc-chat")) {
+    c.innerHTML = `
+      <h2>🧠 Test Vocacional interactivo</h2>
+      <p style="font-size: 0.9em; color: var(--gray);">Descubre tu perfil ideal charlando con nuestra IA orientadora.</p>
+      <div id="voc-chat" style="height:350px;overflow-y:auto;background:#111;padding:15px;margin-bottom:10px;border-radius:8px;border:1px solid #333;display:flex;flex-direction:column;"></div>
+      <div style="display:flex;gap:5px;">
+        <input type="text" id="voc-input" style="flex:1;padding:12px;border-radius:6px;border:1px solid #333;background:#222;color:#fff;" placeholder="Escribe tu respuesta aquí..." onkeypress="if(event.key==='Enter') enviarMensajeVoc()">
+        <button class="btn btn-primary" id="voc-btn" onclick="enviarMensajeVoc()">Enviar</button>
+      </div>
+    `;
+    
+    if (vocacionalHistory.length === 0) {
+       // Mensaje inicial local
+       appendMsg("voc-chat", "assistant", "¡Hola! 👋 Soy tu orientador vocacional. ¿En qué curso estás y qué asignaturas se te dan mejor o te gustan más?");
+    } else {
+       // Re-renderizar historial
+       vocacionalHistory.forEach(m => appendMsg("voc-chat", m.role, m.content));
+    }
+  }
+}
+
+async function enviarMensajeVoc() {
+  const input = $("voc-input");
+  const text = input.value.trim();
+  if (!text) return;
+  
+  input.value = "";
+  input.disabled = true;
+  $("voc-btn").disabled = true;
+  
+  appendMsg("voc-chat", "user", text);
+  vocacionalHistory.push({ role: "user", content: text });
+  
+  const systemPrompt = "Eres un orientador vocacional experto para estudiantes de bachillerato en España que preparan la PAU/EBAU. El usuario es de modalidad de Ciencias. Haz preguntas cortas, evalúa su interés en Ingeniería Mecánica u otras ramas, su estilo de trabajo y personalidad. Usa un tono amigable, de tú a tú, empático y constructivo.";
+  
+  const respuesta = await callIA(systemPrompt, null, vocacionalHistory);
+  if (respuesta) {
+    appendMsg("voc-chat", "assistant", respuesta);
+    vocacionalHistory.push({ role: "assistant", content: respuesta });
+  }
+  
+  input.disabled = false;
+  $("voc-btn").disabled = false;
+  input.focus();
 }
 
 function renderEscritor() {
-  $("escritor-container").innerHTML = `
-    <h2>✍️ El Rincón del Escritor</h2>
-    <p>Un espacio libre de fórmulas. Escribe, desarrolla personajes y pide consejo a la IA para tu libro.</p>
-    <textarea style="width:100%; height: 150px; background:#111; color:#fff; padding:10px;" placeholder="Tengo un bloqueo con el capítulo 3..."></textarea>
-    <button class="btn" style="margin-top:10px;" onclick="alert('Enviando a IA...')">Pedir consejo</button>
-  `;
+  const c = $("escritor-container");
+  if (!c.querySelector("#escritor-chat")) {
+    c.innerHTML = `
+      <h2>✍️ El Rincón del Escritor</h2>
+      <p style="font-size: 0.9em; color: var(--gray);">Tu asistente creativo libre de fórmulas. Pega ideas, pide lluvia de ideas o combate bloqueos.</p>
+      <div id="escritor-chat" style="height:350px;overflow-y:auto;background:#111;padding:15px;margin-bottom:10px;border-radius:8px;border:1px solid #333;display:flex;flex-direction:column;"></div>
+      <div style="display:flex;gap:5px;">
+        <textarea id="escritor-input" rows="2" style="flex:1;padding:12px;border-radius:6px;border:1px solid #333;background:#222;color:#fff;font-family:inherit;resize:vertical;" placeholder="Tengo un bloqueo con el capítulo 3..."></textarea>
+        <button class="btn btn-primary" id="escritor-btn" onclick="enviarMensajeEscritor()">Enviar</button>
+      </div>
+    `;
+    
+    if (escritorHistory.length === 0) {
+       appendMsg("escritor-chat", "assistant", "¡Hola escritor! 📚 Estoy aquí para ayudarte con ese libro de 150 páginas. ¿En qué podemos trabajar hoy? ¿Personajes, trama, o algún bloqueo?");
+    } else {
+       escritorHistory.forEach(m => appendMsg("escritor-chat", m.role, m.content));
+    }
+  }
+}
+
+async function enviarMensajeEscritor() {
+  const input = $("escritor-input");
+  const text = input.value.trim();
+  if (!text) return;
+  
+  input.value = "";
+  input.disabled = true;
+  $("escritor-btn").disabled = true;
+  
+  appendMsg("escritor-chat", "user", text);
+  escritorHistory.push({ role: "user", content: text });
+  
+  const systemPrompt = "Eres un asistente creativo de escritura colaborativa. El usuario es un estudiante que está escribiendo un libro de 150 páginas. Ayúdale con bloqueos creativos, desarrollo de personajes, trama y estilo. Sé inspirador, constructivo y creativo. No escribas el libro por él, dale ideas, enfoques y consejos. Usa un formato claro y agradable.";
+  
+  const respuesta = await callIA(systemPrompt, null, escritorHistory);
+  if (respuesta) {
+    appendMsg("escritor-chat", "assistant", respuesta);
+    escritorHistory.push({ role: "assistant", content: respuesta });
+  }
+  
+  input.disabled = false;
+  $("escritor-btn").disabled = false;
+  input.focus();
 }
 
 function renderStats() {
@@ -139,20 +282,29 @@ function renderStatsTop() {
 }
 
 function configurarPerfil() {
-  const n = prompt("Tu nombre:", S.perfil.nombre);
-  if (n !== null) S.perfil.nombre = n;
-  const k = prompt("Tu API Key de Anthropic (para usar IA):", S.perfil.apiKey);
-  if (k !== null) S.perfil.apiKey = k;
-  saveState();
-  renderStatsTop();
-  renderInicio();
+  $("user-nombre").value = S.perfil.nombre || "";
+  $("user-apikey").value = S.perfil.apiKey || "";
+  $("user-modal").classList.remove("hidden");
 }
 
 $("stat-user").onclick = configurarPerfil;
 
+function initUI() {
+  $("user-cancelar").onclick = () => $("user-modal").classList.add("hidden");
+  $("user-guardar").onclick = () => {
+    S.perfil.nombre = $("user-nombre").value.trim();
+    S.perfil.apiKey = $("user-apikey").value.trim();
+    saveState();
+    renderStatsTop();
+    renderInicio();
+    $("user-modal").classList.add("hidden");
+  };
+}
+
 // ----- Inicialización -----
 function init() {
   loadState();
+  initUI();
   renderStatsTop();
   navTo("inicio");
 }
