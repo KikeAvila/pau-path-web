@@ -3518,7 +3518,7 @@ window.PAU_DATA = {
     }
   },  leyes_educativas: [
     { año: 2027, ley: "LOMLOE (Modelo PAU 2025-2027)", cambios: "Modelo 100% Competencial. Se elimina la optatividad entre opción A/B. El 70% de las preguntas son abiertas/semiabiertas. Penalización severa por ortografía (hasta 10% o más). El comentario de texto de Lengua se enfoca en espíritu crítico y no memorístico." },
-    { año: 2024 (Transición), ley: "LOMLOE", cambios: "Nuevo formato PAU. Competencial. Desaparece la opción A y B cerrada, hay optatividad transversal. Se recupera Historia de la Filosofía como troncal a elegir con Historia de España." },
+    { año: "2024 (Transición)", ley: "LOMLOE", cambios: "Nuevo formato PAU. Competencial. Desaparece la opción A y B cerrada, hay optatividad transversal. Se recupera Historia de la Filosofía como troncal a elegir con Historia de España." },
     { año: 2017, ley: "LOMCE", cambios: "Selectividad pasa a llamarse EBAU/EvAU. Introducción de Ciencias Aplicadas. Las materias troncales pesan el 40%." },
     { año: 2010, ley: "LOE", cambios: "Se divide la prueba en Fase General (obligatoria, puntúa sobre 10) y Fase Específica (voluntaria, puntúa hasta 14). Permite subir nota eligiendo asignaturas de modalidad." },
     { año: 2000, ley: "LOGSE", cambios: "Modelo antiguo de Selectividad. Puntuación sobre 10. Bloques rígidos por letras y ciencias." }
