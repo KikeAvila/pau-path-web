@@ -483,7 +483,7 @@ function appendMsg(containerId, role, text) {
 }
 
 let vocClassicIndex = 0;
-let vocClassicScores = { ingenieria: 0, ciencias: 0, letras: 0, artes: 0 };
+let vocClassicAnswers = [];
 const vocClassicQuestions = [
   {
     q: "¿Qué tipo de actividades disfrutas más en tu tiempo libre?",
@@ -492,7 +492,7 @@ const vocClassicQuestions = [
       { text: "Leer, debatir ideas, o escribir historias.", points: { letras: 2, artes: 1 } },
       { text: "Ayudar a otros a sentirse mejor o leer sobre el cuerpo humano.", points: { salud: 3, ciencias: 1 } },
       { text: "Dibujar, tocar música o crear diseños visuales.", points: { artes: 2, letras: 1 } },
-      { text: "Ninguna de las anteriores / Otra cosa.", points: {} }
+      { text: "Hacer deporte, entrenar, o actividades físicas al aire libre.", points: { deporte: 3, salud: 1 } }
     ]
   },
   {
@@ -502,240 +502,89 @@ const vocClassicQuestions = [
       { text: "Intento reflexionar sobre el impacto humano o social del problema.", points: { sociales: 2, letras: 2 } },
       { text: "Imagino una solución creativa y fuera de lo común.", points: { artes: 2, ingenieria: 1 } },
       { text: "Analizo los síntomas y busco un tratamiento o diagnóstico lógico.", points: { salud: 2, ciencias: 2 } },
-      { text: "Prefiero pedir ayuda o buscar un enfoque distinto.", points: {} }
+      { text: "Pienso en el movimiento, la ergonomía o la actividad física para solucionarlo.", points: { deporte: 2, salud: 1 } }
     ]
   },
   {
-    q: "¿Qué asignaturas te resultan menos pesadas de estudiar?",
+    q: "Si tuvieras que organizar un evento para tu instituto, ¿de qué te encargarías?",
     options: [
-      { text: "Matemáticas, Física, Tecnología.", points: { ingenieria: 3, ciencias: 1 } },
-      { text: "Biología, Química, Anatomía.", points: { ciencias: 1, salud: 3 } },
-      { text: "Economía, Historia, Geografía.", points: { sociales: 3, letras: 1 } },
-      { text: "Dibujo Artístico, Diseño, Música.", points: { artes: 3 } },
-      { text: "Sinceramente, ninguna encaja conmigo al 100%.", points: {} }
+      { text: "De montar el equipo de sonido, las luces y la parte técnica.", points: { ingenieria: 2 } },
+      { text: "De diseñar los carteles, la decoración y el estilo visual.", points: { artes: 3 } },
+      { text: "De llevar las cuentas, gestionar las entradas y la logística.", points: { sociales: 3 } },
+      { text: "De organizar torneos deportivos, competiciones o juegos físicos.", points: { deporte: 3 } },
+      { text: "De preparar los discursos, el guion o presentar el evento.", points: { letras: 2, sociales: 1 } }
     ]
   },
   {
-    q: "Imagina tu trabajo ideal dentro de 10 años. ¿Dónde te ves?",
+    q: "¿Qué temática de documentales o vídeos de YouTube sueles ver más?",
     options: [
-      { text: "En una oficina de proyectos, diseñando tecnología o software.", points: { ingenieria: 3 } },
-      { text: "En un laboratorio, clínica o un hospital, atendiendo pacientes.", points: { salud: 3, ciencias: 1 } },
-      { text: "En un juzgado, empresa, o medios de comunicación.", points: { sociales: 3, letras: 2 } },
-      { text: "En un estudio de diseño, taller de arte o como freelance creativo.", points: { artes: 3 } },
-      { text: "En otro sector completamente distinto.", points: {} }
+      { text: "Tecnología, cómo se fabrican las cosas o programación.", points: { ingenieria: 3 } },
+      { text: "Naturaleza, el universo, experimentos o divulgación científica.", points: { ciencias: 3 } },
+      { text: "Historia, política, crímenes reales (True Crime) o sociedad.", points: { sociales: 2, letras: 2 } },
+      { text: "Nutrición, rutinas de gimnasio, deportes o salud física.", points: { deporte: 3, salud: 2 } },
+      { text: "Cine, animación, pintura, música o videojuegos.", points: { artes: 3 } }
     ]
   },
   {
-    q: "Si tuvieras que leer un artículo de una revista, ¿cuál elegirías?",
+    q: "Imagina tu trabajo ideal dentro de 10 años. ¿Cómo es tu entorno?",
     options: [
-      { text: "El desarrollo de un nuevo motor aeroespacial o chip de IA.", points: { ingenieria: 2, ciencias: 1 } },
-      { text: "Un análisis sobre la historia económica mundial.", points: { sociales: 2, letras: 1 } },
-      { text: "Una reseña sobre una nueva corriente artística o película.", points: { artes: 2, letras: 1 } },
-      { text: "Un ensayo sobre la psique humana y cómo interactuamos.", points: { salud: 2, sociales: 1 } },
-      { text: "Leer no es lo mío / Otra temática.", points: {} }
-    ]
-  },
-  {
-    q: "¿Con qué tipo de herramientas prefieres trabajar?",
-    options: [
-      { text: "Ordenadores, software de programación o herramientas de taller.", points: { ingenieria: 2 } },
-      { text: "Microscopios, instrumental médico o de laboratorio.", points: { salud: 2, ciencias: 1 } },
-      { text: "Pinceles, cámaras, software de diseño o instrumentos musicales.", points: { artes: 2 } },
-      { text: "Libros, documentos, leyes o bases de datos económicas.", points: { sociales: 2, letras: 1 } },
-      { text: "Ninguna de las anteriores.", points: {} }
-    ]
-  },
-  {
-    q: "¿Qué tipo de series o documentales te enganchan más?",
-    options: [
-      { text: "Cómo se hace, megaconstrucciones o tecnología futurista.", points: { ingenieria: 2 } },
-      { text: "Casos médicos, naturaleza salvaje o el cuerpo humano.", points: { salud: 2, ciencias: 2 } },
-      { text: "Crímenes reales, juicios, o política internacional.", points: { sociales: 2 } },
-      { text: "Dramas históricos, cine independiente o biografías de artistas.", points: { artes: 2, letras: 1 } },
-      { text: "Suelo ver cosas de humor puro u otras categorías.", points: {} }
-    ]
-  },
-  {
-    q: "Si fueras el líder de un proyecto, ¿cuál sería tu rol?",
-    options: [
-      { text: "Diseñar la arquitectura técnica o el código del sistema.", points: { ingenieria: 2 } },
-      { text: "Asegurarme del bienestar y la psicología del equipo.", points: { salud: 2, sociales: 1 } },
-      { text: "Gestionar los recursos financieros, el marketing o lo legal.", points: { sociales: 3 } },
-      { text: "Crear la identidad visual, el logo y la estética.", points: { artes: 2 } },
-      { text: "No me gusta liderar proyectos / Me encargaré de otra cosa.", points: {} }
-    ]
-  },
-  {
-    q: "¿Qué cualidad valoras más en ti mismo?",
-    options: [
-      { text: "Mi capacidad analítica y de estructurar problemas.", points: { ingenieria: 2, ciencias: 1 } },
-      { text: "Mi empatía y deseo de sanar o cuidar a otros.", points: { salud: 3 } },
-      { text: "Mi capacidad de comunicación, persuasión y escritura.", points: { letras: 2, sociales: 2 } },
-      { text: "Mi sensibilidad estética e imaginación.", points: { artes: 3 } },
-      { text: "Otra cualidad que no encaja aquí.", points: {} }
-    ]
-  },
-  {
-    q: "Si descubres un bug en una aplicación que usas, ¿qué haces?",
-    options: [
-      { text: "Intento adivinar por qué falló el código y cómo lo arreglaría.", points: { ingenieria: 3 } },
-      { text: "Me quejo de que la experiencia de usuario es visualmente horrible.", points: { artes: 1, ingenieria: 1 } },
-      { text: "Escribo un correo formal de reclamación exigiendo un reembolso.", points: { sociales: 2, letras: 1 } },
-      { text: "Me da exactamente igual y la sigo usando o la borro.", points: {} }
-    ]
-  },
-  {
-    q: "¿Cómo te sientes respecto a la memorización de grandes cantidades de datos?",
-    options: [
-      { text: "Prefiero entender la lógica y deducir la fórmula.", points: { ingenieria: 2, ciencias: 1 } },
-      { text: "Se me da genial memorizar huesos, músculos o reacciones químicas.", points: { salud: 3, ciencias: 2 } },
-      { text: "Se me da bien memorizar leyes, fechas históricas o textos.", points: { sociales: 2, letras: 2 } },
-      { text: "Odio memorizar, prefiero improvisar y crear.", points: { artes: 2 } },
-      { text: "No tengo preferencia.", points: {} }
-    ]
-  },
-  {
-    q: "¿Qué noticia de un periódico te llamaría más la atención?",
-    options: [
-      { text: "Un avance en inteligencia artificial o un nuevo cohete.", points: { ingenieria: 3 } },
-      { text: "Una cura prometedora para una enfermedad rara.", points: { salud: 3, ciencias: 2 } },
-      { text: "Un cambio drástico en la bolsa de valores o una nueva ley.", points: { sociales: 3 } },
-      { text: "La apertura de un museo o una exposición de vanguardia.", points: { artes: 3 } },
-      { text: "Leo los deportes o los sucesos locales.", points: {} }
-    ]
-  },
-  {
-    q: "¿Si te dejaran solo en un laboratorio vacío, qué harías?",
-    options: [
-      { text: "Revisar los ordenadores y maquinaria electrónica.", points: { ingenieria: 3 } },
-      { text: "Mirar los microscopios y muestras biológicas.", points: { salud: 2, ciencias: 3 } },
-      { text: "Apagar la luz y usar el silencio para escribir o pensar.", points: { letras: 2, artes: 1 } },
-      { text: "Aburrirme y salir a buscar a gente con quien hablar.", points: { sociales: 1 } },
-      { text: "Ninguna de las anteriores.", points: {} }
-    ]
-  },
-  {
-    q: "¿Qué te atrae de un idioma extranjero?",
-    options: [
-      { text: "La estructura lógica y cómo encajan las piezas gramaticales.", points: { ingenieria: 1, letras: 2 } },
-      { text: "Cómo suena fonéticamente y su belleza musical.", points: { artes: 2, letras: 1 } },
-      { text: "La oportunidad que me da para hacer negocios o relaciones internacionales.", points: { sociales: 3 } },
-      { text: "Poder leer manuales técnicos o estudios médicos extranjeros.", points: { ciencias: 1, salud: 1 } },
-      { text: "No me interesan los idiomas.", points: {} }
-    ]
-  },
-  {
-    q: "Cuando viajas a una ciudad nueva, ¿qué es lo primero que haces?",
-    options: [
-      { text: "Fijarme en cómo está diseñado el metro, los puentes y los edificios.", points: { ingenieria: 3 } },
-      { text: "Visitar los museos, galerías de arte y obras arquitectónicas.", points: { artes: 3 } },
-      { text: "Empaparme de la historia, costumbres y organización de la gente.", points: { sociales: 2, letras: 2 } },
-      { text: "Probar la gastronomía local y relajarme, sin complicaciones.", points: {} }
-    ]
-  },
-  {
-    q: "Si tuvieras que dar una charla TED, ¿sobre qué sería?",
-    options: [
-      { text: "El futuro de las energías renovables o la computación cuántica.", points: { ingenieria: 3, ciencias: 2 } },
-      { text: "La importancia de la salud mental y los cuidados médicos.", points: { salud: 3 } },
-      { text: "El impacto de la economía en la desigualdad social.", points: { sociales: 3 } },
-      { text: "Cómo el arte puede cambiar el estado de ánimo de la sociedad.", points: { artes: 3 } },
-      { text: "Me aterroriza hablar en público / Sobre otro tema.", points: {} }
-    ]
-  },
-  {
-    q: "Frente a un debate polémico, tú sueles...",
-    options: [
-      { text: "Buscar datos empíricos, números y estadísticas para ganar.", points: { ingenieria: 2, ciencias: 2 } },
-      { text: "Argumentar basándote en la ética, la filosofía y la historia.", points: { letras: 3, sociales: 1 } },
-      { text: "Analizar el lenguaje no verbal y la psicología del oponente.", points: { salud: 2, sociales: 1 } },
-      { text: "Preferir no discutir y cambiar de tema con humor.", points: {} }
-    ]
-  },
-  {
-    q: "¿En qué entorno te concentras mejor?",
-    options: [
-      { text: "Con 3 monitores, teclado mecánico y silencio.", points: { ingenieria: 2 } },
-      { text: "En una biblioteca o archivo, rodeado de polvo y libros antiguos.", points: { letras: 2, sociales: 1 } },
-      { text: "En un espacio caótico, lleno de colores, bocetos y música de fondo.", points: { artes: 3 } },
-      { text: "En equipo, discutiendo y compartiendo ideas en voz alta.", points: { sociales: 2, salud: 1 } },
-      { text: "En otro lado.", points: {} }
-    ]
-  },
-  {
-    q: "¿Qué opinas del trabajo manual o de campo?",
-    options: [
-      { text: "Me encanta mancharme de grasa o cables.", points: { ingenieria: 3 } },
-      { text: "Prefiero trabajar con las manos tocando a pacientes (fisioterapia, cirugía).", points: { salud: 3 } },
-      { text: "Prefiero hacer trabajo de campo arqueológico o geológico.", points: { ciencias: 2, letras: 1 } },
-      { text: "Lo mío es esculpir, pintar o tallar cosas.", points: { artes: 3 } },
-      { text: "Prefiero estar sentado en una silla cómoda y limpia.", points: { sociales: 1, letras: 1 } }
-    ]
-  },
-  {
-    q: "¿Qué legado te gustaría dejar en el mundo?",
-    options: [
-      { text: "Un invento tecnológico que facilite la vida a millones.", points: { ingenieria: 3, ciencias: 1 } },
-      { text: "Haber salvado vidas o descubierto un tratamiento médico.", points: { salud: 3, ciencias: 2 } },
-      { text: "Una gran obra literaria, pictórica o musical.", points: { artes: 3, letras: 3 } },
-      { text: "Un cambio en las leyes o haber liderado una empresa justa.", points: { sociales: 3 } },
-      { text: "Ser recordado como una buena persona, simplemente.", points: {} }
+      { text: "Un hospital, clínica o centro de salud, atendiendo a personas.", points: { salud: 3 } },
+      { text: "Un laboratorio, una oficina técnica o frente a ordenadores programando.", points: { ciencias: 2, ingenieria: 2 } },
+      { text: "Un despacho, un tribunal, o viajando haciendo negocios.", points: { sociales: 3 } },
+      { text: "Una pista de atletismo, un gimnasio, un colegio como profesor de EF o al aire libre.", points: { deporte: 3 } },
+      { text: "Un estudio de diseño, un teatro, una biblioteca o escribiendo desde casa.", points: { artes: 2, letras: 2 } }
     ]
   }
 ];
-
-function renderVocacional() {
-  const c = $("vocacional-container");
-  c.innerHTML = `
-    <div style="padding:15px;">
-      <h2>🧠 Test Vocacional</h2>
-      <p style="font-size: 0.9em; color: var(--gray);">Elige cómo quieres realizar el test vocacional.</p>
-      
-      <div id="voc-menu" style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
-        <button class="btn btn-primary" onclick="startVocClassic()" style="padding:15px; font-size:16px;">📝 Hacer Test Clásico (Offline)</button>
-        <button class="btn" onclick="startVocAI()" style="padding:15px; font-size:16px; background:#4CAF50;">🤖 Chat Vocacional con IA (Gemini)</button>
-      </div>
-
-      <div id="voc-classic-area" class="hidden" style="margin-top:20px; background:#111; padding:15px; border-radius:8px;"></div>
-      <div id="voc-ai-area" class="hidden" style="margin-top:20px;"></div>
-    </div>
-  `;
-}
 
 function startVocClassic() {
   $("voc-menu").classList.add("hidden");
   $("voc-classic-area").classList.remove("hidden");
   vocClassicIndex = 0;
-  vocClassicScores = { ingenieria: 0, ciencias: 0, salud: 0, sociales: 0, letras: 0, artes: 0 };
+  vocClassicAnswers = [];
   renderVocClassicQuestion();
 }
 
 function renderVocClassicQuestion() {
   const area = $("voc-classic-area");
   if (vocClassicIndex >= vocClassicQuestions.length) {
-    // Show results
+    let scores = { ingenieria: 0, ciencias: 0, salud: 0, sociales: 0, letras: 0, artes: 0, deporte: 0 };
+    vocClassicAnswers.forEach((ansIdx, qIdx) => {
+      if (ansIdx !== undefined) {
+        const pts = vocClassicQuestions[qIdx].options[ansIdx].points;
+        for (let k in pts) {
+          if (scores[k] !== undefined) scores[k] += pts[k];
+        }
+      }
+    });
+
     let maxScore = 0;
     let bestProfile = "";
-    for (let p in vocClassicScores) {
-      if (vocClassicScores[p] > maxScore) { maxScore = vocClassicScores[p]; bestProfile = p; }
+    for (let p in scores) {
+      if (scores[p] > maxScore) { maxScore = scores[p]; bestProfile = p; }
     }
     
     let desc = "";
-    if (bestProfile === "ingenieria") desc = "Tu perfil encaja perfectamente con las Ingenierías (Mecánica, Industrial, Informática). Te gusta resolver problemas reales usando la lógica y las matemáticas.";
-    if (bestProfile === "ciencias") desc = "Tienes un perfil científico nato (Biología, Química, Física pura, Matemáticas). Disfrutas investigando en laboratorios y entendiendo las leyes que rigen el mundo natural.";
-    if (bestProfile === "salud") desc = "Tienes una fuerte vocación por las Ciencias de la Salud (Medicina, Enfermería, Fisioterapia). Tu empatía y deseo de sanar a otros te define.";
-    if (bestProfile === "sociales") desc = "Te mueves genial en Ciencias Sociales y Jurídicas (Derecho, ADE, Economía, Periodismo). Te interesan las leyes, los negocios y la estructura de la sociedad.";
-    if (bestProfile === "letras") desc = "Lo tuyo son las Artes y Humanidades Clásicas (Filosofía, Filología, Historia). Se te da bien analizar, escribir y el pensamiento crítico.";
-    if (bestProfile === "artes") desc = "Tienes un perfil marcadamente artístico (Bellas Artes, Diseño Gráfico, Audiovisuales). Prefieres crear, imaginar y expresarte de forma visual o sonora.";
+    if (bestProfile === "ingenieria") desc = "Tu perfil encaja con Ingenierías (Mecánica, Industrial, Informática, etc.). Disfrutas resolviendo problemas con lógica y tecnología.";
+    if (bestProfile === "ciencias") desc = "Tienes perfil científico nato (Biología, Química, Física pura, Matemáticas). Te gusta investigar y la ciencia dura.";
+    if (bestProfile === "salud") desc = "Fuerte vocación por Ciencias de la Salud (Medicina, Enfermería). Empatía y deseo de sanar.";
+    if (bestProfile === "sociales") desc = "Ideal para Ciencias Sociales y Jurídicas (Derecho, ADE, Economía, Periodismo). Te interesan la sociedad, leyes o negocios.";
+    if (bestProfile === "letras") desc = "Artes y Humanidades Clásicas (Filosofía, Filología, Historia). Se te da bien analizar, escribir y el pensamiento crítico.";
+    if (bestProfile === "artes") desc = "Perfil marcadamente artístico (Bellas Artes, Diseño, Audiovisuales). Prefieres crear y expresarte.";
+    if (bestProfile === "deporte") desc = "Tu perfil ideal es Ciencias de la Actividad Física y del Deporte (INEF), Fisioterapia deportiva o Magisterio de EF. El movimiento es vital para ti.";
 
     area.innerHTML = `
       <h3 style="color:#4CAF50; text-align:center;">¡Test Completado!</h3>
       <h2 style="text-align:center; text-transform:uppercase;">Perfil Dominante: ${bestProfile}</h2>
       <p style="text-align:center; margin-top:10px;">${desc}</p>
-      <div style="background:#222; padding:10px; margin-top:15px; border-radius:8px; font-size:0.85em; color:#bbb;">
-        Puntuaciones: Ing: ${vocClassicScores.ingenieria}, Salud: ${vocClassicScores.salud}, Soc: ${vocClassicScores.sociales}, Letras: ${vocClassicScores.letras}, Ciencias: ${vocClassicScores.ciencias}, Artes: ${vocClassicScores.artes}
+      <div style="background:#222; padding:10px; margin-top:15px; border-radius:8px; font-size:0.85em; color:#bbb; text-align:center;">
+        Puntuaciones:<br>
+        Ing: ${scores.ingenieria} | Salud: ${scores.salud} | Soc: ${scores.sociales} | Letras: ${scores.letras} | Cienc: ${scores.ciencias} | Artes: ${scores.artes} | Deporte: ${scores.deporte}
       </div>
-      <button class="btn" style="width:100%; margin-top:20px;" onclick="renderVocacional()">Volver al inicio</button>
+      <div style="display:flex; gap:10px; margin-top:20px;">
+        <button class="btn" style="flex:1;" onclick="vocClassicBack()">⬅️ Revisar Test</button>
+        <button class="btn" style="flex:1; background:var(--blue);" onclick="renderVocacional()">Volver al menú</button>
+      </div>
     `;
     return;
   }
@@ -748,17 +597,23 @@ function renderVocClassicQuestion() {
     html += `<button class="btn" style="text-align:left; white-space:normal; line-height:1.4;" onclick="answerVocClassic(${i})">${opt.text}</button>`;
   });
   html += `</div>`;
+  
+  if (vocClassicIndex > 0) {
+    html += `<button class="btn" style="background:#444; margin-top:20px; width:100%;" onclick="vocClassicBack()">⬅️ Volver a la pregunta anterior</button>`;
+  }
+  
   area.innerHTML = html;
 }
 
-function answerVocClassic(optIndex) {
-  const q = vocClassicQuestions[vocClassicIndex];
-  const pts = q.options[optIndex].points;
-  for (let k in pts) {
-    if (vocClassicScores[k] !== undefined) {
-      vocClassicScores[k] += pts[k];
-    }
+function vocClassicBack() {
+  if (vocClassicIndex > 0) {
+    vocClassicIndex--;
+    renderVocClassicQuestion();
   }
+}
+
+function answerVocClassic(optIndex) {
+  vocClassicAnswers[vocClassicIndex] = optIndex;
   vocClassicIndex++;
   renderVocClassicQuestion();
 }
