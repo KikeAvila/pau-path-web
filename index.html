@@ -11,7 +11,7 @@
       document.documentElement.setAttribute("data-theme", _t);
     } catch (e) {}
   </script>
-  <link rel="stylesheet" href="styles.css?v=31" />
+  <link rel="stylesheet" href="styles.css?v=32" />
   <link rel="manifest" href="manifest.webmanifest" />
   <meta name="theme-color" content="#58cc02" />
   <!-- iOS: instalable en pantalla de inicio -->
@@ -210,13 +210,18 @@
       <h2>Perfil y Ajustes</h2>
       <div style="display:flex;flex-direction:column;gap:10px;margin-top:15px;">
         <label>
-          <b>Tu nombre:</b><br/>
+          <b>Tu nombre (Usuario):</b><br/>
           <input type="text" id="user-nombre" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;" placeholder="Ej: Kike">
         </label>
         <label>
-          <b>Anthropic API Key (Claude):</b><br/>
-          <input type="password" id="user-apikey" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;" placeholder="sk-ant-api03-...">
-          <small style="color:var(--gray);font-size:0.85em;">Necesario para los módulos Vocacional y Escritor.</small>
+          <b>PIN (4 dígitos):</b><br/>
+          <input type="password" id="user-pin" inputmode="numeric" maxlength="4" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;" placeholder="Ej: 1234">
+          <small style="color:var(--gray);font-size:0.85em;">Tu clave de seguridad local.</small>
+        </label>
+        <label>
+          <b>Gemini API Key:</b><br/>
+          <input type="password" id="user-apikey" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;" placeholder="AIzaSy...">
+          <small style="color:var(--gray);font-size:0.85em;">Clave gratuita de Google Studio para usar la IA.</small>
         </label>
       </div>
       <div style="margin-top:15px;display:flex;justify-content:flex-end;gap:10px;">
@@ -229,10 +234,10 @@
   <!-- SDK de Firebase (nube). Si no hay internet, la app funciona igual en local. -->
   <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
-  <script src="firebase-config.js?v=31"></script>
-  <script src="i18n.js?v=31"></script>
+  <script src="firebase-config.js?v=32"></script>
+  <script src="i18n.js?v=32"></script>
   <script src="pau_data.js"></script>
-          <script src="app.js?v=31"></script>
+          <script src="app.js?v=32"></script>
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
