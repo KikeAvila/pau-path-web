@@ -287,15 +287,16 @@ function abrirTestDificil() {
 function renderOrientacion() {
   const c = $("orientacion-container");
   
-  // Extract unique careers and universities for the dropdowns
+  // Extract unique careers, universities, and regions for the dropdowns
   const grados = window.PAU_DATA.universidades || [];
   const carreras = [...new Set(grados.map(g => g.carrera))].sort();
   const unis = [...new Set(grados.map(g => g.uni))].sort();
+  const comunidades = [...new Set(grados.map(g => g.comunidad || "Desconocida"))].sort();
   
   let html = `
     <div style="padding:15px;">
       <h2>🎓 Buscador de Notas de Corte</h2>
-      <p style="font-size: 0.9em; color: var(--gray); margin-bottom:15px;">Busca por carrera o por universidad para ver la oferta y las notas exigidas en la EBAU.</p>
+      <p style="font-size: 0.9em; color: var(--gray); margin-bottom:15px;">Busca por carrera, universidad o comunidad autónoma para ver la oferta y las notas exigidas en la EBAU.</p>
       
       <div style="display:flex; flex-direction:column; gap:10px; background:#111; padding:15px; border-radius:8px; margin-bottom:20px;">
         <label style="font-weight:bold;">Buscar Carrera (Ej: Medicina, Ingeniería...):</label>
@@ -304,6 +305,12 @@ function renderOrientacion() {
           ${carreras.map(car => `<option value="${car}">${car}</option>`).join('')}
         </select>
         
+        <label style="font-weight:bold; margin-top:10px;">Comunidad Autónoma:</label>
+        <select id="ori-comunidad" style="padding:10px; border-radius:6px; background:#222; color:#fff; border:1px solid #444;" onchange="filtrarOrientacion()">
+          <option value="ALL">-- Todas las comunidades --</option>
+          ${comunidades.map(co => `<option value="${co}">${co}</option>`).join('')}
+        </select>
+
         <label style="font-weight:bold; margin-top:10px;">Buscar Universidad:</label>
         <select id="ori-uni" style="padding:10px; border-radius:6px; background:#222; color:#fff; border:1px solid #444;" onchange="filtrarOrientacion()">
           <option value="ALL">-- Todas las universidades --</option>
@@ -326,6 +333,7 @@ function renderOrientacion() {
 window.filtrarOrientacion = function() {
   const selCarrera = $("ori-carrera").value;
   const selUni = $("ori-uni").value;
+  const selComunidad = $("ori-comunidad") ? $("ori-comunidad").value : "ALL";
   const res = $("ori-resultados");
   
   const grados = window.PAU_DATA.universidades || [];
@@ -333,7 +341,8 @@ window.filtrarOrientacion = function() {
   const filtrados = grados.filter(g => {
     const matchCarrera = (selCarrera === "ALL" || g.carrera === selCarrera);
     const matchUni = (selUni === "ALL" || g.uni === selUni);
-    return matchCarrera && matchUni;
+    const matchComunidad = (selComunidad === "ALL" || (g.comunidad || "Desconocida") === selComunidad);
+    return matchCarrera && matchUni && matchComunidad;
   });
   
   if (filtrados.length === 0) {
@@ -354,7 +363,7 @@ window.filtrarOrientacion = function() {
     html += `
       <div style="background:#222; padding:15px; border-radius:8px; border-left: 5px solid ${ramaColor};">
         <div style="font-weight:900; font-size:1.1em;">${g.carrera}</div>
-        <div style="font-size:0.9em; color:#bbb; margin-top:4px;">${g.uni}</div>
+        <div style="font-size:0.9em; color:#bbb; margin-top:4px;">${g.uni} <span style="color:#888; font-size:0.9em;">(${g.comunidad || ""})</span></div>
         <div style="margin-top:10px; display:flex; justify-content:space-between; align-items:center;">
           <span style="font-size:0.85em; background:#333; padding:3px 8px; border-radius:12px;">${g.rama}</span>
           <span style="font-weight:bold; color:${g.corte > 12 ? '#FF5722' : '#8BC34A'};">Nota de corte: ${g.corte.toFixed(3)}</span>

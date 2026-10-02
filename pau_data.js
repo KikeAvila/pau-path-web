@@ -211,39 +211,34 @@ window.PAU_DATA = {
     { id: "ebau-2023-ord", titulo: "EBAU Madrid 2023 - Ordinaria", qs: ["m2-1", "fis-1", "fis-3"] },
     { id: "ebau-2023-ext", titulo: "EBAU Madrid 2023 - Extraordinaria", qs: ["m2-2", "fis-2", "m2-4"] }
   ],
-  universidades: [
-    // INGENIERÍAS (UPM, UC3M, URJC)
-    { uni: "Universidad Politécnica de Madrid (UPM)", carrera: "Ingeniería Mecánica", corte: 11.234, rama: "Ingeniería" },
-    { uni: "Universidad Politécnica de Madrid (UPM)", carrera: "Ingeniería Aeroespacial", corte: 12.560, rama: "Ingeniería" },
-    { uni: "Universidad Politécnica de Madrid (UPM)", carrera: "Ingeniería Informática", corte: 10.950, rama: "Ingeniería" },
-    { uni: "Universidad Carlos III de Madrid (UC3M)", carrera: "Ingeniería Mecánica", corte: 11.890, rama: "Ingeniería" },
-    { uni: "Universidad Carlos III de Madrid (UC3M)", carrera: "Ingeniería Biomédica", corte: 12.910, rama: "Ingeniería" },
-    { uni: "Universidad Rey Juan Carlos (URJC)", carrera: "Ingeniería Mecánica", corte: 9.800, rama: "Ingeniería" },
+    universidades: [
+    // MADRID
+    { comunidad: "Madrid", uni: "Universidad Politécnica de Madrid (UPM)", carrera: "Ingeniería Mecánica", corte: 11.234, rama: "Ingeniería" },
+    { comunidad: "Madrid", uni: "Universidad Politécnica de Madrid (UPM)", carrera: "Ingeniería Aeroespacial", corte: 12.560, rama: "Ingeniería" },
+    { comunidad: "Madrid", uni: "Universidad Carlos III de Madrid (UC3M)", carrera: "Ingeniería Mecánica", corte: 11.890, rama: "Ingeniería" },
+    { comunidad: "Madrid", uni: "Universidad Complutense de Madrid (UCM)", carrera: "Medicina", corte: 13.060, rama: "Salud" },
+    { comunidad: "Madrid", uni: "Universidad Complutense de Madrid (UCM)", carrera: "Derecho", corte: 9.500, rama: "Sociales" },
+    { comunidad: "Madrid", uni: "Universidad Complutense de Madrid (UCM)", carrera: "Historia", corte: 5.0, rama: "Humanidades" },
     
-    // CIENCIAS DE LA SALUD (UCM, UAM, UAH)
-    { uni: "Universidad Complutense de Madrid (UCM)", carrera: "Medicina", corte: 13.060, rama: "Salud" },
-    { uni: "Universidad Complutense de Madrid (UCM)", carrera: "Enfermería", corte: 11.800, rama: "Salud" },
-    { uni: "Universidad Complutense de Madrid (UCM)", carrera: "Psicología", corte: 10.900, rama: "Salud" },
-    { uni: "Universidad Autónoma de Madrid (UAM)", carrera: "Medicina", corte: 13.120, rama: "Salud" },
-    { uni: "Universidad Autónoma de Madrid (UAM)", carrera: "Enfermería", corte: 11.950, rama: "Salud" },
-    { uni: "Universidad de Alcalá (UAH)", carrera: "Medicina", corte: 12.980, rama: "Salud" },
-
-    // CIENCIAS SOCIALES Y JURÍDICAS (UCM, UC3M)
-    { uni: "Universidad Complutense de Madrid (UCM)", carrera: "Derecho", corte: 9.500, rama: "Sociales" },
-    { uni: "Universidad Complutense de Madrid (UCM)", carrera: "Periodismo", corte: 8.700, rama: "Sociales" },
-    { uni: "Universidad Complutense de Madrid (UCM)", carrera: "ADE", corte: 9.850, rama: "Sociales" },
-    { uni: "Universidad Carlos III de Madrid (UC3M)", carrera: "Derecho y ADE", corte: 12.100, rama: "Sociales" },
-
-    // ARTES Y HUMANIDADES (UCM, UAM)
-    { uni: "Universidad Complutense de Madrid (UCM)", carrera: "Bellas Artes", corte: 10.200, rama: "Artes" },
-    { uni: "Universidad Complutense de Madrid (UCM)", carrera: "Filología Hispánica", corte: 7.500, rama: "Humanidades" },
-    { uni: "Universidad Complutense de Madrid (UCM)", carrera: "Filosofía", corte: 8.100, rama: "Humanidades" },
-    { uni: "Universidad Autónoma de Madrid (UAM)", carrera: "Historia", corte: 8.300, rama: "Humanidades" },
-
-    // PRIVADAS
-    { uni: "Universidad Nebrija", carrera: "Ingeniería del Automóvil", corte: 5.0, rama: "Ingeniería" },
-    { uni: "Universidad CEU San Pablo", carrera: "Medicina", corte: 5.0, rama: "Salud" },
-    { uni: "Universidad Francisco de Vitoria", carrera: "Periodismo", corte: 5.0, rama: "Sociales" }
+    // ANDALUCÍA
+    { comunidad: "Andalucía", uni: "Universidad de Sevilla (US)", carrera: "Medicina", corte: 13.080, rama: "Salud" },
+    { comunidad: "Andalucía", uni: "Universidad de Sevilla (US)", carrera: "Ingeniería Aeroespacial", corte: 12.350, rama: "Ingeniería" },
+    { comunidad: "Andalucía", uni: "Universidad de Málaga (UMA)", carrera: "Ingeniería Mecánica", corte: 10.150, rama: "Ingeniería" },
+    { comunidad: "Andalucía", uni: "Universidad de Málaga (UMA)", carrera: "ADE", corte: 8.900, rama: "Sociales" },
+    
+    // CATALUÑA
+    { comunidad: "Cataluña", uni: "Universitat de Barcelona (UB)", carrera: "Medicina", corte: 12.920, rama: "Salud" },
+    { comunidad: "Cataluña", uni: "Universitat Politècnica de Catalunya (UPC)", carrera: "Ingeniería Mecánica", corte: 10.210, rama: "Ingeniería" },
+    { comunidad: "Cataluña", uni: "Universitat Pompeu Fabra (UPF)", carrera: "Derecho", corte: 10.850, rama: "Sociales" },
+    
+    // COMUNIDAD VALENCIANA
+    { comunidad: "Comunidad Valenciana", uni: "Universitat Politècnica de València (UPV)", carrera: "Ingeniería Aeroespacial", corte: 13.050, rama: "Ingeniería" },
+    { comunidad: "Comunidad Valenciana", uni: "Universitat de València (UV)", carrera: "Medicina", corte: 13.030, rama: "Salud" },
+    { comunidad: "Comunidad Valenciana", uni: "Universitat de València (UV)", carrera: "Periodismo", corte: 9.300, rama: "Sociales" },
+    
+    // CASTILLA Y LEÓN
+    { comunidad: "Castilla y León", uni: "Universidad de Salamanca (USAL)", carrera: "Medicina", corte: 12.890, rama: "Salud" },
+    { comunidad: "Castilla y León", uni: "Universidad de Salamanca (USAL)", carrera: "Derecho", corte: 8.500, rama: "Sociales" }
   ],
   preguntas: {
     "qui-1": [ { q: "¿Cuál es el número atómico del carbono?", opciones: ["6", "12", "14", "8"], correcta: 0, explicacion: "El carbono tiene 6 protones." } ],
