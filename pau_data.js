@@ -14,7 +14,7 @@ window.PAU_DATA = {
       nodos: [
         { id: "m2-1", asig: "mates2", tema: "Matrices Básicas", tipo: "teoria" },
         { id: "fis-1", asig: "fisica", tema: "Fuerza Gravitatoria", tipo: "quiz" },
-        { id: "dib-1", asig: "dibujo", tema: "Geometría Métrica", tipo: "quiz" }
+        { id: "len-1", asig: "lengua", tema: "Sintaxis Simple", tipo: "quiz" }
       ]
     },
     {
@@ -22,8 +22,8 @@ window.PAU_DATA = {
       titulo: "Trimestre 1 - Nivel 2 (Intermedio)",
       nodos: [
         { id: "m2-2", asig: "mates2", tema: "Determinantes", tipo: "quiz" },
-        { id: "fis-2", asig: "fisica", tema: "Campo Gravitatorio", tipo: "teoria" },
-        { id: "len-1", asig: "lengua", tema: "Sintaxis Simple", tipo: "quiz" }
+        { id: "ing-1", asig: "ingles", tema: "Tiempos Verbales (Past)", tipo: "quiz" },
+        { id: "hist-1", asig: "historia", tema: "Raíces Históricas", tipo: "quiz" }
       ]
     },
     {
@@ -31,8 +31,8 @@ window.PAU_DATA = {
       titulo: "Trimestre 1 - Nivel 3 (Avanzado)",
       nodos: [
         { id: "m2-3", asig: "mates2", tema: "Rango e Inversa", tipo: "quiz" },
-        { id: "hist-1", asig: "historia", tema: "Raíces Históricas", tipo: "quiz" },
-        { id: "fis-3", asig: "fisica", tema: "Velocidad de Escape", tipo: "quiz" }
+        { id: "fis-2", asig: "fisica", tema: "Campo Gravitatorio", tipo: "teoria" },
+        { id: "len-2", asig: "lengua", tema: "Morfología Básica", tipo: "quiz" }
       ]
     },
     {
@@ -40,25 +40,26 @@ window.PAU_DATA = {
       titulo: "Trimestre 1 - Nivel 4 (Retos EBAU)",
       nodos: [
         { id: "m2-4", asig: "mates2", tema: "Sistemas Lineales", tipo: "quiz" },
-        { id: "fis-4", asig: "fisica", tema: "Satélites y Órbitas", tipo: "quiz" },
-        { id: "dib-2", asig: "dibujo", tema: "Sistema Diédrico Básico", tipo: "quiz" }
+        { id: "hist-2", asig: "historia", tema: "Reyes Católicos y Austrias", tipo: "quiz" },
+        { id: "ing-2", asig: "ingles", tema: "Condicionales", tipo: "quiz" }
       ]
     },
     {
       id: "nivel-5",
       titulo: "Trimestre 1 - Nivel 5 (Simulacro T1)",
       nodos: [
-        { id: "sim-m2", asig: "mates2", tema: "Simulacro Matemáticas T1", tipo: "examen" },
-        { id: "sim-fis", asig: "fisica", tema: "Simulacro Física T1", tipo: "examen" }
+        { id: "sim-ciencias-t1", asig: "mates2", tema: "Simulacro Ciencias T1", tipo: "examen" },
+        { id: "sim-letras-t1", asig: "lengua", tema: "Simulacro Letras T1", tipo: "examen" }
       ]
     },
     // TRIMESTRE 2
     {
       id: "nivel-6",
-      titulo: "Trimestre 2 - Nivel 1 (Geometría y Ondas)",
+      titulo: "Trimestre 2 - Nivel 1 (Geometría y Siglo XIX)",
       nodos: [
         { id: "m2-5", asig: "mates2", tema: "Vectores en el Espacio", tipo: "teoria" },
-        { id: "fis-5", asig: "fisica", tema: "Movimiento Armónico Simple", tipo: "quiz" }
+        { id: "fis-5", asig: "fisica", tema: "Movimiento Armónico", tipo: "quiz" },
+        { id: "hist-3", asig: "historia", tema: "Guerra de Independencia", tipo: "quiz" }
       ]
     },
     {
@@ -66,42 +67,44 @@ window.PAU_DATA = {
       titulo: "Trimestre 2 - Nivel 2 (Intermedio)",
       nodos: [
         { id: "m2-6", asig: "mates2", tema: "Rectas y Planos", tipo: "quiz" },
-        { id: "fis-6", asig: "fisica", tema: "Ondas Sonoras", tipo: "quiz" },
-        { id: "len-2", asig: "lengua", tema: "Morfología", tipo: "quiz" }
+        { id: "len-3", asig: "lengua", tema: "Literatura: Generación del 98", tipo: "teoria" },
+        { id: "ing-3", asig: "ingles", tema: "Reported Speech", tipo: "quiz" }
       ]
     },
     {
       id: "nivel-8",
       titulo: "Trimestre 2 - Nivel 3 (Avanzado)",
       nodos: [
+        { id: "fis-6", asig: "fisica", tema: "Ondas Sonoras", tipo: "quiz" },
         { id: "m2-7", asig: "mates2", tema: "Posiciones Relativas", tipo: "quiz" },
-        { id: "fis-7", asig: "fisica", tema: "Óptica Geométrica", tipo: "teoria" }
+        { id: "hist-4", asig: "historia", tema: "La Restauración", tipo: "quiz" }
       ]
     },
     {
       id: "nivel-9",
       titulo: "Trimestre 2 - Nivel 4 (Retos EBAU)",
       nodos: [
-        { id: "m2-8", asig: "mates2", tema: "Distancias y Ángulos", tipo: "quiz" },
-        { id: "hist-2", asig: "historia", tema: "Siglo XIX", tipo: "quiz" },
-        { id: "fis-8", asig: "fisica", tema: "Lentes y Espejos", tipo: "quiz" }
+        { id: "fis-7", asig: "fisica", tema: "Óptica Geométrica", tipo: "teoria" },
+        { id: "len-4", asig: "lengua", tema: "Sintaxis Compuesta", tipo: "quiz" },
+        { id: "ing-4", asig: "ingles", tema: "Passive Voice", tipo: "quiz" }
       ]
     },
     {
       id: "nivel-10",
       titulo: "Trimestre 2 - Nivel 5 (Simulacro T2)",
       nodos: [
-        { id: "sim-m2-t2", asig: "mates2", tema: "Simulacro Matemáticas T2", tipo: "examen" },
-        { id: "sim-fis-t2", asig: "fisica", tema: "Simulacro Física T2", tipo: "examen" }
+        { id: "sim-ciencias-t2", asig: "fisica", tema: "Simulacro Ciencias T2", tipo: "examen" },
+        { id: "sim-letras-t2", asig: "historia", tema: "Simulacro Letras T2", tipo: "examen" }
       ]
     },
     // TRIMESTRE 3
     {
       id: "nivel-11",
-      titulo: "Trimestre 3 - Nivel 1 (Análisis y Cuántica)",
+      titulo: "Trimestre 3 - Nivel 1 (Análisis y Siglo XX)",
       nodos: [
         { id: "m2-9", asig: "mates2", tema: "Límites y Continuidad", tipo: "teoria" },
-        { id: "fis-9", asig: "fisica", tema: "Efecto Fotoeléctrico", tipo: "quiz" }
+        { id: "hist-5", asig: "historia", tema: "Segunda República y Guerra", tipo: "quiz" },
+        { id: "ing-5", asig: "ingles", tema: "Relative Clauses", tipo: "quiz" }
       ]
     },
     {
@@ -109,8 +112,8 @@ window.PAU_DATA = {
       titulo: "Trimestre 3 - Nivel 2 (Intermedio)",
       nodos: [
         { id: "m2-10", asig: "mates2", tema: "Derivadas y Aplicaciones", tipo: "quiz" },
-        { id: "fis-10", asig: "fisica", tema: "Física Nuclear", tipo: "quiz" },
-        { id: "len-3", asig: "lengua", tema: "Comentario de Texto", tipo: "teoria" }
+        { id: "fis-9", asig: "fisica", tema: "Efecto Fotoeléctrico", tipo: "quiz" },
+        { id: "len-5", asig: "lengua", tema: "Literatura: Generación del 27", tipo: "quiz" }
       ]
     },
     {
@@ -118,7 +121,8 @@ window.PAU_DATA = {
       titulo: "Trimestre 3 - Nivel 3 (Avanzado)",
       nodos: [
         { id: "m2-11", asig: "mates2", tema: "Integrales Indefinidas", tipo: "quiz" },
-        { id: "hist-3", asig: "historia", tema: "Siglo XX", tipo: "quiz" }
+        { id: "hist-6", asig: "historia", tema: "Franquismo y Transición", tipo: "quiz" },
+        { id: "ing-6", asig: "ingles", tema: "Vocabulary and Reading", tipo: "quiz" }
       ]
     },
     {
@@ -126,8 +130,8 @@ window.PAU_DATA = {
       titulo: "Trimestre 3 - Nivel 4 (Retos EBAU)",
       nodos: [
         { id: "m2-12", asig: "mates2", tema: "Cálculo de Áreas", tipo: "quiz" },
-        { id: "fis-11", asig: "fisica", tema: "Radiactividad EBAU", tipo: "quiz" },
-        { id: "dib-3", asig: "dibujo", tema: "Axonométrico", tipo: "quiz" }
+        { id: "fis-10", asig: "fisica", tema: "Física Nuclear", tipo: "quiz" },
+        { id: "len-6", asig: "lengua", tema: "Comentario de Texto", tipo: "teoria" }
       ]
     },
     {
@@ -135,7 +139,7 @@ window.PAU_DATA = {
       titulo: "Trimestre 3 - Nivel 5 (Simulacro T3)",
       nodos: [
         { id: "sim-ebau-m2", asig: "mates2", tema: "Examen EBAU Matemáticas", tipo: "examen" },
-        { id: "sim-ebau-fis", asig: "fisica", tema: "Examen EBAU Física", tipo: "examen" }
+        { id: "sim-ebau-hist", asig: "historia", tema: "Examen EBAU Historia", tipo: "examen" }
       ]
     }
   ],
@@ -194,6 +198,26 @@ window.PAU_DATA = {
     { uni: "Universidad Francisco de Vitoria", carrera: "Periodismo", corte: 5.0, rama: "Sociales" }
   ],
   preguntas: {
+    "ing-1": [ { q: "Complete the sentence: 'Yesterday I ___ to the store.'", opciones: ["go", "went", "gone", "going"], correcta: 1, explicacion: "Past simple." } ],
+    "ing-2": [ { q: "If I ___ you, I would study more.", opciones: ["was", "were", "am", "be"], correcta: 1, explicacion: "Second conditional uses 'were' for all persons." } ],
+    "ing-3": [ { q: "He said: 'I am happy'. -> He said that he ___ happy.", opciones: ["is", "was", "has been", "were"], correcta: 1, explicacion: "Present simple backshifts to past simple." } ],
+    "ing-4": [ { q: "The book ___ written by Shakespeare.", opciones: ["is", "was", "has", "did"], correcta: 1, explicacion: "Passive voice past simple." } ],
+    "ing-5": [ { q: "The man ___ car was stolen called the police.", opciones: ["who", "whom", "whose", "which"], correcta: 2, explicacion: "Possessive relative pronoun." } ],
+    "ing-6": [ { q: "Which word is a synonym for 'essential'?", opciones: ["optional", "crucial", "minor", "trivial"], correcta: 1, explicacion: "Crucial means extremely important or necessary." } ],
+    
+    "len-1": [ { q: "¿Cuál es el sujeto en 'Me gusta el café'?", opciones: ["Me", "gusta", "el café", "Yo (omitido)"], correcta: 2, explicacion: "El verbo concuerda con 'el café'." } ],
+    "len-2": [ { q: "La palabra 'inconstitucionalmente' es...", opciones: ["Simple", "Derivada", "Parasintética", "Compuesta"], correcta: 1, explicacion: "Derivada mediante prefijo y sufijos." } ],
+    "len-3": [ { q: "¿Qué autor pertenece a la Generación del 98?", opciones: ["Lorca", "Unamuno", "Góngora", "Cervantes"], correcta: 1, explicacion: "Unamuno es figura clave del 98." } ],
+    "len-4": [ { q: "En 'Dime si vienes', la oración subordinada es...", opciones: ["Sustantiva", "Adjetiva", "Adverbial", "No hay subordinada"], correcta: 0, explicacion: "Es sustantiva de objeto directo." } ],
+    "len-5": [ { q: "¿Quién escribió 'Romancero Gitano'?", opciones: ["Machado", "Lorca", "Alberti", "Cernuda"], correcta: 1, explicacion: "Obra clave de Federico García Lorca (Gen. 27)." } ],
+    "len-6": [ { q: "¿Qué función del lenguaje predomina en un artículo de opinión?", opciones: ["Fática", "Metalingüística", "Apelativa o Conativa", "Estética"], correcta: 2, explicacion: "Busca convencer al receptor." } ],
+
+    "hist-1": [ { q: "¿Qué pueblo prerromano habitaba el levante peninsular?", opciones: ["Celtas", "Íberos", "Tartessos", "Vascones"], correcta: 1, explicacion: "Los íberos ocupaban el sur y levante." } ],
+    "hist-2": [ { q: "¿En qué año se descubrió América y se conquistó Granada?", opciones: ["1492", "1512", "1479", "1504"], correcta: 0, explicacion: "1492 es el año clave de los Reyes Católicos." } ],
+    "hist-3": [ { q: "La Guerra de la Independencia Española (1808-1814) fue contra...", opciones: ["Reino Unido", "Francia", "Portugal", "Marruecos"], correcta: 1, explicacion: "Contra el Imperio Napoleónico." } ],
+    "hist-4": [ { q: "El sistema de la Restauración (Turno Pacífico) fue ideado por...", opciones: ["Cánovas del Castillo", "Sagasta", "Maura", "Primo de Rivera"], correcta: 0, explicacion: "Cánovas diseñó el sistema de turno de partidos." } ],
+    "hist-5": [ { q: "¿Qué Constitución se proclamó durante la Segunda República?", opciones: ["1812", "1876", "1931", "1978"], correcta: 2, explicacion: "Constitución republicana de 1931." } ],
+    "hist-6": [ { q: "¿Quién fue el primer presidente del gobierno tras las elecciones de 1977?", opciones: ["Arias Navarro", "Adolfo Suárez", "Felipe González", "Carrero Blanco"], correcta: 1, explicacion: "Suárez lideró la UCD en las primeras elecciones." } ],
     "m2-1": [
       {
         q: "Si A es una matriz 3x3 y |A| = 2, ¿cuál es el determinante de 3A?",
