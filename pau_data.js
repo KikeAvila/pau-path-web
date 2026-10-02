@@ -15,154 +15,3398 @@ window.PAU_DATA = {
     "latin": { nombre: "Latín", icono: "🏛️" }
   },
     camino: [
-    // TRIMESTRE 1
     {
-      id: "comunes-t1",
-      rama: "comun",
-      titulo: "Fase General - Trimestre 1",
-      nodos: [
-        { id: "len-1", asig: "lengua", tema: "Sintaxis Simple", tipo: "teoria" },
-        { id: "hist-1", asig: "historia", tema: "Raíces y Reyes Católicos", tipo: "quiz" },
-        { id: "ing-1", asig: "ingles", tema: "Grammar: Past & Conditionals", tipo: "quiz" }
-      ]
+        "id": "comun-t1-n1",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 1 - Nivel 1: Muy Fácil",
+        "nodos": [
+            {
+                "id": "comun-t1-n1-lengua",
+                "asig": "lengua",
+                "tema": "Morfología (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "comun-t1-n1-historia",
+                "asig": "historia",
+                "tema": "Raíces Históricas (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "comun-t1-n1-ingles",
+                "asig": "ingles",
+                "tema": "Present Tenses (Muy Fácil)",
+                "tipo": "teoria"
+            }
+        ]
     },
     {
-      id: "ing-t1",
-      rama: "ingenieria",
-      titulo: "Ingeniería y Tecnología - Trimestre 1",
-      nodos: [
-        { id: "m2-1", asig: "mates2", tema: "Matrices Básicas", tipo: "teoria" },
-        { id: "fis-1", asig: "fisica", tema: "Fuerza Gravitatoria", tipo: "quiz" },
-        { id: "dib-1", asig: "dibujo", tema: "Geometría Métrica", tipo: "quiz" }
-      ]
+        "id": "comun-t1-n2",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 1 - Nivel 2: Fácil",
+        "nodos": [
+            {
+                "id": "comun-t1-n2-lengua",
+                "asig": "lengua",
+                "tema": "Morfología (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t1-n2-historia",
+                "asig": "historia",
+                "tema": "Raíces Históricas (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t1-n2-ingles",
+                "asig": "ingles",
+                "tema": "Present Tenses (Fácil)",
+                "tipo": "quiz"
+            }
+        ]
     },
     {
-      id: "salud-t1",
-      rama: "salud",
-      titulo: "Ciencias de la Salud - Trimestre 1",
-      nodos: [
-        { id: "m2-1", asig: "mates2", tema: "Matrices Básicas", tipo: "teoria" },
-        { id: "qui-1", asig: "quimica", tema: "Estructura Atómica", tipo: "quiz" },
-        { id: "bio-1", asig: "biologia", tema: "Bioelementos y Agua", tipo: "quiz" }
-      ]
+        "id": "comun-t1-n3",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 1 - Nivel 3: Básico",
+        "nodos": [
+            {
+                "id": "comun-t1-n3-lengua",
+                "asig": "lengua",
+                "tema": "Morfología (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t1-n3-historia",
+                "asig": "historia",
+                "tema": "Raíces Históricas (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t1-n3-ingles",
+                "asig": "ingles",
+                "tema": "Present Tenses (Básico)",
+                "tipo": "quiz"
+            }
+        ]
     },
     {
-      id: "soc-t1",
-      rama: "sociales",
-      titulo: "Ciencias Sociales - Trimestre 1",
-      nodos: [
-        { id: "mcs-1", asig: "mates_ccss", tema: "Matrices y Sistemas", tipo: "quiz" },
-        { id: "eco-1", asig: "economia", tema: "La Empresa y el Entorno", tipo: "quiz" }
-      ]
+        "id": "comun-t1-n4",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 1 - Nivel 4: Intermedio Bajo",
+        "nodos": [
+            {
+                "id": "comun-t1-n4-lengua",
+                "asig": "lengua",
+                "tema": "Morfología (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t1-n4-historia",
+                "asig": "historia",
+                "tema": "Raíces Históricas (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t1-n4-ingles",
+                "asig": "ingles",
+                "tema": "Present Tenses (Intermedio Bajo)",
+                "tipo": "quiz"
+            }
+        ]
     },
     {
-      id: "hum-t1",
-      rama: "humanidades",
-      titulo: "Humanidades - Trimestre 1",
-      nodos: [
-        { id: "lat-1", asig: "latin", tema: "Declinaciones y Casos", tipo: "quiz" },
-        { id: "len-2", asig: "lengua", tema: "Literatura Clásica", tipo: "teoria" }
-      ]
-    },
-
-    // TRIMESTRE 2
-    {
-      id: "comunes-t2",
-      rama: "comun",
-      titulo: "Fase General - Trimestre 2",
-      nodos: [
-        { id: "len-3", asig: "lengua", tema: "Morfología y Literatura", tipo: "quiz" },
-        { id: "hist-2", asig: "historia", tema: "Siglo XIX y Restauración", tipo: "quiz" },
-        { id: "ing-2", asig: "ingles", tema: "Passive & Reported Speech", tipo: "quiz" }
-      ]
-    },
-    {
-      id: "ing-t2",
-      rama: "ingenieria",
-      titulo: "Ingeniería y Tecnología - Trimestre 2",
-      nodos: [
-        { id: "m2-2", asig: "mates2", tema: "Geometría y Vectores", tipo: "quiz" },
-        { id: "fis-2", asig: "fisica", tema: "Ondas y Óptica", tipo: "quiz" },
-        { id: "dib-2", asig: "dibujo", tema: "Sistema Diédrico", tipo: "quiz" }
-      ]
+        "id": "comun-t1-n5",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 1 - Nivel 5: Intermedio",
+        "nodos": [
+            {
+                "id": "comun-t1-n5-lengua",
+                "asig": "lengua",
+                "tema": "Morfología (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t1-n5-historia",
+                "asig": "historia",
+                "tema": "Raíces Históricas (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t1-n5-ingles",
+                "asig": "ingles",
+                "tema": "Present Tenses (Intermedio)",
+                "tipo": "quiz"
+            }
+        ]
     },
     {
-      id: "salud-t2",
-      rama: "salud",
-      titulo: "Ciencias de la Salud - Trimestre 2",
-      nodos: [
-        { id: "m2-2", asig: "mates2", tema: "Geometría y Vectores", tipo: "quiz" },
-        { id: "qui-2", asig: "quimica", tema: "Termoquímica y Cinética", tipo: "quiz" },
-        { id: "bio-2", asig: "biologia", tema: "Biología Celular", tipo: "quiz" }
-      ]
+        "id": "comun-t1-n6",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 1 - Nivel 6: Intermedio Alto",
+        "nodos": [
+            {
+                "id": "comun-t1-n6-lengua",
+                "asig": "lengua",
+                "tema": "Sintaxis Simple (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t1-n6-historia",
+                "asig": "historia",
+                "tema": "Reyes Católicos (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t1-n6-ingles",
+                "asig": "ingles",
+                "tema": "Past Tenses (Intermedio Alto)",
+                "tipo": "quiz"
+            }
+        ]
     },
     {
-      id: "soc-t2",
-      rama: "sociales",
-      titulo: "Ciencias Sociales - Trimestre 2",
-      nodos: [
-        { id: "mcs-2", asig: "mates_ccss", tema: "Probabilidad Básica", tipo: "quiz" },
-        { id: "eco-2", asig: "economia", tema: "Gestión Financiera", tipo: "quiz" }
-      ]
+        "id": "comun-t1-n7",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 1 - Nivel 7: Avanzado",
+        "nodos": [
+            {
+                "id": "comun-t1-n7-lengua",
+                "asig": "lengua",
+                "tema": "Sintaxis Simple (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t1-n7-historia",
+                "asig": "historia",
+                "tema": "Reyes Católicos (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t1-n7-ingles",
+                "asig": "ingles",
+                "tema": "Past Tenses (Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
     },
     {
-      id: "hum-t2",
-      rama: "humanidades",
-      titulo: "Humanidades - Trimestre 2",
-      nodos: [
-        { id: "lat-2", asig: "latin", tema: "Traducción de Textos", tipo: "quiz" }
-      ]
-    },
-
-    // TRIMESTRE 3 (SIMULACROS)
-    {
-      id: "comunes-t3",
-      rama: "comun",
-      titulo: "Simulacros EBAU - Fase General",
-      nodos: [
-        { id: "sim-len", asig: "lengua", tema: "Examen EBAU Lengua", tipo: "examen" },
-        { id: "sim-hist", asig: "historia", tema: "Examen EBAU Historia", tipo: "examen" },
-        { id: "sim-ing", asig: "ingles", tema: "Examen EBAU Inglés", tipo: "examen" }
-      ]
-    },
-    {
-      id: "ing-t3",
-      rama: "ingenieria",
-      titulo: "Simulacros EBAU - Ingeniería",
-      nodos: [
-        { id: "sim-m2", asig: "mates2", tema: "Examen EBAU Matemáticas II", tipo: "examen" },
-        { id: "sim-fis", asig: "fisica", tema: "Examen EBAU Física", tipo: "examen" },
-        { id: "sim-dib", asig: "dibujo", tema: "Examen EBAU Dibujo", tipo: "examen" }
-      ]
+        "id": "comun-t1-n8",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 1 - Nivel 8: Muy Avanzado",
+        "nodos": [
+            {
+                "id": "comun-t1-n8-lengua",
+                "asig": "lengua",
+                "tema": "Sintaxis Simple (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t1-n8-historia",
+                "asig": "historia",
+                "tema": "Reyes Católicos (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t1-n8-ingles",
+                "asig": "ingles",
+                "tema": "Past Tenses (Muy Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
     },
     {
-      id: "salud-t3",
-      rama: "salud",
-      titulo: "Simulacros EBAU - Salud",
-      nodos: [
-        { id: "sim-m2", asig: "mates2", tema: "Examen EBAU Matemáticas II", tipo: "examen" },
-        { id: "sim-qui", asig: "quimica", tema: "Examen EBAU Química", tipo: "examen" },
-        { id: "sim-bio", asig: "biologia", tema: "Examen EBAU Biología", tipo: "examen" }
-      ]
+        "id": "comun-t1-n9",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 1 - Nivel 9: Nivel EBAU",
+        "nodos": [
+            {
+                "id": "comun-t1-n9-lengua",
+                "asig": "lengua",
+                "tema": "Sintaxis Compuesta (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t1-n9-historia",
+                "asig": "historia",
+                "tema": "Austrias (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t1-n9-ingles",
+                "asig": "ingles",
+                "tema": "Future Forms (Nivel EBAU)",
+                "tipo": "quiz"
+            }
+        ]
     },
     {
-      id: "soc-t3",
-      rama: "sociales",
-      titulo: "Simulacros EBAU - Sociales",
-      nodos: [
-        { id: "sim-mcs", asig: "mates_ccss", tema: "Examen EBAU Mates CCSS", tipo: "examen" },
-        { id: "sim-eco", asig: "economia", tema: "Examen EBAU Economía", tipo: "examen" }
-      ]
+        "id": "comun-t1-n10",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 1 - Nivel 10: Reto Experto",
+        "nodos": [
+            {
+                "id": "comun-t1-n10-lengua",
+                "asig": "lengua",
+                "tema": "Sintaxis Compuesta (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "comun-t1-n10-historia",
+                "asig": "historia",
+                "tema": "Austrias (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "comun-t1-n10-ingles",
+                "asig": "ingles",
+                "tema": "Future Forms (Reto Experto)",
+                "tipo": "examen"
+            }
+        ]
     },
     {
-      id: "hum-t3",
-      rama: "humanidades",
-      titulo: "Simulacros EBAU - Humanidades",
-      nodos: [
-        { id: "sim-lat", asig: "latin", tema: "Examen EBAU Latín", tipo: "examen" }
-      ]
+        "id": "comun-t2-n1",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 2 - Nivel 1: Muy Fácil",
+        "nodos": [
+            {
+                "id": "comun-t2-n1-lengua",
+                "asig": "lengua",
+                "tema": "Sintaxis Compuesta (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "comun-t2-n1-historia",
+                "asig": "historia",
+                "tema": "Austrias (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "comun-t2-n1-ingles",
+                "asig": "ingles",
+                "tema": "Future Forms (Muy Fácil)",
+                "tipo": "teoria"
+            }
+        ]
+    },
+    {
+        "id": "comun-t2-n2",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 2 - Nivel 2: Fácil",
+        "nodos": [
+            {
+                "id": "comun-t2-n2-lengua",
+                "asig": "lengua",
+                "tema": "Sintaxis Compuesta (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t2-n2-historia",
+                "asig": "historia",
+                "tema": "Austrias (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t2-n2-ingles",
+                "asig": "ingles",
+                "tema": "Future Forms (Fácil)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "comun-t2-n3",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 2 - Nivel 3: Básico",
+        "nodos": [
+            {
+                "id": "comun-t2-n3-lengua",
+                "asig": "lengua",
+                "tema": "Texto Expositivo (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t2-n3-historia",
+                "asig": "historia",
+                "tema": "Borbones (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t2-n3-ingles",
+                "asig": "ingles",
+                "tema": "Conditionals (Básico)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "comun-t2-n4",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 2 - Nivel 4: Intermedio Bajo",
+        "nodos": [
+            {
+                "id": "comun-t2-n4-lengua",
+                "asig": "lengua",
+                "tema": "Texto Expositivo (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t2-n4-historia",
+                "asig": "historia",
+                "tema": "Borbones (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t2-n4-ingles",
+                "asig": "ingles",
+                "tema": "Conditionals (Intermedio Bajo)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "comun-t2-n5",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 2 - Nivel 5: Intermedio",
+        "nodos": [
+            {
+                "id": "comun-t2-n5-lengua",
+                "asig": "lengua",
+                "tema": "Texto Expositivo (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t2-n5-historia",
+                "asig": "historia",
+                "tema": "Borbones (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t2-n5-ingles",
+                "asig": "ingles",
+                "tema": "Conditionals (Intermedio)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "comun-t2-n6",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 2 - Nivel 6: Intermedio Alto",
+        "nodos": [
+            {
+                "id": "comun-t2-n6-lengua",
+                "asig": "lengua",
+                "tema": "Texto Argumentativo (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t2-n6-historia",
+                "asig": "historia",
+                "tema": "Guerra de Independencia (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t2-n6-ingles",
+                "asig": "ingles",
+                "tema": "Passive Voice (Intermedio Alto)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "comun-t2-n7",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 2 - Nivel 7: Avanzado",
+        "nodos": [
+            {
+                "id": "comun-t2-n7-lengua",
+                "asig": "lengua",
+                "tema": "Texto Argumentativo (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t2-n7-historia",
+                "asig": "historia",
+                "tema": "Guerra de Independencia (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t2-n7-ingles",
+                "asig": "ingles",
+                "tema": "Passive Voice (Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "comun-t2-n8",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 2 - Nivel 8: Muy Avanzado",
+        "nodos": [
+            {
+                "id": "comun-t2-n8-lengua",
+                "asig": "lengua",
+                "tema": "Texto Argumentativo (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t2-n8-historia",
+                "asig": "historia",
+                "tema": "Guerra de Independencia (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t2-n8-ingles",
+                "asig": "ingles",
+                "tema": "Passive Voice (Muy Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "comun-t2-n9",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 2 - Nivel 9: Nivel EBAU",
+        "nodos": [
+            {
+                "id": "comun-t2-n9-lengua",
+                "asig": "lengua",
+                "tema": "Literatura: S.XIX (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t2-n9-historia",
+                "asig": "historia",
+                "tema": "Restauración (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t2-n9-ingles",
+                "asig": "ingles",
+                "tema": "Reported Speech (Nivel EBAU)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "comun-t2-n10",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 2 - Nivel 10: Reto Experto",
+        "nodos": [
+            {
+                "id": "comun-t2-n10-lengua",
+                "asig": "lengua",
+                "tema": "Literatura: S.XIX (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "comun-t2-n10-historia",
+                "asig": "historia",
+                "tema": "Restauración (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "comun-t2-n10-ingles",
+                "asig": "ingles",
+                "tema": "Reported Speech (Reto Experto)",
+                "tipo": "examen"
+            }
+        ]
+    },
+    {
+        "id": "comun-t3-n1",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 3 - Nivel 1: Muy Fácil",
+        "nodos": [
+            {
+                "id": "comun-t3-n1-lengua",
+                "asig": "lengua",
+                "tema": "Literatura: S.XIX (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "comun-t3-n1-historia",
+                "asig": "historia",
+                "tema": "Restauración (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "comun-t3-n1-ingles",
+                "asig": "ingles",
+                "tema": "Reported Speech (Muy Fácil)",
+                "tipo": "teoria"
+            }
+        ]
+    },
+    {
+        "id": "comun-t3-n2",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 3 - Nivel 2: Fácil",
+        "nodos": [
+            {
+                "id": "comun-t3-n2-lengua",
+                "asig": "lengua",
+                "tema": "Literatura: S.XX (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t3-n2-historia",
+                "asig": "historia",
+                "tema": "Segunda República (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t3-n2-ingles",
+                "asig": "ingles",
+                "tema": "Relative Clauses (Fácil)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "comun-t3-n3",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 3 - Nivel 3: Básico",
+        "nodos": [
+            {
+                "id": "comun-t3-n3-lengua",
+                "asig": "lengua",
+                "tema": "Literatura: S.XX (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t3-n3-historia",
+                "asig": "historia",
+                "tema": "Segunda República (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t3-n3-ingles",
+                "asig": "ingles",
+                "tema": "Relative Clauses (Básico)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "comun-t3-n4",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 3 - Nivel 4: Intermedio Bajo",
+        "nodos": [
+            {
+                "id": "comun-t3-n4-lengua",
+                "asig": "lengua",
+                "tema": "Literatura: S.XX (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t3-n4-historia",
+                "asig": "historia",
+                "tema": "Segunda República (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t3-n4-ingles",
+                "asig": "ingles",
+                "tema": "Relative Clauses (Intermedio Bajo)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "comun-t3-n5",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 3 - Nivel 5: Intermedio",
+        "nodos": [
+            {
+                "id": "comun-t3-n5-lengua",
+                "asig": "lengua",
+                "tema": "Métrica (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t3-n5-historia",
+                "asig": "historia",
+                "tema": "Guerra Civil (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t3-n5-ingles",
+                "asig": "ingles",
+                "tema": "Modals (Intermedio)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "comun-t3-n6",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 3 - Nivel 6: Intermedio Alto",
+        "nodos": [
+            {
+                "id": "comun-t3-n6-lengua",
+                "asig": "lengua",
+                "tema": "Métrica (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t3-n6-historia",
+                "asig": "historia",
+                "tema": "Guerra Civil (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t3-n6-ingles",
+                "asig": "ingles",
+                "tema": "Modals (Intermedio Alto)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "comun-t3-n7",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 3 - Nivel 7: Avanzado",
+        "nodos": [
+            {
+                "id": "comun-t3-n7-lengua",
+                "asig": "lengua",
+                "tema": "Métrica (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t3-n7-historia",
+                "asig": "historia",
+                "tema": "Guerra Civil (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t3-n7-ingles",
+                "asig": "ingles",
+                "tema": "Modals (Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "comun-t3-n8",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 3 - Nivel 8: Muy Avanzado",
+        "nodos": [
+            {
+                "id": "comun-t3-n8-lengua",
+                "asig": "lengua",
+                "tema": "Semántica (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t3-n8-historia",
+                "asig": "historia",
+                "tema": "Franquismo (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t3-n8-ingles",
+                "asig": "ingles",
+                "tema": "Vocabulary & Reading (Muy Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "comun-t3-n9",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 3 - Nivel 9: Nivel EBAU",
+        "nodos": [
+            {
+                "id": "comun-t3-n9-lengua",
+                "asig": "lengua",
+                "tema": "Semántica (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t3-n9-historia",
+                "asig": "historia",
+                "tema": "Franquismo (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "comun-t3-n9-ingles",
+                "asig": "ingles",
+                "tema": "Vocabulary & Reading (Nivel EBAU)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "comun-t3-n10",
+        "rama": "comun",
+        "titulo": "Fase General - Trimestre 3 - Nivel 10: Reto Experto",
+        "nodos": [
+            {
+                "id": "comun-t3-n10-lengua",
+                "asig": "lengua",
+                "tema": "Semántica (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "comun-t3-n10-historia",
+                "asig": "historia",
+                "tema": "Franquismo (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "comun-t3-n10-ingles",
+                "asig": "ingles",
+                "tema": "Vocabulary & Reading (Reto Experto)",
+                "tipo": "examen"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t1-n1",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 1 - Nivel 1: Muy Fácil",
+        "nodos": [
+            {
+                "id": "ingenieria-t1-n1-mates2",
+                "asig": "mates2",
+                "tema": "Matrices (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "ingenieria-t1-n1-fisica",
+                "asig": "fisica",
+                "tema": "Gravitación Universal (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "ingenieria-t1-n1-dibujo",
+                "asig": "dibujo",
+                "tema": "Trazados Fundamentales (Muy Fácil)",
+                "tipo": "teoria"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t1-n2",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 1 - Nivel 2: Fácil",
+        "nodos": [
+            {
+                "id": "ingenieria-t1-n2-mates2",
+                "asig": "mates2",
+                "tema": "Matrices (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t1-n2-fisica",
+                "asig": "fisica",
+                "tema": "Gravitación Universal (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t1-n2-dibujo",
+                "asig": "dibujo",
+                "tema": "Trazados Fundamentales (Fácil)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t1-n3",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 1 - Nivel 3: Básico",
+        "nodos": [
+            {
+                "id": "ingenieria-t1-n3-mates2",
+                "asig": "mates2",
+                "tema": "Matrices (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t1-n3-fisica",
+                "asig": "fisica",
+                "tema": "Gravitación Universal (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t1-n3-dibujo",
+                "asig": "dibujo",
+                "tema": "Trazados Fundamentales (Básico)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t1-n4",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 1 - Nivel 4: Intermedio Bajo",
+        "nodos": [
+            {
+                "id": "ingenieria-t1-n4-mates2",
+                "asig": "mates2",
+                "tema": "Matrices (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t1-n4-fisica",
+                "asig": "fisica",
+                "tema": "Gravitación Universal (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t1-n4-dibujo",
+                "asig": "dibujo",
+                "tema": "Trazados Fundamentales (Intermedio Bajo)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t1-n5",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 1 - Nivel 5: Intermedio",
+        "nodos": [
+            {
+                "id": "ingenieria-t1-n5-mates2",
+                "asig": "mates2",
+                "tema": "Matrices (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t1-n5-fisica",
+                "asig": "fisica",
+                "tema": "Gravitación Universal (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t1-n5-dibujo",
+                "asig": "dibujo",
+                "tema": "Trazados Fundamentales (Intermedio)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t1-n6",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 1 - Nivel 6: Intermedio Alto",
+        "nodos": [
+            {
+                "id": "ingenieria-t1-n6-mates2",
+                "asig": "mates2",
+                "tema": "Determinantes (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t1-n6-fisica",
+                "asig": "fisica",
+                "tema": "Campo Gravitatorio (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t1-n6-dibujo",
+                "asig": "dibujo",
+                "tema": "Polígonos y Tangencias (Intermedio Alto)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t1-n7",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 1 - Nivel 7: Avanzado",
+        "nodos": [
+            {
+                "id": "ingenieria-t1-n7-mates2",
+                "asig": "mates2",
+                "tema": "Determinantes (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t1-n7-fisica",
+                "asig": "fisica",
+                "tema": "Campo Gravitatorio (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t1-n7-dibujo",
+                "asig": "dibujo",
+                "tema": "Polígonos y Tangencias (Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t1-n8",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 1 - Nivel 8: Muy Avanzado",
+        "nodos": [
+            {
+                "id": "ingenieria-t1-n8-mates2",
+                "asig": "mates2",
+                "tema": "Determinantes (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t1-n8-fisica",
+                "asig": "fisica",
+                "tema": "Campo Gravitatorio (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t1-n8-dibujo",
+                "asig": "dibujo",
+                "tema": "Polígonos y Tangencias (Muy Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t1-n9",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 1 - Nivel 9: Nivel EBAU",
+        "nodos": [
+            {
+                "id": "ingenieria-t1-n9-mates2",
+                "asig": "mates2",
+                "tema": "Sistemas Lineales (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t1-n9-fisica",
+                "asig": "fisica",
+                "tema": "Oscilaciones y Ondas (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t1-n9-dibujo",
+                "asig": "dibujo",
+                "tema": "Curvas Técnicas (Nivel EBAU)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t1-n10",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 1 - Nivel 10: Reto Experto",
+        "nodos": [
+            {
+                "id": "ingenieria-t1-n10-mates2",
+                "asig": "mates2",
+                "tema": "Sistemas Lineales (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "ingenieria-t1-n10-fisica",
+                "asig": "fisica",
+                "tema": "Oscilaciones y Ondas (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "ingenieria-t1-n10-dibujo",
+                "asig": "dibujo",
+                "tema": "Curvas Técnicas (Reto Experto)",
+                "tipo": "examen"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t2-n1",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 2 - Nivel 1: Muy Fácil",
+        "nodos": [
+            {
+                "id": "ingenieria-t2-n1-mates2",
+                "asig": "mates2",
+                "tema": "Sistemas Lineales (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "ingenieria-t2-n1-fisica",
+                "asig": "fisica",
+                "tema": "Oscilaciones y Ondas (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "ingenieria-t2-n1-dibujo",
+                "asig": "dibujo",
+                "tema": "Curvas Técnicas (Muy Fácil)",
+                "tipo": "teoria"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t2-n2",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 2 - Nivel 2: Fácil",
+        "nodos": [
+            {
+                "id": "ingenieria-t2-n2-mates2",
+                "asig": "mates2",
+                "tema": "Sistemas Lineales (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t2-n2-fisica",
+                "asig": "fisica",
+                "tema": "Oscilaciones y Ondas (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t2-n2-dibujo",
+                "asig": "dibujo",
+                "tema": "Curvas Técnicas (Fácil)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t2-n3",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 2 - Nivel 3: Básico",
+        "nodos": [
+            {
+                "id": "ingenieria-t2-n3-mates2",
+                "asig": "mates2",
+                "tema": "Vectores en el Espacio (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t2-n3-fisica",
+                "asig": "fisica",
+                "tema": "Acústica y Efecto Doppler (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t2-n3-dibujo",
+                "asig": "dibujo",
+                "tema": "Curvas Cónicas (Básico)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t2-n4",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 2 - Nivel 4: Intermedio Bajo",
+        "nodos": [
+            {
+                "id": "ingenieria-t2-n4-mates2",
+                "asig": "mates2",
+                "tema": "Vectores en el Espacio (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t2-n4-fisica",
+                "asig": "fisica",
+                "tema": "Acústica y Efecto Doppler (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t2-n4-dibujo",
+                "asig": "dibujo",
+                "tema": "Curvas Cónicas (Intermedio Bajo)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t2-n5",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 2 - Nivel 5: Intermedio",
+        "nodos": [
+            {
+                "id": "ingenieria-t2-n5-mates2",
+                "asig": "mates2",
+                "tema": "Vectores en el Espacio (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t2-n5-fisica",
+                "asig": "fisica",
+                "tema": "Acústica y Efecto Doppler (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t2-n5-dibujo",
+                "asig": "dibujo",
+                "tema": "Curvas Cónicas (Intermedio)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t2-n6",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 2 - Nivel 6: Intermedio Alto",
+        "nodos": [
+            {
+                "id": "ingenieria-t2-n6-mates2",
+                "asig": "mates2",
+                "tema": "Puntos, Rectas y Planos (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t2-n6-fisica",
+                "asig": "fisica",
+                "tema": "Óptica Geométrica (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t2-n6-dibujo",
+                "asig": "dibujo",
+                "tema": "Sistema Diédrico: Punto y Recta (Intermedio Alto)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t2-n7",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 2 - Nivel 7: Avanzado",
+        "nodos": [
+            {
+                "id": "ingenieria-t2-n7-mates2",
+                "asig": "mates2",
+                "tema": "Puntos, Rectas y Planos (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t2-n7-fisica",
+                "asig": "fisica",
+                "tema": "Óptica Geométrica (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t2-n7-dibujo",
+                "asig": "dibujo",
+                "tema": "Sistema Diédrico: Punto y Recta (Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t2-n8",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 2 - Nivel 8: Muy Avanzado",
+        "nodos": [
+            {
+                "id": "ingenieria-t2-n8-mates2",
+                "asig": "mates2",
+                "tema": "Puntos, Rectas y Planos (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t2-n8-fisica",
+                "asig": "fisica",
+                "tema": "Óptica Geométrica (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t2-n8-dibujo",
+                "asig": "dibujo",
+                "tema": "Sistema Diédrico: Punto y Recta (Muy Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t2-n9",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 2 - Nivel 9: Nivel EBAU",
+        "nodos": [
+            {
+                "id": "ingenieria-t2-n9-mates2",
+                "asig": "mates2",
+                "tema": "Problemas Métricos (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t2-n9-fisica",
+                "asig": "fisica",
+                "tema": "Óptica Física (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t2-n9-dibujo",
+                "asig": "dibujo",
+                "tema": "Sistema Diédrico: Planos (Nivel EBAU)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t2-n10",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 2 - Nivel 10: Reto Experto",
+        "nodos": [
+            {
+                "id": "ingenieria-t2-n10-mates2",
+                "asig": "mates2",
+                "tema": "Problemas Métricos (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "ingenieria-t2-n10-fisica",
+                "asig": "fisica",
+                "tema": "Óptica Física (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "ingenieria-t2-n10-dibujo",
+                "asig": "dibujo",
+                "tema": "Sistema Diédrico: Planos (Reto Experto)",
+                "tipo": "examen"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t3-n1",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 3 - Nivel 1: Muy Fácil",
+        "nodos": [
+            {
+                "id": "ingenieria-t3-n1-mates2",
+                "asig": "mates2",
+                "tema": "Problemas Métricos (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "ingenieria-t3-n1-fisica",
+                "asig": "fisica",
+                "tema": "Óptica Física (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "ingenieria-t3-n1-dibujo",
+                "asig": "dibujo",
+                "tema": "Sistema Diédrico: Planos (Muy Fácil)",
+                "tipo": "teoria"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t3-n2",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 3 - Nivel 2: Fácil",
+        "nodos": [
+            {
+                "id": "ingenieria-t3-n2-mates2",
+                "asig": "mates2",
+                "tema": "Límites y Continuidad (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t3-n2-fisica",
+                "asig": "fisica",
+                "tema": "Campo Eléctrico (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t3-n2-dibujo",
+                "asig": "dibujo",
+                "tema": "Intersecciones y Paralelismo (Fácil)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t3-n3",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 3 - Nivel 3: Básico",
+        "nodos": [
+            {
+                "id": "ingenieria-t3-n3-mates2",
+                "asig": "mates2",
+                "tema": "Límites y Continuidad (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t3-n3-fisica",
+                "asig": "fisica",
+                "tema": "Campo Eléctrico (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t3-n3-dibujo",
+                "asig": "dibujo",
+                "tema": "Intersecciones y Paralelismo (Básico)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t3-n4",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 3 - Nivel 4: Intermedio Bajo",
+        "nodos": [
+            {
+                "id": "ingenieria-t3-n4-mates2",
+                "asig": "mates2",
+                "tema": "Límites y Continuidad (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t3-n4-fisica",
+                "asig": "fisica",
+                "tema": "Campo Eléctrico (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t3-n4-dibujo",
+                "asig": "dibujo",
+                "tema": "Intersecciones y Paralelismo (Intermedio Bajo)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t3-n5",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 3 - Nivel 5: Intermedio",
+        "nodos": [
+            {
+                "id": "ingenieria-t3-n5-mates2",
+                "asig": "mates2",
+                "tema": "Derivadas y Optimización (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t3-n5-fisica",
+                "asig": "fisica",
+                "tema": "Campo Magnético (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t3-n5-dibujo",
+                "asig": "dibujo",
+                "tema": "Abatimientos (Intermedio)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t3-n6",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 3 - Nivel 6: Intermedio Alto",
+        "nodos": [
+            {
+                "id": "ingenieria-t3-n6-mates2",
+                "asig": "mates2",
+                "tema": "Derivadas y Optimización (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t3-n6-fisica",
+                "asig": "fisica",
+                "tema": "Campo Magnético (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t3-n6-dibujo",
+                "asig": "dibujo",
+                "tema": "Abatimientos (Intermedio Alto)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t3-n7",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 3 - Nivel 7: Avanzado",
+        "nodos": [
+            {
+                "id": "ingenieria-t3-n7-mates2",
+                "asig": "mates2",
+                "tema": "Derivadas y Optimización (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t3-n7-fisica",
+                "asig": "fisica",
+                "tema": "Campo Magnético (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t3-n7-dibujo",
+                "asig": "dibujo",
+                "tema": "Abatimientos (Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t3-n8",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 3 - Nivel 8: Muy Avanzado",
+        "nodos": [
+            {
+                "id": "ingenieria-t3-n8-mates2",
+                "asig": "mates2",
+                "tema": "Integrales Indefinidas (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t3-n8-fisica",
+                "asig": "fisica",
+                "tema": "Inducción Electromagnética (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t3-n8-dibujo",
+                "asig": "dibujo",
+                "tema": "Perspectiva Axonométrica (Muy Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t3-n9",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 3 - Nivel 9: Nivel EBAU",
+        "nodos": [
+            {
+                "id": "ingenieria-t3-n9-mates2",
+                "asig": "mates2",
+                "tema": "Integrales Indefinidas (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t3-n9-fisica",
+                "asig": "fisica",
+                "tema": "Inducción Electromagnética (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "ingenieria-t3-n9-dibujo",
+                "asig": "dibujo",
+                "tema": "Perspectiva Axonométrica (Nivel EBAU)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "ingenieria-t3-n10",
+        "rama": "ingenieria",
+        "titulo": "Modalidad Ingenieria - Trimestre 3 - Nivel 10: Reto Experto",
+        "nodos": [
+            {
+                "id": "ingenieria-t3-n10-mates2",
+                "asig": "mates2",
+                "tema": "Integrales Indefinidas (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "ingenieria-t3-n10-fisica",
+                "asig": "fisica",
+                "tema": "Inducción Electromagnética (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "ingenieria-t3-n10-dibujo",
+                "asig": "dibujo",
+                "tema": "Perspectiva Axonométrica (Reto Experto)",
+                "tipo": "examen"
+            }
+        ]
+    },
+    {
+        "id": "salud-t1-n1",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 1 - Nivel 1: Muy Fácil",
+        "nodos": [
+            {
+                "id": "salud-t1-n1-mates2",
+                "asig": "mates2",
+                "tema": "Matrices (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "salud-t1-n1-quimica",
+                "asig": "quimica",
+                "tema": "Estructura Atómica (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "salud-t1-n1-biologia",
+                "asig": "biologia",
+                "tema": "Bioelementos y Agua (Muy Fácil)",
+                "tipo": "teoria"
+            }
+        ]
+    },
+    {
+        "id": "salud-t1-n2",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 1 - Nivel 2: Fácil",
+        "nodos": [
+            {
+                "id": "salud-t1-n2-mates2",
+                "asig": "mates2",
+                "tema": "Matrices (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t1-n2-quimica",
+                "asig": "quimica",
+                "tema": "Estructura Atómica (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t1-n2-biologia",
+                "asig": "biologia",
+                "tema": "Bioelementos y Agua (Fácil)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t1-n3",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 1 - Nivel 3: Básico",
+        "nodos": [
+            {
+                "id": "salud-t1-n3-mates2",
+                "asig": "mates2",
+                "tema": "Matrices (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t1-n3-quimica",
+                "asig": "quimica",
+                "tema": "Estructura Atómica (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t1-n3-biologia",
+                "asig": "biologia",
+                "tema": "Bioelementos y Agua (Básico)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t1-n4",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 1 - Nivel 4: Intermedio Bajo",
+        "nodos": [
+            {
+                "id": "salud-t1-n4-mates2",
+                "asig": "mates2",
+                "tema": "Matrices (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t1-n4-quimica",
+                "asig": "quimica",
+                "tema": "Estructura Atómica (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t1-n4-biologia",
+                "asig": "biologia",
+                "tema": "Bioelementos y Agua (Intermedio Bajo)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t1-n5",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 1 - Nivel 5: Intermedio",
+        "nodos": [
+            {
+                "id": "salud-t1-n5-mates2",
+                "asig": "mates2",
+                "tema": "Matrices (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t1-n5-quimica",
+                "asig": "quimica",
+                "tema": "Estructura Atómica (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t1-n5-biologia",
+                "asig": "biologia",
+                "tema": "Bioelementos y Agua (Intermedio)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t1-n6",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 1 - Nivel 6: Intermedio Alto",
+        "nodos": [
+            {
+                "id": "salud-t1-n6-mates2",
+                "asig": "mates2",
+                "tema": "Determinantes (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t1-n6-quimica",
+                "asig": "quimica",
+                "tema": "Enlace Químico (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t1-n6-biologia",
+                "asig": "biologia",
+                "tema": "Glúcidos y Lípidos (Intermedio Alto)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t1-n7",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 1 - Nivel 7: Avanzado",
+        "nodos": [
+            {
+                "id": "salud-t1-n7-mates2",
+                "asig": "mates2",
+                "tema": "Determinantes (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t1-n7-quimica",
+                "asig": "quimica",
+                "tema": "Enlace Químico (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t1-n7-biologia",
+                "asig": "biologia",
+                "tema": "Glúcidos y Lípidos (Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t1-n8",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 1 - Nivel 8: Muy Avanzado",
+        "nodos": [
+            {
+                "id": "salud-t1-n8-mates2",
+                "asig": "mates2",
+                "tema": "Determinantes (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t1-n8-quimica",
+                "asig": "quimica",
+                "tema": "Enlace Químico (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t1-n8-biologia",
+                "asig": "biologia",
+                "tema": "Glúcidos y Lípidos (Muy Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t1-n9",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 1 - Nivel 9: Nivel EBAU",
+        "nodos": [
+            {
+                "id": "salud-t1-n9-mates2",
+                "asig": "mates2",
+                "tema": "Sistemas Lineales (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t1-n9-quimica",
+                "asig": "quimica",
+                "tema": "Termoquímica (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t1-n9-biologia",
+                "asig": "biologia",
+                "tema": "Proteínas y Enzimas (Nivel EBAU)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t1-n10",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 1 - Nivel 10: Reto Experto",
+        "nodos": [
+            {
+                "id": "salud-t1-n10-mates2",
+                "asig": "mates2",
+                "tema": "Sistemas Lineales (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "salud-t1-n10-quimica",
+                "asig": "quimica",
+                "tema": "Termoquímica (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "salud-t1-n10-biologia",
+                "asig": "biologia",
+                "tema": "Proteínas y Enzimas (Reto Experto)",
+                "tipo": "examen"
+            }
+        ]
+    },
+    {
+        "id": "salud-t2-n1",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 2 - Nivel 1: Muy Fácil",
+        "nodos": [
+            {
+                "id": "salud-t2-n1-mates2",
+                "asig": "mates2",
+                "tema": "Sistemas Lineales (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "salud-t2-n1-quimica",
+                "asig": "quimica",
+                "tema": "Termoquímica (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "salud-t2-n1-biologia",
+                "asig": "biologia",
+                "tema": "Proteínas y Enzimas (Muy Fácil)",
+                "tipo": "teoria"
+            }
+        ]
+    },
+    {
+        "id": "salud-t2-n2",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 2 - Nivel 2: Fácil",
+        "nodos": [
+            {
+                "id": "salud-t2-n2-mates2",
+                "asig": "mates2",
+                "tema": "Sistemas Lineales (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t2-n2-quimica",
+                "asig": "quimica",
+                "tema": "Termoquímica (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t2-n2-biologia",
+                "asig": "biologia",
+                "tema": "Proteínas y Enzimas (Fácil)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t2-n3",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 2 - Nivel 3: Básico",
+        "nodos": [
+            {
+                "id": "salud-t2-n3-mates2",
+                "asig": "mates2",
+                "tema": "Vectores en el Espacio (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t2-n3-quimica",
+                "asig": "quimica",
+                "tema": "Cinética Química (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t2-n3-biologia",
+                "asig": "biologia",
+                "tema": "Ácidos Nucleicos (Básico)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t2-n4",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 2 - Nivel 4: Intermedio Bajo",
+        "nodos": [
+            {
+                "id": "salud-t2-n4-mates2",
+                "asig": "mates2",
+                "tema": "Vectores en el Espacio (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t2-n4-quimica",
+                "asig": "quimica",
+                "tema": "Cinética Química (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t2-n4-biologia",
+                "asig": "biologia",
+                "tema": "Ácidos Nucleicos (Intermedio Bajo)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t2-n5",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 2 - Nivel 5: Intermedio",
+        "nodos": [
+            {
+                "id": "salud-t2-n5-mates2",
+                "asig": "mates2",
+                "tema": "Vectores en el Espacio (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t2-n5-quimica",
+                "asig": "quimica",
+                "tema": "Cinética Química (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t2-n5-biologia",
+                "asig": "biologia",
+                "tema": "Ácidos Nucleicos (Intermedio)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t2-n6",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 2 - Nivel 6: Intermedio Alto",
+        "nodos": [
+            {
+                "id": "salud-t2-n6-mates2",
+                "asig": "mates2",
+                "tema": "Puntos, Rectas y Planos (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t2-n6-quimica",
+                "asig": "quimica",
+                "tema": "Equilibrio Químico (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t2-n6-biologia",
+                "asig": "biologia",
+                "tema": "La Célula y Orgánulos (Intermedio Alto)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t2-n7",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 2 - Nivel 7: Avanzado",
+        "nodos": [
+            {
+                "id": "salud-t2-n7-mates2",
+                "asig": "mates2",
+                "tema": "Puntos, Rectas y Planos (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t2-n7-quimica",
+                "asig": "quimica",
+                "tema": "Equilibrio Químico (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t2-n7-biologia",
+                "asig": "biologia",
+                "tema": "La Célula y Orgánulos (Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t2-n8",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 2 - Nivel 8: Muy Avanzado",
+        "nodos": [
+            {
+                "id": "salud-t2-n8-mates2",
+                "asig": "mates2",
+                "tema": "Puntos, Rectas y Planos (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t2-n8-quimica",
+                "asig": "quimica",
+                "tema": "Equilibrio Químico (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t2-n8-biologia",
+                "asig": "biologia",
+                "tema": "La Célula y Orgánulos (Muy Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t2-n9",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 2 - Nivel 9: Nivel EBAU",
+        "nodos": [
+            {
+                "id": "salud-t2-n9-mates2",
+                "asig": "mates2",
+                "tema": "Problemas Métricos (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t2-n9-quimica",
+                "asig": "quimica",
+                "tema": "Ácido-Base (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t2-n9-biologia",
+                "asig": "biologia",
+                "tema": "Metabolismo Celular (Nivel EBAU)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t2-n10",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 2 - Nivel 10: Reto Experto",
+        "nodos": [
+            {
+                "id": "salud-t2-n10-mates2",
+                "asig": "mates2",
+                "tema": "Problemas Métricos (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "salud-t2-n10-quimica",
+                "asig": "quimica",
+                "tema": "Ácido-Base (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "salud-t2-n10-biologia",
+                "asig": "biologia",
+                "tema": "Metabolismo Celular (Reto Experto)",
+                "tipo": "examen"
+            }
+        ]
+    },
+    {
+        "id": "salud-t3-n1",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 3 - Nivel 1: Muy Fácil",
+        "nodos": [
+            {
+                "id": "salud-t3-n1-mates2",
+                "asig": "mates2",
+                "tema": "Problemas Métricos (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "salud-t3-n1-quimica",
+                "asig": "quimica",
+                "tema": "Ácido-Base (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "salud-t3-n1-biologia",
+                "asig": "biologia",
+                "tema": "Metabolismo Celular (Muy Fácil)",
+                "tipo": "teoria"
+            }
+        ]
+    },
+    {
+        "id": "salud-t3-n2",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 3 - Nivel 2: Fácil",
+        "nodos": [
+            {
+                "id": "salud-t3-n2-mates2",
+                "asig": "mates2",
+                "tema": "Límites y Continuidad (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t3-n2-quimica",
+                "asig": "quimica",
+                "tema": "Reacciones Redox (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t3-n2-biologia",
+                "asig": "biologia",
+                "tema": "Respiración y Fotosíntesis (Fácil)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t3-n3",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 3 - Nivel 3: Básico",
+        "nodos": [
+            {
+                "id": "salud-t3-n3-mates2",
+                "asig": "mates2",
+                "tema": "Límites y Continuidad (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t3-n3-quimica",
+                "asig": "quimica",
+                "tema": "Reacciones Redox (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t3-n3-biologia",
+                "asig": "biologia",
+                "tema": "Respiración y Fotosíntesis (Básico)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t3-n4",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 3 - Nivel 4: Intermedio Bajo",
+        "nodos": [
+            {
+                "id": "salud-t3-n4-mates2",
+                "asig": "mates2",
+                "tema": "Límites y Continuidad (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t3-n4-quimica",
+                "asig": "quimica",
+                "tema": "Reacciones Redox (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t3-n4-biologia",
+                "asig": "biologia",
+                "tema": "Respiración y Fotosíntesis (Intermedio Bajo)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t3-n5",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 3 - Nivel 5: Intermedio",
+        "nodos": [
+            {
+                "id": "salud-t3-n5-mates2",
+                "asig": "mates2",
+                "tema": "Derivadas y Optimización (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t3-n5-quimica",
+                "asig": "quimica",
+                "tema": "Electroquímica (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t3-n5-biologia",
+                "asig": "biologia",
+                "tema": "Mitosis y Meiosis (Intermedio)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t3-n6",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 3 - Nivel 6: Intermedio Alto",
+        "nodos": [
+            {
+                "id": "salud-t3-n6-mates2",
+                "asig": "mates2",
+                "tema": "Derivadas y Optimización (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t3-n6-quimica",
+                "asig": "quimica",
+                "tema": "Electroquímica (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t3-n6-biologia",
+                "asig": "biologia",
+                "tema": "Mitosis y Meiosis (Intermedio Alto)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t3-n7",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 3 - Nivel 7: Avanzado",
+        "nodos": [
+            {
+                "id": "salud-t3-n7-mates2",
+                "asig": "mates2",
+                "tema": "Derivadas y Optimización (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t3-n7-quimica",
+                "asig": "quimica",
+                "tema": "Electroquímica (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t3-n7-biologia",
+                "asig": "biologia",
+                "tema": "Mitosis y Meiosis (Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t3-n8",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 3 - Nivel 8: Muy Avanzado",
+        "nodos": [
+            {
+                "id": "salud-t3-n8-mates2",
+                "asig": "mates2",
+                "tema": "Integrales Indefinidas (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t3-n8-quimica",
+                "asig": "quimica",
+                "tema": "Química Orgánica (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t3-n8-biologia",
+                "asig": "biologia",
+                "tema": "Genética Mendeliana (Muy Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t3-n9",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 3 - Nivel 9: Nivel EBAU",
+        "nodos": [
+            {
+                "id": "salud-t3-n9-mates2",
+                "asig": "mates2",
+                "tema": "Integrales Indefinidas (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t3-n9-quimica",
+                "asig": "quimica",
+                "tema": "Química Orgánica (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "salud-t3-n9-biologia",
+                "asig": "biologia",
+                "tema": "Genética Mendeliana (Nivel EBAU)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "salud-t3-n10",
+        "rama": "salud",
+        "titulo": "Modalidad Salud - Trimestre 3 - Nivel 10: Reto Experto",
+        "nodos": [
+            {
+                "id": "salud-t3-n10-mates2",
+                "asig": "mates2",
+                "tema": "Integrales Indefinidas (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "salud-t3-n10-quimica",
+                "asig": "quimica",
+                "tema": "Química Orgánica (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "salud-t3-n10-biologia",
+                "asig": "biologia",
+                "tema": "Genética Mendeliana (Reto Experto)",
+                "tipo": "examen"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t1-n1",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 1 - Nivel 1: Muy Fácil",
+        "nodos": [
+            {
+                "id": "sociales-t1-n1-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Matrices (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "sociales-t1-n1-economia",
+                "asig": "economia",
+                "tema": "La Empresa (Muy Fácil)",
+                "tipo": "teoria"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t1-n2",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 1 - Nivel 2: Fácil",
+        "nodos": [
+            {
+                "id": "sociales-t1-n2-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Matrices (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t1-n2-economia",
+                "asig": "economia",
+                "tema": "La Empresa (Fácil)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t1-n3",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 1 - Nivel 3: Básico",
+        "nodos": [
+            {
+                "id": "sociales-t1-n3-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Matrices (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t1-n3-economia",
+                "asig": "economia",
+                "tema": "La Empresa (Básico)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t1-n4",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 1 - Nivel 4: Intermedio Bajo",
+        "nodos": [
+            {
+                "id": "sociales-t1-n4-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Matrices (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t1-n4-economia",
+                "asig": "economia",
+                "tema": "La Empresa (Intermedio Bajo)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t1-n5",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 1 - Nivel 5: Intermedio",
+        "nodos": [
+            {
+                "id": "sociales-t1-n5-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Matrices (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t1-n5-economia",
+                "asig": "economia",
+                "tema": "La Empresa (Intermedio)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t1-n6",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 1 - Nivel 6: Intermedio Alto",
+        "nodos": [
+            {
+                "id": "sociales-t1-n6-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Sistemas de Ecuaciones (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t1-n6-economia",
+                "asig": "economia",
+                "tema": "Desarrollo de la Empresa (Intermedio Alto)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t1-n7",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 1 - Nivel 7: Avanzado",
+        "nodos": [
+            {
+                "id": "sociales-t1-n7-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Sistemas de Ecuaciones (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t1-n7-economia",
+                "asig": "economia",
+                "tema": "Desarrollo de la Empresa (Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t1-n8",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 1 - Nivel 8: Muy Avanzado",
+        "nodos": [
+            {
+                "id": "sociales-t1-n8-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Sistemas de Ecuaciones (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t1-n8-economia",
+                "asig": "economia",
+                "tema": "Desarrollo de la Empresa (Muy Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t1-n9",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 1 - Nivel 9: Nivel EBAU",
+        "nodos": [
+            {
+                "id": "sociales-t1-n9-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Programación Lineal (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t1-n9-economia",
+                "asig": "economia",
+                "tema": "Organización y Dirección (Nivel EBAU)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t1-n10",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 1 - Nivel 10: Reto Experto",
+        "nodos": [
+            {
+                "id": "sociales-t1-n10-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Programación Lineal (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "sociales-t1-n10-economia",
+                "asig": "economia",
+                "tema": "Organización y Dirección (Reto Experto)",
+                "tipo": "examen"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t2-n1",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 2 - Nivel 1: Muy Fácil",
+        "nodos": [
+            {
+                "id": "sociales-t2-n1-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Programación Lineal (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "sociales-t2-n1-economia",
+                "asig": "economia",
+                "tema": "Organización y Dirección (Muy Fácil)",
+                "tipo": "teoria"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t2-n2",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 2 - Nivel 2: Fácil",
+        "nodos": [
+            {
+                "id": "sociales-t2-n2-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Programación Lineal (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t2-n2-economia",
+                "asig": "economia",
+                "tema": "Organización y Dirección (Fácil)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t2-n3",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 2 - Nivel 3: Básico",
+        "nodos": [
+            {
+                "id": "sociales-t2-n3-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Límites (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t2-n3-economia",
+                "asig": "economia",
+                "tema": "Función de Producción (Básico)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t2-n4",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 2 - Nivel 4: Intermedio Bajo",
+        "nodos": [
+            {
+                "id": "sociales-t2-n4-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Límites (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t2-n4-economia",
+                "asig": "economia",
+                "tema": "Función de Producción (Intermedio Bajo)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t2-n5",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 2 - Nivel 5: Intermedio",
+        "nodos": [
+            {
+                "id": "sociales-t2-n5-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Límites (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t2-n5-economia",
+                "asig": "economia",
+                "tema": "Función de Producción (Intermedio)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t2-n6",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 2 - Nivel 6: Intermedio Alto",
+        "nodos": [
+            {
+                "id": "sociales-t2-n6-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Derivadas (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t2-n6-economia",
+                "asig": "economia",
+                "tema": "Costes y Beneficios (Intermedio Alto)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t2-n7",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 2 - Nivel 7: Avanzado",
+        "nodos": [
+            {
+                "id": "sociales-t2-n7-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Derivadas (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t2-n7-economia",
+                "asig": "economia",
+                "tema": "Costes y Beneficios (Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t2-n8",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 2 - Nivel 8: Muy Avanzado",
+        "nodos": [
+            {
+                "id": "sociales-t2-n8-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Derivadas (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t2-n8-economia",
+                "asig": "economia",
+                "tema": "Costes y Beneficios (Muy Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t2-n9",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 2 - Nivel 9: Nivel EBAU",
+        "nodos": [
+            {
+                "id": "sociales-t2-n9-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Aplicaciones de Derivadas (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t2-n9-economia",
+                "asig": "economia",
+                "tema": "Función Comercial (Nivel EBAU)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t2-n10",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 2 - Nivel 10: Reto Experto",
+        "nodos": [
+            {
+                "id": "sociales-t2-n10-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Aplicaciones de Derivadas (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "sociales-t2-n10-economia",
+                "asig": "economia",
+                "tema": "Función Comercial (Reto Experto)",
+                "tipo": "examen"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t3-n1",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 3 - Nivel 1: Muy Fácil",
+        "nodos": [
+            {
+                "id": "sociales-t3-n1-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Aplicaciones de Derivadas (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "sociales-t3-n1-economia",
+                "asig": "economia",
+                "tema": "Función Comercial (Muy Fácil)",
+                "tipo": "teoria"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t3-n2",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 3 - Nivel 2: Fácil",
+        "nodos": [
+            {
+                "id": "sociales-t3-n2-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Integrales (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t3-n2-economia",
+                "asig": "economia",
+                "tema": "Marketing (Fácil)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t3-n3",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 3 - Nivel 3: Básico",
+        "nodos": [
+            {
+                "id": "sociales-t3-n3-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Integrales (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t3-n3-economia",
+                "asig": "economia",
+                "tema": "Marketing (Básico)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t3-n4",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 3 - Nivel 4: Intermedio Bajo",
+        "nodos": [
+            {
+                "id": "sociales-t3-n4-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Integrales (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t3-n4-economia",
+                "asig": "economia",
+                "tema": "Marketing (Intermedio Bajo)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t3-n5",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 3 - Nivel 5: Intermedio",
+        "nodos": [
+            {
+                "id": "sociales-t3-n5-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Estadística Bidimensional (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t3-n5-economia",
+                "asig": "economia",
+                "tema": "Información Contable (Intermedio)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t3-n6",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 3 - Nivel 6: Intermedio Alto",
+        "nodos": [
+            {
+                "id": "sociales-t3-n6-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Estadística Bidimensional (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t3-n6-economia",
+                "asig": "economia",
+                "tema": "Información Contable (Intermedio Alto)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t3-n7",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 3 - Nivel 7: Avanzado",
+        "nodos": [
+            {
+                "id": "sociales-t3-n7-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Estadística Bidimensional (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t3-n7-economia",
+                "asig": "economia",
+                "tema": "Información Contable (Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t3-n8",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 3 - Nivel 8: Muy Avanzado",
+        "nodos": [
+            {
+                "id": "sociales-t3-n8-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Probabilidad (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t3-n8-economia",
+                "asig": "economia",
+                "tema": "Análisis Financiero (Muy Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t3-n9",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 3 - Nivel 9: Nivel EBAU",
+        "nodos": [
+            {
+                "id": "sociales-t3-n9-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Probabilidad (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "sociales-t3-n9-economia",
+                "asig": "economia",
+                "tema": "Análisis Financiero (Nivel EBAU)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "sociales-t3-n10",
+        "rama": "sociales",
+        "titulo": "Modalidad Sociales - Trimestre 3 - Nivel 10: Reto Experto",
+        "nodos": [
+            {
+                "id": "sociales-t3-n10-mates_ccss",
+                "asig": "mates_ccss",
+                "tema": "Probabilidad (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "sociales-t3-n10-economia",
+                "asig": "economia",
+                "tema": "Análisis Financiero (Reto Experto)",
+                "tipo": "examen"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t1-n1",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 1 - Nivel 1: Muy Fácil",
+        "nodos": [
+            {
+                "id": "humanidades-t1-n1-latin",
+                "asig": "latin",
+                "tema": "Primera Declinación (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "humanidades-t1-n1-historia",
+                "asig": "historia",
+                "tema": "Arte Antiguo (Muy Fácil)",
+                "tipo": "teoria"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t1-n2",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 1 - Nivel 2: Fácil",
+        "nodos": [
+            {
+                "id": "humanidades-t1-n2-latin",
+                "asig": "latin",
+                "tema": "Primera Declinación (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t1-n2-historia",
+                "asig": "historia",
+                "tema": "Arte Antiguo (Fácil)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t1-n3",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 1 - Nivel 3: Básico",
+        "nodos": [
+            {
+                "id": "humanidades-t1-n3-latin",
+                "asig": "latin",
+                "tema": "Primera Declinación (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t1-n3-historia",
+                "asig": "historia",
+                "tema": "Arte Antiguo (Básico)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t1-n4",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 1 - Nivel 4: Intermedio Bajo",
+        "nodos": [
+            {
+                "id": "humanidades-t1-n4-latin",
+                "asig": "latin",
+                "tema": "Primera Declinación (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t1-n4-historia",
+                "asig": "historia",
+                "tema": "Arte Antiguo (Intermedio Bajo)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t1-n5",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 1 - Nivel 5: Intermedio",
+        "nodos": [
+            {
+                "id": "humanidades-t1-n5-latin",
+                "asig": "latin",
+                "tema": "Primera Declinación (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t1-n5-historia",
+                "asig": "historia",
+                "tema": "Arte Antiguo (Intermedio)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t1-n6",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 1 - Nivel 6: Intermedio Alto",
+        "nodos": [
+            {
+                "id": "humanidades-t1-n6-latin",
+                "asig": "latin",
+                "tema": "Segunda Declinación (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t1-n6-historia",
+                "asig": "historia",
+                "tema": "Grecia Clásica (Intermedio Alto)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t1-n7",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 1 - Nivel 7: Avanzado",
+        "nodos": [
+            {
+                "id": "humanidades-t1-n7-latin",
+                "asig": "latin",
+                "tema": "Segunda Declinación (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t1-n7-historia",
+                "asig": "historia",
+                "tema": "Grecia Clásica (Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t1-n8",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 1 - Nivel 8: Muy Avanzado",
+        "nodos": [
+            {
+                "id": "humanidades-t1-n8-latin",
+                "asig": "latin",
+                "tema": "Segunda Declinación (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t1-n8-historia",
+                "asig": "historia",
+                "tema": "Grecia Clásica (Muy Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t1-n9",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 1 - Nivel 9: Nivel EBAU",
+        "nodos": [
+            {
+                "id": "humanidades-t1-n9-latin",
+                "asig": "latin",
+                "tema": "Tercera Declinación (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t1-n9-historia",
+                "asig": "historia",
+                "tema": "Roma (Nivel EBAU)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t1-n10",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 1 - Nivel 10: Reto Experto",
+        "nodos": [
+            {
+                "id": "humanidades-t1-n10-latin",
+                "asig": "latin",
+                "tema": "Tercera Declinación (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "humanidades-t1-n10-historia",
+                "asig": "historia",
+                "tema": "Roma (Reto Experto)",
+                "tipo": "examen"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t2-n1",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 2 - Nivel 1: Muy Fácil",
+        "nodos": [
+            {
+                "id": "humanidades-t2-n1-latin",
+                "asig": "latin",
+                "tema": "Tercera Declinación (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "humanidades-t2-n1-historia",
+                "asig": "historia",
+                "tema": "Roma (Muy Fácil)",
+                "tipo": "teoria"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t2-n2",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 2 - Nivel 2: Fácil",
+        "nodos": [
+            {
+                "id": "humanidades-t2-n2-latin",
+                "asig": "latin",
+                "tema": "Tercera Declinación (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t2-n2-historia",
+                "asig": "historia",
+                "tema": "Roma (Fácil)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t2-n3",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 2 - Nivel 3: Básico",
+        "nodos": [
+            {
+                "id": "humanidades-t2-n3-latin",
+                "asig": "latin",
+                "tema": "Cuarta y Quinta (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t2-n3-historia",
+                "asig": "historia",
+                "tema": "Arte Paleocristiano (Básico)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t2-n4",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 2 - Nivel 4: Intermedio Bajo",
+        "nodos": [
+            {
+                "id": "humanidades-t2-n4-latin",
+                "asig": "latin",
+                "tema": "Cuarta y Quinta (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t2-n4-historia",
+                "asig": "historia",
+                "tema": "Arte Paleocristiano (Intermedio Bajo)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t2-n5",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 2 - Nivel 5: Intermedio",
+        "nodos": [
+            {
+                "id": "humanidades-t2-n5-latin",
+                "asig": "latin",
+                "tema": "Cuarta y Quinta (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t2-n5-historia",
+                "asig": "historia",
+                "tema": "Arte Paleocristiano (Intermedio)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t2-n6",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 2 - Nivel 6: Intermedio Alto",
+        "nodos": [
+            {
+                "id": "humanidades-t2-n6-latin",
+                "asig": "latin",
+                "tema": "Verbos: Presente (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t2-n6-historia",
+                "asig": "historia",
+                "tema": "Arte Románico (Intermedio Alto)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t2-n7",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 2 - Nivel 7: Avanzado",
+        "nodos": [
+            {
+                "id": "humanidades-t2-n7-latin",
+                "asig": "latin",
+                "tema": "Verbos: Presente (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t2-n7-historia",
+                "asig": "historia",
+                "tema": "Arte Románico (Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t2-n8",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 2 - Nivel 8: Muy Avanzado",
+        "nodos": [
+            {
+                "id": "humanidades-t2-n8-latin",
+                "asig": "latin",
+                "tema": "Verbos: Presente (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t2-n8-historia",
+                "asig": "historia",
+                "tema": "Arte Románico (Muy Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t2-n9",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 2 - Nivel 9: Nivel EBAU",
+        "nodos": [
+            {
+                "id": "humanidades-t2-n9-latin",
+                "asig": "latin",
+                "tema": "Verbos: Pasado (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t2-n9-historia",
+                "asig": "historia",
+                "tema": "Arte Gótico (Nivel EBAU)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t2-n10",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 2 - Nivel 10: Reto Experto",
+        "nodos": [
+            {
+                "id": "humanidades-t2-n10-latin",
+                "asig": "latin",
+                "tema": "Verbos: Pasado (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "humanidades-t2-n10-historia",
+                "asig": "historia",
+                "tema": "Arte Gótico (Reto Experto)",
+                "tipo": "examen"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t3-n1",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 3 - Nivel 1: Muy Fácil",
+        "nodos": [
+            {
+                "id": "humanidades-t3-n1-latin",
+                "asig": "latin",
+                "tema": "Verbos: Pasado (Muy Fácil)",
+                "tipo": "teoria"
+            },
+            {
+                "id": "humanidades-t3-n1-historia",
+                "asig": "historia",
+                "tema": "Arte Gótico (Muy Fácil)",
+                "tipo": "teoria"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t3-n2",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 3 - Nivel 2: Fácil",
+        "nodos": [
+            {
+                "id": "humanidades-t3-n2-latin",
+                "asig": "latin",
+                "tema": "Sintaxis de Casos (Fácil)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t3-n2-historia",
+                "asig": "historia",
+                "tema": "Renacimiento (Fácil)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t3-n3",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 3 - Nivel 3: Básico",
+        "nodos": [
+            {
+                "id": "humanidades-t3-n3-latin",
+                "asig": "latin",
+                "tema": "Sintaxis de Casos (Básico)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t3-n3-historia",
+                "asig": "historia",
+                "tema": "Renacimiento (Básico)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t3-n4",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 3 - Nivel 4: Intermedio Bajo",
+        "nodos": [
+            {
+                "id": "humanidades-t3-n4-latin",
+                "asig": "latin",
+                "tema": "Sintaxis de Casos (Intermedio Bajo)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t3-n4-historia",
+                "asig": "historia",
+                "tema": "Renacimiento (Intermedio Bajo)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t3-n5",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 3 - Nivel 5: Intermedio",
+        "nodos": [
+            {
+                "id": "humanidades-t3-n5-latin",
+                "asig": "latin",
+                "tema": "Oraciones Subordinadas (Intermedio)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t3-n5-historia",
+                "asig": "historia",
+                "tema": "Barroco (Intermedio)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t3-n6",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 3 - Nivel 6: Intermedio Alto",
+        "nodos": [
+            {
+                "id": "humanidades-t3-n6-latin",
+                "asig": "latin",
+                "tema": "Oraciones Subordinadas (Intermedio Alto)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t3-n6-historia",
+                "asig": "historia",
+                "tema": "Barroco (Intermedio Alto)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t3-n7",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 3 - Nivel 7: Avanzado",
+        "nodos": [
+            {
+                "id": "humanidades-t3-n7-latin",
+                "asig": "latin",
+                "tema": "Oraciones Subordinadas (Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t3-n7-historia",
+                "asig": "historia",
+                "tema": "Barroco (Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t3-n8",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 3 - Nivel 8: Muy Avanzado",
+        "nodos": [
+            {
+                "id": "humanidades-t3-n8-latin",
+                "asig": "latin",
+                "tema": "Cultura Romana (Muy Avanzado)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t3-n8-historia",
+                "asig": "historia",
+                "tema": "Goya y Neoclasicismo (Muy Avanzado)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t3-n9",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 3 - Nivel 9: Nivel EBAU",
+        "nodos": [
+            {
+                "id": "humanidades-t3-n9-latin",
+                "asig": "latin",
+                "tema": "Cultura Romana (Nivel EBAU)",
+                "tipo": "quiz"
+            },
+            {
+                "id": "humanidades-t3-n9-historia",
+                "asig": "historia",
+                "tema": "Goya y Neoclasicismo (Nivel EBAU)",
+                "tipo": "quiz"
+            }
+        ]
+    },
+    {
+        "id": "humanidades-t3-n10",
+        "rama": "humanidades",
+        "titulo": "Modalidad Humanidades - Trimestre 3 - Nivel 10: Reto Experto",
+        "nodos": [
+            {
+                "id": "humanidades-t3-n10-latin",
+                "asig": "latin",
+                "tema": "Cultura Romana (Reto Experto)",
+                "tipo": "examen"
+            },
+            {
+                "id": "humanidades-t3-n10-historia",
+                "asig": "historia",
+                "tema": "Goya y Neoclasicismo (Reto Experto)",
+                "tipo": "examen"
+            }
+        ]
     }
-  ],
+]
+  ,
   teoria: {
     "m2-1": {
       titulo: "Álgebra: Matrices y Determinantes (Nivel EBAU)",
