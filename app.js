@@ -59,23 +59,43 @@ function renderInicio() {
 
 function renderPath() {
   const c = $("path-container");
-  let html = `<div style="padding: 20px;"><h2>🗺️ El Camino (EBAU)</h2>`;
-  if (!window.PAU_DATA) {
-    c.innerHTML = html + "Cargando datos...</div>"; return;
-  }
   
-  window.PAU_DATA.camino.forEach(nivel => {
-    html += `<div class="level-box" style="margin-bottom: 20px; background: #222; border-radius: 12px; padding: 15px;">
-      <h3>${nivel.titulo}</h3>
+  if (!window.PAU_DATA) {
+    c.innerHTML = "<div style='padding: 20px;'><h2>🗺️ El Camino (EBAU)</h2>Cargando datos...</div>"; return;
+  }
+
+  // Leer el itinerario seleccionado del estado, por defecto Ingeniería
+  const itinerario = window.S.itinerario || "ingenieria";
+
+  let html = `<div style="padding: 20px;">
+    <h2>🗺️ Itinerario EBAU</h2>
+    <p style="color:#aaa; font-size:0.9em;">Elige tu modalidad para cargar tu plan de estudio específico.</p>
+    
+    <div style="margin-bottom:20px; background:#111; padding:15px; border-radius:8px;">
+      <label style="font-weight:bold; margin-right:10px;">Modalidad:</label>
+      <select id="camino-itinerario" onchange="cambiarItinerario(this.value)" style="padding:10px; border-radius:6px; background:#222; color:#fff; border:1px solid #444;">
+        <option value="ingenieria" ` + (itinerario==='ingenieria'?'selected':'') + `>Ciencias: Ingeniería y Tecnología</option>
+        <option value="salud" ` + (itinerario==='salud'?'selected':'') + `>Ciencias: Ciencias de la Salud</option>
+        <option value="sociales" ` + (itinerario==='sociales'?'selected':'') + `>Ciencias Sociales</option>
+        <option value="humanidades" ` + (itinerario==='humanidades'?'selected':'') + `>Humanidades</option>
+      </select>
+    </div>
+  `;
+  
+  const nivelesFiltrados = window.PAU_DATA.camino.filter(n => n.rama === "comun" || n.rama === itinerario);
+
+  nivelesFiltrados.forEach(nivel => {
+    html += `<div class="level-box" style="margin-bottom: 20px; background: #222; border-radius: 12px; padding: 15px; border-left: 5px solid ${nivel.rama==='comun' ? '#888' : '#4CAF50'};">
+      <h3 style="margin-top:0;">${nivel.titulo}</h3>
       <div style="display: flex; gap: 10px; overflow-x: auto; padding: 10px 0;">`;
     nivel.nodos.forEach(nodo => {
       const asig = window.PAU_DATA.asignaturas[nodo.asig];
       const done = S.nodos[nodo.id] ? "✅" : "";
-      html += `<div style="background: #333; padding: 10px; border-radius: 8px; min-width: 120px; text-align: center; cursor: pointer;" onclick="abrirNodo('${nodo.id}')">
-        <div style="font-size: 24px;">${asig.icono}</div>
-        <div style="font-size: 12px; margin-top: 5px;">${asig.nombre}</div>
-        <div style="font-size: 11px; color: #888;">${nodo.tema}</div>
-        <div>${done}</div>
+      html += `<div style="background: #333; padding: 10px; border-radius: 8px; min-width: 120px; text-align: center; cursor: pointer; border: 1px solid #444;" onclick="abrirNodo('${nodo.id}')">
+        <div style="font-size: 24px;">${asig ? asig.icono : '📚'}</div>
+        <div style="font-size: 12px; margin-top: 5px; font-weight:bold;">${asig ? asig.nombre : nodo.asig}</div>
+        <div style="font-size: 11px; color: #aaa; margin-top:5px;">${nodo.tema}</div>
+        <div style="margin-top:5px;">${done}</div>
       </div>`;
     });
     html += `</div></div>`;
@@ -83,6 +103,12 @@ function renderPath() {
   html += `</div>`;
   c.innerHTML = html;
 }
+
+window.cambiarItinerario = function(val) {
+  window.S.itinerario = val;
+  saveState();
+  renderPath();
+};
 
 let currentQuiz = null;
 

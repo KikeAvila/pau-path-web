@@ -14,10 +14,12 @@ window.PAU_DATA = {
     "economia": { nombre: "Economía de la Empresa", icono: "💶" },
     "latin": { nombre: "Latín", icono: "🏛️" }
   },
-  camino: [
+    camino: [
+    // TRIMESTRE 1
     {
       id: "comunes-t1",
-      titulo: "Fase General (Común) - Trimestre 1",
+      rama: "comun",
+      titulo: "Fase General - Trimestre 1",
       nodos: [
         { id: "len-1", asig: "lengua", tema: "Sintaxis Simple", tipo: "teoria" },
         { id: "hist-1", asig: "historia", tema: "Raíces y Reyes Católicos", tipo: "quiz" },
@@ -25,57 +27,98 @@ window.PAU_DATA = {
       ]
     },
     {
-      id: "ciencias-t1",
-      titulo: "Modalidad: Ciencias e Ingeniería - Trimestre 1",
+      id: "ing-t1",
+      rama: "ingenieria",
+      titulo: "Ingeniería y Tecnología - Trimestre 1",
       nodos: [
         { id: "m2-1", asig: "mates2", tema: "Matrices Básicas", tipo: "teoria" },
         { id: "fis-1", asig: "fisica", tema: "Fuerza Gravitatoria", tipo: "quiz" },
+        { id: "dib-1", asig: "dibujo", tema: "Geometría Métrica", tipo: "quiz" }
+      ]
+    },
+    {
+      id: "salud-t1",
+      rama: "salud",
+      titulo: "Ciencias de la Salud - Trimestre 1",
+      nodos: [
+        { id: "m2-1", asig: "mates2", tema: "Matrices Básicas", tipo: "teoria" },
         { id: "qui-1", asig: "quimica", tema: "Estructura Atómica", tipo: "quiz" },
-        { id: "dib-1", asig: "dibujo", tema: "Geometría Métrica", tipo: "quiz" },
         { id: "bio-1", asig: "biologia", tema: "Bioelementos y Agua", tipo: "quiz" }
       ]
     },
     {
-      id: "sociales-t1",
-      titulo: "Modalidad: Ciencias Sociales y Humanidades - Trimestre 1",
+      id: "soc-t1",
+      rama: "sociales",
+      titulo: "Ciencias Sociales - Trimestre 1",
       nodos: [
         { id: "mcs-1", asig: "mates_ccss", tema: "Matrices y Sistemas", tipo: "quiz" },
-        { id: "eco-1", asig: "economia", tema: "La Empresa y el Entorno", tipo: "quiz" },
-        { id: "lat-1", asig: "latin", tema: "Declinaciones y Casos", tipo: "quiz" }
+        { id: "eco-1", asig: "economia", tema: "La Empresa y el Entorno", tipo: "quiz" }
       ]
     },
     {
-      id: "comunes-t2",
-      titulo: "Fase General (Común) - Trimestre 2",
+      id: "hum-t1",
+      rama: "humanidades",
+      titulo: "Humanidades - Trimestre 1",
       nodos: [
-        { id: "len-2", asig: "lengua", tema: "Morfología y Literatura", tipo: "quiz" },
+        { id: "lat-1", asig: "latin", tema: "Declinaciones y Casos", tipo: "quiz" },
+        { id: "len-2", asig: "lengua", tema: "Literatura Clásica", tipo: "teoria" }
+      ]
+    },
+
+    // TRIMESTRE 2
+    {
+      id: "comunes-t2",
+      rama: "comun",
+      titulo: "Fase General - Trimestre 2",
+      nodos: [
+        { id: "len-3", asig: "lengua", tema: "Morfología y Literatura", tipo: "quiz" },
         { id: "hist-2", asig: "historia", tema: "Siglo XIX y Restauración", tipo: "quiz" },
         { id: "ing-2", asig: "ingles", tema: "Passive & Reported Speech", tipo: "quiz" }
       ]
     },
     {
-      id: "ciencias-t2",
-      titulo: "Modalidad: Ciencias e Ingeniería - Trimestre 2",
+      id: "ing-t2",
+      rama: "ingenieria",
+      titulo: "Ingeniería y Tecnología - Trimestre 2",
       nodos: [
         { id: "m2-2", asig: "mates2", tema: "Geometría y Vectores", tipo: "quiz" },
         { id: "fis-2", asig: "fisica", tema: "Ondas y Óptica", tipo: "quiz" },
+        { id: "dib-2", asig: "dibujo", tema: "Sistema Diédrico", tipo: "quiz" }
+      ]
+    },
+    {
+      id: "salud-t2",
+      rama: "salud",
+      titulo: "Ciencias de la Salud - Trimestre 2",
+      nodos: [
+        { id: "m2-2", asig: "mates2", tema: "Geometría y Vectores", tipo: "quiz" },
         { id: "qui-2", asig: "quimica", tema: "Termoquímica y Cinética", tipo: "quiz" },
-        { id: "dib-2", asig: "dibujo", tema: "Sistema Diédrico", tipo: "quiz" },
         { id: "bio-2", asig: "biologia", tema: "Biología Celular", tipo: "quiz" }
       ]
     },
     {
-      id: "sociales-t2",
-      titulo: "Modalidad: Ciencias Sociales y Humanidades - Trimestre 2",
+      id: "soc-t2",
+      rama: "sociales",
+      titulo: "Ciencias Sociales - Trimestre 2",
       nodos: [
         { id: "mcs-2", asig: "mates_ccss", tema: "Probabilidad Básica", tipo: "quiz" },
-        { id: "eco-2", asig: "economia", tema: "Gestión Financiera", tipo: "quiz" },
-        { id: "lat-2", asig: "latin", tema: "Traducción de Textos", tipo: "quiz" }
+        { id: "eco-2", asig: "economia", tema: "Gestión Financiera", tipo: "quiz" }
       ]
     },
     {
+      id: "hum-t2",
+      rama: "humanidades",
+      titulo: "Humanidades - Trimestre 2",
+      nodos: [
+        { id: "lat-2", asig: "latin", tema: "Traducción de Textos", tipo: "quiz" }
+      ]
+    },
+
+    // TRIMESTRE 3 (SIMULACROS)
+    {
       id: "comunes-t3",
-      titulo: "Fase General (Común) - Trimestre 3 (Simulacros)",
+      rama: "comun",
+      titulo: "Simulacros EBAU - Fase General",
       nodos: [
         { id: "sim-len", asig: "lengua", tema: "Examen EBAU Lengua", tipo: "examen" },
         { id: "sim-hist", asig: "historia", tema: "Examen EBAU Historia", tipo: "examen" },
@@ -83,20 +126,40 @@ window.PAU_DATA = {
       ]
     },
     {
-      id: "ciencias-t3",
-      titulo: "Modalidad: Ciencias e Ingeniería - Trimestre 3 (Simulacros)",
+      id: "ing-t3",
+      rama: "ingenieria",
+      titulo: "Simulacros EBAU - Ingeniería",
       nodos: [
         { id: "sim-m2", asig: "mates2", tema: "Examen EBAU Matemáticas II", tipo: "examen" },
         { id: "sim-fis", asig: "fisica", tema: "Examen EBAU Física", tipo: "examen" },
-        { id: "sim-qui", asig: "quimica", tema: "Examen EBAU Química", tipo: "examen" }
+        { id: "sim-dib", asig: "dibujo", tema: "Examen EBAU Dibujo", tipo: "examen" }
       ]
     },
     {
-      id: "sociales-t3",
-      titulo: "Modalidad: Ciencias Sociales y Humanidades - Trimestre 3 (Simulacros)",
+      id: "salud-t3",
+      rama: "salud",
+      titulo: "Simulacros EBAU - Salud",
+      nodos: [
+        { id: "sim-m2", asig: "mates2", tema: "Examen EBAU Matemáticas II", tipo: "examen" },
+        { id: "sim-qui", asig: "quimica", tema: "Examen EBAU Química", tipo: "examen" },
+        { id: "sim-bio", asig: "biologia", tema: "Examen EBAU Biología", tipo: "examen" }
+      ]
+    },
+    {
+      id: "soc-t3",
+      rama: "sociales",
+      titulo: "Simulacros EBAU - Sociales",
       nodos: [
         { id: "sim-mcs", asig: "mates_ccss", tema: "Examen EBAU Mates CCSS", tipo: "examen" },
         { id: "sim-eco", asig: "economia", tema: "Examen EBAU Economía", tipo: "examen" }
+      ]
+    },
+    {
+      id: "hum-t3",
+      rama: "humanidades",
+      titulo: "Simulacros EBAU - Humanidades",
+      nodos: [
+        { id: "sim-lat", asig: "latin", tema: "Examen EBAU Latín", tipo: "examen" }
       ]
     }
   ],
