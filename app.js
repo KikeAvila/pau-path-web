@@ -249,11 +249,11 @@ function renderTeoria() {
 }
 
 function renderExamenes() {
-  const c = examenes-container;
+  const c = $("examenes-container");
   const leyes = window.PAU_DATA.leyes_educativas || [];
   const historico = window.PAU_DATA.histórico_examenes || [];
   
-  let html = <h2>📜 Histórico de Exámenes (20 Años)</h2>
+  let html = `<h2>📜 Histórico de Exámenes (20 Años)</h2>
     <p style="color:var(--gray); font-size:0.9em; margin-bottom:15px;">Pruebas oficiales organizadas por Ley Educativa y cambios de modalidad.</p>
     
     <div style="background:#222; padding:15px; border-radius:8px; margin-bottom:20px; text-align:center; border: 2px solid #FF5722;">
@@ -263,33 +263,34 @@ function renderExamenes() {
     </div>
     
     <h3>Línea Temporal de Leyes Educativas</h3>
-    <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:20px;">
-  ;
+    <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:20px;">`;
   
   leyes.forEach(l => {
-    html += 
+    html += `
       <div style="background:#1a1a1a; border-left: 4px solid #00BCD4; padding:10px; border-radius:4px;">
-        <h4 style="margin:0; color:#00BCD4;"> - </h4>
-        <p style="margin:5px 0 0 0; font-size:0.85em; color:#aaa;"></p>
+        <h4 style="margin:0; color:#00BCD4;">${l.año} - ${l.ley}</h4>
+        <p style="margin:5px 0 0 0; font-size:0.85em; color:#aaa;">${l.cambios}</p>
       </div>
-    ;
+    `;
   });
 
-  html += <h3>Archivo de Exámenes</h3><div style="display:flex; flex-direction:column; gap:10px;">;
+  html += `</div><h3>Archivo de Exámenes</h3><div style="display:flex; flex-direction:column; gap:10px;">`;
 
   historico.forEach(ex => {
     const color = ex.disponible ? 'var(--blue)' : '#444';
     const text = ex.disponible ? 'Hacer Examen' : 'PDF (Próximamente)';
-    html += <div style="background:#111; padding:15px; border-radius:8px; display:flex; justify-content:space-between; align-items:center;">
+    const alertMsg = ex.disponible ? 'Cargando examen interactivo...' : 'Archivo PDF no disponible en la demo';
+    
+    html += `<div style="background:#111; padding:15px; border-radius:8px; display:flex; justify-content:space-between; align-items:center;">
       <div>
-        <h4 style="font-size:1.1em; margin:0;"></h4>
-        <span style="font-size:0.85em; color:var(--gray);">Año  | Ley:  | </span>
+        <h4 style="font-size:1.1em; margin:0;">${ex.titulo}</h4>
+        <span style="font-size:0.85em; color:var(--gray);">Año ${ex.año} | Ley: ${ex.ley} | ${ex.convocatoria}</span>
       </div>
-      <button class="btn" style="background:;" onclick="alert('')"></button>
-    </div>;
+      <button class="btn" style="background:${color};" onclick="alert('${alertMsg}')">${text}</button>
+    </div>`;
   });
   
-  html += </div>;
+  html += `</div>`;
   c.innerHTML = html;
 }
 function abrirTestDificil() {
