@@ -541,7 +541,7 @@ function startVocClassic() {
   $("voc-menu").classList.add("hidden");
   $("voc-classic-area").classList.remove("hidden");
   vocClassicIndex = 0;
-  vocClassicAnswers = [];
+  vocClassicAnswers = []; // Will store arrays of selected indices
   renderVocClassicQuestion();
 }
 
@@ -549,12 +549,14 @@ function renderVocClassicQuestion() {
   const area = $("voc-classic-area");
   if (vocClassicIndex >= vocClassicQuestions.length) {
     let scores = { ingenieria: 0, ciencias: 0, salud: 0, sociales: 0, letras: 0, artes: 0, deporte: 0 };
-    vocClassicAnswers.forEach((ansIdx, qIdx) => {
-      if (ansIdx !== undefined) {
-        const pts = vocClassicQuestions[qIdx].options[ansIdx].points;
-        for (let k in pts) {
-          if (scores[k] !== undefined) scores[k] += pts[k];
-        }
+    vocClassicAnswers.forEach((ansArray, qIdx) => {
+      if (ansArray && ansArray.length > 0) {
+        ansArray.forEach(ansIdx => {
+          const pts = vocClassicQuestions[qIdx].options[ansIdx].points;
+          for (let k in pts) {
+            if (scores[k] !== undefined) scores[k] += pts[k];
+          }
+        });
       }
     });
 
@@ -572,6 +574,11 @@ function renderVocClassicQuestion() {
     if (bestProfile === "letras") desc = "Artes y Humanidades Clásicas (Filosofía, Filología, Historia). Se te da bien analizar, escribir y el pensamiento crítico.";
     if (bestProfile === "artes") desc = "Perfil marcadamente artístico (Bellas Artes, Diseño, Audiovisuales). Prefieres crear y expresarte.";
     if (bestProfile === "deporte") desc = "Tu perfil ideal es Ciencias de la Actividad Física y del Deporte (INEF), Fisioterapia deportiva o Magisterio de EF. El movimiento es vital para ti.";
+
+    if (maxScore === 0) {
+      bestProfile = "Indefinido";
+      desc = "No has seleccionado suficientes opciones para definir un perfil claro. ¡Inténtalo de nuevo!";
+    }
 
     area.innerHTML = `
       <h3 style="color:#4CAF50; text-align:center;">¡Test Completado!</h3>
@@ -591,31 +598,64 @@ function renderVocClassicQuestion() {
 
   const q = vocClassicQuestions[vocClassicIndex];
   let html = `<h3>Pregunta ${vocClassicIndex + 1} de ${vocClassicQuestions.length}</h3>`;
+  html += `<p style="margin:5px 0 15px 0; font-size:0.9em; color:#aaa;">(Puedes elegir más de una opción)</p>`;
   html += `<p style="margin:15px 0; font-size:1.1em;">${q.q}</p>`;
-  html += `<div style="display:flex; flex-direction:column; gap:10px;">`;
+  html += `<div id="voc-options-container" style="display:flex; flex-direction:column; gap:10px;">`;
+  
+  const savedAnswers = vocClassicAnswers[vocClassicIndex] || [];
+  
   q.options.forEach((opt, i) => {
-    html += `<button class="btn" style="text-align:left; white-space:normal; line-height:1.4;" onclick="answerVocClassic(${i})">${opt.text}</button>`;
+    const isSelected = savedAnswers.includes(i);
+    const bg = isSelected ? 'var(--blue)' : '#333';
+    html += `<button class="btn voc-opt-btn" data-idx="${i}" style="text-align:left; white-space:normal; line-height:1.4; background:${bg}; transition: background 0.2s;" onclick="toggleVocOption(this)">${opt.text}</button>`;
   });
   html += `</div>`;
   
+  html += `<div style="display:flex; gap:10px; margin-top:20px;">`;
   if (vocClassicIndex > 0) {
-    html += `<button class="btn" style="background:#444; margin-top:20px; width:100%;" onclick="vocClassicBack()">⬅️ Volver a la pregunta anterior</button>`;
+    html += `<button class="btn" style="flex:1; background:#444;" onclick="vocClassicBack()">⬅️ Atrás</button>`;
   }
+  html += `<button class="btn" style="flex:1; background:#4CAF50;" onclick="nextVocQuestion()">Siguiente ➡️</button>`;
+  html += `</div>`;
   
   area.innerHTML = html;
 }
+
+window.toggleVocOption = function(btn) {
+  // Safe toggle using dataset property or just inline styles managed strictly
+  if (btn.dataset.selected === 'true') {
+    btn.dataset.selected = 'false';
+    btn.style.background = '#333';
+  } else {
+    btn.dataset.selected = 'true';
+    btn.style.background = 'var(--blue)';
+  }
+};
+
+window.nextVocQuestion = function() {
+  const container = $("voc-options-container");
+  const btns = container.querySelectorAll('.voc-opt-btn');
+  let selected = [];
+  btns.forEach(btn => {
+    // If it was selected previously, its background was set to var(--blue) on render
+    // If it was clicked, we set dataset.selected
+    // Best check is either dataset.selected == 'true' or inline background matching var(--blue)
+    const isSelected = btn.dataset.selected === 'true' || (btn.style.background.includes('var(--blue)') && btn.dataset.selected !== 'false');
+    if (isSelected) {
+      selected.push(parseInt(btn.getAttribute('data-idx')));
+    }
+  });
+  
+  vocClassicAnswers[vocClassicIndex] = selected;
+  vocClassicIndex++;
+  renderVocClassicQuestion();
+};
 
 function vocClassicBack() {
   if (vocClassicIndex > 0) {
     vocClassicIndex--;
     renderVocClassicQuestion();
   }
-}
-
-function answerVocClassic(optIndex) {
-  vocClassicAnswers[vocClassicIndex] = optIndex;
-  vocClassicIndex++;
-  renderVocClassicQuestion();
 }
 
 function startVocAI() {
