@@ -288,7 +288,7 @@ function renderOrientacion() {
   const c = $("orientacion-container");
   
   // Extract unique careers and universities for the dropdowns
-  const grados = window.PAU_DATA.grados || [];
+  const grados = window.PAU_DATA.universidades || [];
   const carreras = [...new Set(grados.map(g => g.carrera))].sort();
   const unis = [...new Set(grados.map(g => g.uni))].sort();
   
@@ -328,7 +328,7 @@ window.filtrarOrientacion = function() {
   const selUni = $("ori-uni").value;
   const res = $("ori-resultados");
   
-  const grados = window.PAU_DATA.grados || [];
+  const grados = window.PAU_DATA.universidades || [];
   
   const filtrados = grados.filter(g => {
     const matchCarrera = (selCarrera === "ALL" || g.carrera === selCarrera);
