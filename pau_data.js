@@ -51,6 +51,92 @@ window.PAU_DATA = {
         { id: "sim-m2", asig: "mates2", tema: "Simulacro Matemáticas T1", tipo: "examen" },
         { id: "sim-fis", asig: "fisica", tema: "Simulacro Física T1", tipo: "examen" }
       ]
+    },
+    // TRIMESTRE 2
+    {
+      id: "nivel-6",
+      titulo: "Trimestre 2 - Nivel 1 (Geometría y Ondas)",
+      nodos: [
+        { id: "m2-5", asig: "mates2", tema: "Vectores en el Espacio", tipo: "teoria" },
+        { id: "fis-5", asig: "fisica", tema: "Movimiento Armónico Simple", tipo: "quiz" }
+      ]
+    },
+    {
+      id: "nivel-7",
+      titulo: "Trimestre 2 - Nivel 2 (Intermedio)",
+      nodos: [
+        { id: "m2-6", asig: "mates2", tema: "Rectas y Planos", tipo: "quiz" },
+        { id: "fis-6", asig: "fisica", tema: "Ondas Sonoras", tipo: "quiz" },
+        { id: "len-2", asig: "lengua", tema: "Morfología", tipo: "quiz" }
+      ]
+    },
+    {
+      id: "nivel-8",
+      titulo: "Trimestre 2 - Nivel 3 (Avanzado)",
+      nodos: [
+        { id: "m2-7", asig: "mates2", tema: "Posiciones Relativas", tipo: "quiz" },
+        { id: "fis-7", asig: "fisica", tema: "Óptica Geométrica", tipo: "teoria" }
+      ]
+    },
+    {
+      id: "nivel-9",
+      titulo: "Trimestre 2 - Nivel 4 (Retos EBAU)",
+      nodos: [
+        { id: "m2-8", asig: "mates2", tema: "Distancias y Ángulos", tipo: "quiz" },
+        { id: "hist-2", asig: "historia", tema: "Siglo XIX", tipo: "quiz" },
+        { id: "fis-8", asig: "fisica", tema: "Lentes y Espejos", tipo: "quiz" }
+      ]
+    },
+    {
+      id: "nivel-10",
+      titulo: "Trimestre 2 - Nivel 5 (Simulacro T2)",
+      nodos: [
+        { id: "sim-m2-t2", asig: "mates2", tema: "Simulacro Matemáticas T2", tipo: "examen" },
+        { id: "sim-fis-t2", asig: "fisica", tema: "Simulacro Física T2", tipo: "examen" }
+      ]
+    },
+    // TRIMESTRE 3
+    {
+      id: "nivel-11",
+      titulo: "Trimestre 3 - Nivel 1 (Análisis y Cuántica)",
+      nodos: [
+        { id: "m2-9", asig: "mates2", tema: "Límites y Continuidad", tipo: "teoria" },
+        { id: "fis-9", asig: "fisica", tema: "Efecto Fotoeléctrico", tipo: "quiz" }
+      ]
+    },
+    {
+      id: "nivel-12",
+      titulo: "Trimestre 3 - Nivel 2 (Intermedio)",
+      nodos: [
+        { id: "m2-10", asig: "mates2", tema: "Derivadas y Aplicaciones", tipo: "quiz" },
+        { id: "fis-10", asig: "fisica", tema: "Física Nuclear", tipo: "quiz" },
+        { id: "len-3", asig: "lengua", tema: "Comentario de Texto", tipo: "teoria" }
+      ]
+    },
+    {
+      id: "nivel-13",
+      titulo: "Trimestre 3 - Nivel 3 (Avanzado)",
+      nodos: [
+        { id: "m2-11", asig: "mates2", tema: "Integrales Indefinidas", tipo: "quiz" },
+        { id: "hist-3", asig: "historia", tema: "Siglo XX", tipo: "quiz" }
+      ]
+    },
+    {
+      id: "nivel-14",
+      titulo: "Trimestre 3 - Nivel 4 (Retos EBAU)",
+      nodos: [
+        { id: "m2-12", asig: "mates2", tema: "Cálculo de Áreas", tipo: "quiz" },
+        { id: "fis-11", asig: "fisica", tema: "Radiactividad EBAU", tipo: "quiz" },
+        { id: "dib-3", asig: "dibujo", tema: "Axonométrico", tipo: "quiz" }
+      ]
+    },
+    {
+      id: "nivel-15",
+      titulo: "Trimestre 3 - Nivel 5 (Simulacro T3)",
+      nodos: [
+        { id: "sim-ebau-m2", asig: "mates2", tema: "Examen EBAU Matemáticas", tipo: "examen" },
+        { id: "sim-ebau-fis", asig: "fisica", tema: "Examen EBAU Física", tipo: "examen" }
+      ]
     }
   ],
   teoria: {
